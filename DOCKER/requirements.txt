@@ -1,0 +1,13 @@
+robotframework-requests
+robotframework-jsonlibrary
+robotframework-datetime-tz
+robotframework-csvlibrary
+robotframework-excellib
+robotframework-appiumlibrary
+rpaframework
+pymysql
+peewee
+tabulate
+python-dotenv
+docx2pdf
+robotframework-browser

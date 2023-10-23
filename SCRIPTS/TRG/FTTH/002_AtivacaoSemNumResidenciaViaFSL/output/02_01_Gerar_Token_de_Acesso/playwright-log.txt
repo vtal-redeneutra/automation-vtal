@@ -1,0 +1,27 @@
+{"level":30,"time":"2023-10-10T21:31:57.941Z","pid":9,"hostname":"IBM-PF401H48","msg":"Listening on 33059"}
+{"level":30,"time":"2023-10-10T21:31:57.983Z","pid":9,"hostname":"IBM-PF401H48","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-10T21:31:57.984Z","pid":9,"hostname":"IBM-PF401H48","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-10T21:31:57.988Z","pid":9,"hostname":"IBM-PF401H48","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-10T21:31:57.988Z","pid":9,"hostname":"IBM-PF401H48","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9991:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:10237:57)
+    at handleUnary (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:833:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+=============================================================
+{"level":30,"time":"2023-10-10T21:31:59.369Z","pid":9,"hostname":"IBM-PF401H48","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-10T21:31:59.369Z","pid":9,"hostname":"IBM-PF401H48","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9470:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9991:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:10237:57)
+    at handleUnary (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:833:17)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+=============================================================
+{"level":30,"time":"2023-10-10T21:31:59.375Z","pid":9,"hostname":"IBM-PF401H48","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-10T21:31:59.376Z","pid":9,"hostname":"IBM-PF401H48","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-10T21:31:59.434Z","pid":9,"hostname":"IBM-PF401H48","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-10-10T21:31:59.434Z","pid":9,"hostname":"IBM-PF401H48","msg":"End of node method closeAllBrowsers"}

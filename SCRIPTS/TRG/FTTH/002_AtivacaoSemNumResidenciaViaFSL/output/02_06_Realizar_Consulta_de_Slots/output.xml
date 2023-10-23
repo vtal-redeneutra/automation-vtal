@@ -1,0 +1,1927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231010 21:32:35.484" rpa="false" schemaversion="4">
+<suite id="s1" name="002 AtivacaoSemNumResidenciaViaFSL" source="/robot/test/SCRIPTS/TRG/FTTH/002_AtivacaoSemNumResidenciaViaFSL/002_AtivacaoSemNumResidenciaViaFSL.robot">
+<test id="s1-t1" name="02.06 - Realizar Consulta de Slots" line="65">
+<kw name="Inicia CT" library="DB">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${PORTAL}</var>
+<arg>Variable Should Exist</arg>
+<arg>${PORTAL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Variable Should Exist" library="BuiltIn">
+<arg>${PORTAL}</arg>
+<doc>Fails unless the given variable exists within the current scope.</doc>
+<status status="PASS" starttime="20231010 21:32:38.698" endtime="20231010 21:32:38.698"/>
+</kw>
+<msg timestamp="20231010 21:32:38.698" level="INFO">${PORTAL} = True</msg>
+<status status="PASS" starttime="20231010 21:32:38.698" endtime="20231010 21:32:38.698"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${check_step}</var>
+<arg>Variable Should Exist</arg>
+<arg>${STEP}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Variable Should Exist" library="BuiltIn">
+<arg>${STEP}</arg>
+<doc>Fails unless the given variable exists within the current scope.</doc>
+<status status="PASS" starttime="20231010 21:32:38.699" endtime="20231010 21:32:38.699"/>
+</kw>
+<msg timestamp="20231010 21:32:38.699" level="INFO">${check_step} = True</msg>
+<status status="PASS" starttime="20231010 21:32:38.699" endtime="20231010 21:32:38.699"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PORTAL}</arg>
+<arg>${PORTAL}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231010 21:32:38.700" level="INFO">${PORTAL} = True</msg>
+<status status="PASS" starttime="20231010 21:32:38.699" endtime="20231010 21:32:38.700"/>
+</kw>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Log" library="BuiltIn">
+<arg>${CEP}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231010 21:32:38.700" level="INFO">00000000</msg>
+<status status="PASS" starttime="20231010 21:32:38.700" endtime="20231010 21:32:38.700"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${NUMERO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231010 21:32:38.700" level="INFO">00</msg>
+<status status="PASS" starttime="20231010 21:32:38.700" endtime="20231010 21:32:38.700"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${check_step}</arg>
+<arg>Set Step</arg>
+<arg>${STEP}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Set Step" library="DB">
+<arg>${STEP}</arg>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${STEP}</arg>
+<arg>${STEP}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231010 21:32:38.701" level="INFO">${STEP} = 02_06_Realizar_Consulta_de_Slots</msg>
+<status status="PASS" starttime="20231010 21:32:38.701" endtime="20231010 21:32:38.701"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:38.701" endtime="20231010 21:32:38.701"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:38.701" endtime="20231010 21:32:38.701"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${RESPONSAVEL}</arg>
+<arg>${RESPONSAVEL}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231010 21:32:38.702" level="INFO">${RESPONSAVEL} = galeite</msg>
+<status status="PASS" starttime="20231010 21:32:38.702" endtime="20231010 21:32:38.702"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${AUTHENTICATION}</arg>
+<arg>${AUTHENTICATION}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231010 21:32:38.702" level="INFO">${AUTHENTICATION} = Whitelabel</msg>
+<status status="PASS" starttime="20231010 21:32:38.702" endtime="20231010 21:32:38.702"/>
+</kw>
+<kw name="Buscar Dat Do Usuario" library="dat">
+<var>${DAT_DB}</var>
+<arg>${RESPONSAVEL}</arg>
+<arg>${STEP}</arg>
+<msg timestamp="20231010 21:32:38.705" level="INFO">${DAT_DB} = 32</msg>
+<status status="PASS" starttime="20231010 21:32:38.703" endtime="20231010 21:32:38.705"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${DAT_DB}</arg>
+<arg>${DAT_DB}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231010 21:32:38.706" level="INFO">${DAT_DB} = 32</msg>
+<status status="PASS" starttime="20231010 21:32:38.706" endtime="20231010 21:32:38.706"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:38.700" endtime="20231010 21:32:38.706"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:38.700" endtime="20231010 21:32:38.706"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:38.697" endtime="20231010 21:32:38.706"/>
+</kw>
+<kw name="Retornar Token Vtal" library="RES_API">
+<doc>Função que usa o usuario e senha para autenticar e receber o valor do Token para fazer as próximas requisições.
+| ``HEADERS_TOKEN`` | Informações necessárias para o token, como qual ferramenta está executando. Exemplo:  User-Agent=RobotFramework. |
+| ``USUARIO`` | Usuario cadastrado para fazer a autenticação. |
+| ``SENHA`` | Senha cadastrado para fazer a autenticação. |
+| ``validade_token`` | Variavel com o tempo que expira a validade do token, salva na planilha. |
+A resposta é um retorno XML que contem:
+- ``access_token`` &lt;str&gt; Cadeia de caracteres que serve de autenticação para requisições.
+- ``token_type`` &lt;str&gt; Descrição do tipo de token, pode ser uma cadeia de str ou de int.
+- ``expires_in`` &lt;int&gt; Valor em segundos que esse token será valido.
+- ``scope`` &lt;str&gt; Escopo do token.
+Alguns exemplos de como usar a função:
+| Retornar Token Vtal
+Biblioteca utilizada: [https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html#POST%20On%20Session|RequestsLibrary &gt;&gt;]</doc>
+<kw name="Ler Variavel Param Global" library="RES_EXCEL">
+<var>${Credencial}</var>
+<arg>Credencial</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha PARAN GLOBAL</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Ler Global Db" library="globals">
+<var>${Data}</var>
+<arg>${AUTHENTICATION}</arg>
+<msg timestamp="20231010 21:32:38.709" level="INFO">${Data} = 1</msg>
+<status status="PASS" starttime="20231010 21:32:38.707" endtime="20231010 21:32:38.709"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Valor}</var>
+<arg>${Data.${NomeColuna}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:38.713" level="INFO">${Valor} = Whitelabel</msg>
+<status status="PASS" starttime="20231010 21:32:38.709" endtime="20231010 21:32:38.713"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:38.707" endtime="20231010 21:32:38.713"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${PARAM_GLOBAL}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.714" endtime="20231010 21:32:38.714"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.714" endtime="20231010 21:32:38.714"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.715" endtime="20231010 21:32:38.715"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.715" endtime="20231010 21:32:38.715"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.714" endtime="20231010 21:32:38.716"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:38.714" endtime="20231010 21:32:38.716"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.716" endtime="20231010 21:32:38.716"/>
+</kw>
+<kw name="Get Worksheet Value" library="RPA.Excel.Files">
+<var>${Valor}</var>
+<arg>row=2</arg>
+<arg>column=${i}</arg>
+<arg>name=${nome_aba}</arg>
+<doc>Alias for keyword ``Get cell value``, see the original keyword
+for documentation.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.716" endtime="20231010 21:32:38.716"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:38.724" endtime="20231010 21:32:38.724"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.714" endtime="20231010 21:32:38.724"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:38.707" endtime="20231010 21:32:38.724"/>
+</if>
+<msg timestamp="20231010 21:32:38.724" level="INFO">${Credencial} = Whitelabel</msg>
+<status status="PASS" starttime="20231010 21:32:38.707" endtime="20231010 21:32:38.724"/>
+</kw>
+<kw name="Ler Variavel Param Global" library="RES_EXCEL">
+<var>${TokenExcel}</var>
+<arg>Token</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha PARAN GLOBAL</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Ler Global Db" library="globals">
+<var>${Data}</var>
+<arg>${AUTHENTICATION}</arg>
+<msg timestamp="20231010 21:32:38.727" level="INFO">${Data} = 1</msg>
+<status status="PASS" starttime="20231010 21:32:38.725" endtime="20231010 21:32:38.727"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Valor}</var>
+<arg>${Data.${NomeColuna}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:38.731" level="INFO">${Valor} = </msg>
+<status status="PASS" starttime="20231010 21:32:38.727" endtime="20231010 21:32:38.731"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:38.725" endtime="20231010 21:32:38.731"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${PARAM_GLOBAL}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.731" endtime="20231010 21:32:38.731"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.732" endtime="20231010 21:32:38.732"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.732" endtime="20231010 21:32:38.732"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.732" endtime="20231010 21:32:38.732"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.731" endtime="20231010 21:32:38.732"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:38.731" endtime="20231010 21:32:38.732"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.732" endtime="20231010 21:32:38.732"/>
+</kw>
+<kw name="Get Worksheet Value" library="RPA.Excel.Files">
+<var>${Valor}</var>
+<arg>row=2</arg>
+<arg>column=${i}</arg>
+<arg>name=${nome_aba}</arg>
+<doc>Alias for keyword ``Get cell value``, see the original keyword
+for documentation.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.733" endtime="20231010 21:32:38.733"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:38.741" endtime="20231010 21:32:38.742"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.731" endtime="20231010 21:32:38.742"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:38.725" endtime="20231010 21:32:38.742"/>
+</if>
+<msg timestamp="20231010 21:32:38.742" level="INFO">${TokenExcel} = </msg>
+<status status="PASS" starttime="20231010 21:32:38.724" endtime="20231010 21:32:38.742"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Credencial}&quot; == &quot;Whitelabel&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nAtencao --&gt; Credenciais Whitelabel foram utilizadas para o cenario.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231010 21:32:38.743" endtime="20231010 21:32:38.744"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Authorization}</var>
+<arg>Basic ZDhhODhmZGEtZGI1Ni00MTQzLWFjM2YtZTY3OTZhYTMwMTg2OjgwMmQyYWE5LTg0MjItNGEyMi1hMTQ0LTNhZGZjZjA2MWY2Mw==</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:38.744" level="INFO">${Authorization} = Basic ZDhhODhmZGEtZGI1Ni00MTQzLWFjM2YtZTY3OTZhYTMwMTg2OjgwMmQyYWE5LTg0MjItNGEyMi1hMTQ0LTNhZGZjZjA2MWY2Mw==</msg>
+<status status="PASS" starttime="20231010 21:32:38.744" endtime="20231010 21:32:38.744"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:38.743" endtime="20231010 21:32:38.744"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Credencial}&quot; == &quot;FTTP&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nAtencao --&gt; Credenciais FTTP foram utilizadas para o cenario.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.745" endtime="20231010 21:32:38.745"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Authorization}</var>
+<arg>Basic MzNkNTc3Y2QtYzZmMS00YzMxLTllYzgtMjRiY2IyZWYyMmI3OjQyNWZkYzUyLTIzMmMtNDQ2YS1iOTViLWQyNmFkZGZmYjBkYw==</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.745" endtime="20231010 21:32:38.746"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.745" endtime="20231010 21:32:38.746"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Credencial}&quot; == &quot;Bitstream&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nAtencao --&gt; Credenciais Bitstream foram utilizadas para o cenario.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.746" endtime="20231010 21:32:38.746"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Authorization}</var>
+<arg>Basic NDQ0MzdlMjAtMmFjNi00YzY3LTk2NzMtYTMyMDI2N2ZjNmE3OjE1M2ZkYmU4LTcxMzUtNDJiNC05MDQ5LTI4MDM2NmI4MDU2YQ==</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.746" endtime="20231010 21:32:38.746"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.746" endtime="20231010 21:32:38.747"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Credencial}&quot; == &quot;CPOI&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nAtencao --&gt; Credenciais CP OI foram utilizadas para o cenario.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.747" endtime="20231010 21:32:38.747"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Authorization}</var>
+<arg>Basic Yzg2MzhhNTUtYTdmNC00OTBlLWIyNGItNWZhNjQxMDUwZDQyOmNjZjUyYzc3LTliN2UtNGM2NC04M2NkLTIwZmY3YWQzZjFkZQ==</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.747" endtime="20231010 21:32:38.748"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.747" endtime="20231010 21:32:38.748"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Credencial}&quot; == &quot;Voip&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nAtencao --&gt; Credenciais Voip foram utilizadas para o cenario.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.748" endtime="20231010 21:32:38.748"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Authorization}</var>
+<arg>Basic Yzg2MzhhNTUtYTdmNC00OTBlLWIyNGItNWZhNjQxMDUwZDQyOmNjZjUyYzc3LTliN2UtNGM2NC04M2NkLTIwZmY3YWQzZjFkZQ==</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.748" endtime="20231010 21:32:38.748"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.748" endtime="20231010 21:32:38.748"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:38.742" endtime="20231010 21:32:38.749"/>
+</if>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${HeaderToken}</var>
+<arg>Content-Type=application/x-www-form-urlencoded</arg>
+<arg>User-Agent=RobotFramework</arg>
+<arg>Accept=*/*</arg>
+<arg>Authorization=${Authorization}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231010 21:32:38.749" level="INFO">${HeaderToken} = {'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'RobotFramework', 'Accept': '*/*', 'Authorization': 'Basic ZDhhODhmZGEtZGI1Ni00MTQzLWFjM2YtZTY3OTZhYTMwMTg2OjgwMmQyYWE5LTg0MjItNGEyM...</msg>
+<status status="PASS" starttime="20231010 21:32:38.749" endtime="20231010 21:32:38.749"/>
+</kw>
+<kw name="Ler Variavel Param Global" library="RES_EXCEL">
+<var>${UrlApi}</var>
+<arg>URL_Token</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha PARAN GLOBAL</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Ler Global Db" library="globals">
+<var>${Data}</var>
+<arg>${AUTHENTICATION}</arg>
+<msg timestamp="20231010 21:32:38.752" level="INFO">${Data} = 1</msg>
+<status status="PASS" starttime="20231010 21:32:38.750" endtime="20231010 21:32:38.752"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Valor}</var>
+<arg>${Data.${NomeColuna}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:38.761" level="INFO">${Valor} = https://apitrg.vtal.com.br</msg>
+<status status="PASS" starttime="20231010 21:32:38.753" endtime="20231010 21:32:38.761"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:38.750" endtime="20231010 21:32:38.761"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${PARAM_GLOBAL}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.762" endtime="20231010 21:32:38.762"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.762" endtime="20231010 21:32:38.762"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.763" endtime="20231010 21:32:38.763"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.763" endtime="20231010 21:32:38.763"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.762" endtime="20231010 21:32:38.763"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:38.762" endtime="20231010 21:32:38.763"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.763" endtime="20231010 21:32:38.764"/>
+</kw>
+<kw name="Get Worksheet Value" library="RPA.Excel.Files">
+<var>${Valor}</var>
+<arg>row=2</arg>
+<arg>column=${i}</arg>
+<arg>name=${nome_aba}</arg>
+<doc>Alias for keyword ``Get cell value``, see the original keyword
+for documentation.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.764" endtime="20231010 21:32:38.764"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:38.773" endtime="20231010 21:32:38.773"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.761" endtime="20231010 21:32:38.773"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:38.750" endtime="20231010 21:32:38.774"/>
+</if>
+<msg timestamp="20231010 21:32:38.774" level="INFO">${UrlApi} = https://apitrg.vtal.com.br</msg>
+<status status="PASS" starttime="20231010 21:32:38.750" endtime="20231010 21:32:38.774"/>
+</kw>
+<kw name="Ler Variavel Param Global" library="RES_EXCEL">
+<var>${Usuario}</var>
+<arg>Usuario_Token</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha PARAN GLOBAL</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Ler Global Db" library="globals">
+<var>${Data}</var>
+<arg>${AUTHENTICATION}</arg>
+<msg timestamp="20231010 21:32:38.777" level="INFO">${Data} = 1</msg>
+<status status="PASS" starttime="20231010 21:32:38.775" endtime="20231010 21:32:38.777"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Valor}</var>
+<arg>${Data.${NomeColuna}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:38.783" level="INFO">${Valor} = d6c3e319-d388-4128-96f8-154da4c71526</msg>
+<status status="PASS" starttime="20231010 21:32:38.778" endtime="20231010 21:32:38.783"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:38.775" endtime="20231010 21:32:38.783"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${PARAM_GLOBAL}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.783" endtime="20231010 21:32:38.783"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.784" endtime="20231010 21:32:38.784"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.785" endtime="20231010 21:32:38.785"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.785" endtime="20231010 21:32:38.785"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.784" endtime="20231010 21:32:38.785"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:38.784" endtime="20231010 21:32:38.786"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.786" endtime="20231010 21:32:38.786"/>
+</kw>
+<kw name="Get Worksheet Value" library="RPA.Excel.Files">
+<var>${Valor}</var>
+<arg>row=2</arg>
+<arg>column=${i}</arg>
+<arg>name=${nome_aba}</arg>
+<doc>Alias for keyword ``Get cell value``, see the original keyword
+for documentation.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.786" endtime="20231010 21:32:38.786"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:38.795" endtime="20231010 21:32:38.795"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.783" endtime="20231010 21:32:38.795"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:38.774" endtime="20231010 21:32:38.795"/>
+</if>
+<msg timestamp="20231010 21:32:38.796" level="INFO">${Usuario} = d6c3e319-d388-4128-96f8-154da4c71526</msg>
+<status status="PASS" starttime="20231010 21:32:38.774" endtime="20231010 21:32:38.796"/>
+</kw>
+<kw name="Ler Variavel Param Global" library="RES_EXCEL">
+<var>${Senha}</var>
+<arg>Senha_Token</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha PARAN GLOBAL</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Ler Global Db" library="globals">
+<var>${Data}</var>
+<arg>${AUTHENTICATION}</arg>
+<msg timestamp="20231010 21:32:38.799" level="INFO">${Data} = 1</msg>
+<status status="PASS" starttime="20231010 21:32:38.797" endtime="20231010 21:32:38.799"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Valor}</var>
+<arg>${Data.${NomeColuna}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:38.804" level="INFO">${Valor} = 0917ff46-9ed9-4dea-babd-baba3e2a55e3</msg>
+<status status="PASS" starttime="20231010 21:32:38.799" endtime="20231010 21:32:38.804"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:38.796" endtime="20231010 21:32:38.804"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${PARAM_GLOBAL}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.805" endtime="20231010 21:32:38.805"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.805" endtime="20231010 21:32:38.806"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.806" endtime="20231010 21:32:38.806"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.806" endtime="20231010 21:32:38.806"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.805" endtime="20231010 21:32:38.806"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:38.805" endtime="20231010 21:32:38.806"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.806" endtime="20231010 21:32:38.807"/>
+</kw>
+<kw name="Get Worksheet Value" library="RPA.Excel.Files">
+<var>${Valor}</var>
+<arg>row=2</arg>
+<arg>column=${i}</arg>
+<arg>name=${nome_aba}</arg>
+<doc>Alias for keyword ``Get cell value``, see the original keyword
+for documentation.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:38.807" endtime="20231010 21:32:38.807"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:38.815" endtime="20231010 21:32:38.815"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:38.804" endtime="20231010 21:32:38.815"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:38.796" endtime="20231010 21:32:38.815"/>
+</if>
+<msg timestamp="20231010 21:32:38.815" level="INFO">${Senha} = 0917ff46-9ed9-4dea-babd-baba3e2a55e3</msg>
+<status status="PASS" starttime="20231010 21:32:38.796" endtime="20231010 21:32:38.815"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${UrlApi}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231010 21:32:38.816" level="INFO">${UrlApi} = https://apitrg.vtal.com.br</msg>
+<status status="PASS" starttime="20231010 21:32:38.815" endtime="20231010 21:32:38.816"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Usuario}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231010 21:32:38.816" level="INFO">${Usuario} = d6c3e319-d388-4128-96f8-154da4c71526</msg>
+<status status="PASS" starttime="20231010 21:32:38.816" endtime="20231010 21:32:38.816"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${Senha}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231010 21:32:38.817" level="INFO">${Senha} = 0917ff46-9ed9-4dea-babd-baba3e2a55e3</msg>
+<status status="PASS" starttime="20231010 21:32:38.816" endtime="20231010 21:32:38.817"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>StartAPI</arg>
+<arg>${UrlApi}</arg>
+<arg>verify=true</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20231010 21:32:38.817" level="INFO">Creating Session using : alias=StartAPI, url=https://apitrg.vtal.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20231010 21:32:38.817" endtime="20231010 21:32:38.817"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${Response}</var>
+<arg>StartAPI</arg>
+<arg>${AUTH}</arg>
+<arg>data={"username":"${Usuario}","password":"${Senha}"}</arg>
+<arg>headers=${HeaderToken}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20231010 21:32:40.072" level="INFO">POST Request : url=https://apitrg.vtal.com.br/auth/oauth/v2/token?grant_type=client_credentials&amp;scope=fttx 
+ path_url=/auth/oauth/v2/token?grant_type=client_credentials&amp;scope=fttx 
+ headers={'User-Agent': 'RobotFramework', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': 'Basic ZDhhODhmZGEtZGI1Ni00MTQzLWFjM2YtZTY3OTZhYTMwMTg2OjgwMmQyYWE5LTg0MjItNGEyMi1hMTQ0LTNhZGZjZjA2MWY2Mw==', 'Content-Length': '101'} 
+ body={"username":"d6c3e319-d388-4128-96f8-154da4c71526","password":"0917ff46-9ed9-4dea-babd-baba3e2a55e3"} 
+ </msg>
+<msg timestamp="20231010 21:32:40.072" level="INFO">POST Response : url=https://apitrg.vtal.com.br/auth/oauth/v2/token?grant_type=client_credentials&amp;scope=fttx 
+ status=200, reason=OK 
+ headers={'Pragma': 'no-cache', 'Cache-Control': 'no-store', 'Content-Encoding': 'gzip', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '128', 'Date': 'Tue, 10 Oct 2023 21:32:41 GMT', 'Server': 'Layer7-API-Gateway', 'Set-Cookie': 'BIGipServerRD16_POOL_APIGQX02LB_8443=rd16o00000000000000000000ffffac128415o8443; path=/; Httponly; Secure'} 
+ body={
+  "access_token":"c53d6bb8-e331-411a-9a66-248472139216",
+  "token_type":"Bearer",
+  "expires_in":3600,
+  "scope":"fttx"
+} 
+ </msg>
+<msg timestamp="20231010 21:32:40.073" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231010 21:32:38.818" endtime="20231010 21:32:40.073"/>
+</kw>
+<kw name="Valida Retorno da API" library="RES_API">
+<arg>${Response.status_code}</arg>
+<arg>200</arg>
+<arg>Retornar Token Vtal</arg>
+<doc>Função usada para mandar validar o retorno da API, caso um retorno 500 seja dado muitas vezes ou  um retorno diferente do esperado ele cria um documento de defect.
+| =Arguments= | =Description= |
+| ``STATUS_RECEBIDO`` | Recebe o status de Retorno da API. exemplo: ``404(Not Found)``. |
+| ``STATUS_ESPERADO`` | Recebe o status Esperado da API. exemplo: ``200(Ok)``. |
+| ``FUNCAO_API`` | Recebe o nome da função para que ela execute novamente caso seja diferente o resultado: exemplo: ``Retornar Address Id``. |
+A resposta é um retorno JSON que contem:
+- ``type`` &lt;int&gt; Tipo da resposta do Retorno. Exemplo: S(Sucesso) e E(ERRO).
+- ``code`` &lt;int&gt; Codigo da reposta do retorno. Exemplo: 200(Ok) 404(Not Found).
+- ``message`` &lt;str&gt; Descrição do código de retorno. Exemplo: 200(Ok) 404(Not Found).
+Alguns exemplos de como usar a função:
+| Valida Retorno da API                   200                 200                                     Retornar Address Id
+Biblioteca utilizada: [https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html#PATCH|RequestsLibrary &gt;&gt;]</doc>
+<if>
+<branch type="IF" condition="'${status_recebido}' == '500'">
+<kw name="Evaluate" library="BuiltIn">
+<var>${Counter_API}</var>
+<arg>${Counter_API} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.081" endtime="20231010 21:32:40.082"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Counter_API}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.082" endtime="20231010 21:32:40.082"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nErro ${status_recebido} recebido, tentando novamente!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.082" endtime="20231010 21:32:40.082"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.082" endtime="20231010 21:32:40.082"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Counter_API}&quot; == &quot;3&quot;">
+<kw name="Fatal Error" library="BuiltIn">
+<arg>\nApós 3 execuções a API continua retornando erro ${status_esperado}</arg>
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.083" endtime="20231010 21:32:40.083"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:40.082" endtime="20231010 21:32:40.083"/>
+</branch>
+<status status="NOT RUN" starttime="20231010 21:32:40.082" endtime="20231010 21:32:40.083"/>
+</if>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${Funcao_API}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.083" endtime="20231010 21:32:40.083"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:40.081" endtime="20231010 21:32:40.083"/>
+</branch>
+<branch type="ELSE IF" condition="'${status_recebido}' != '${status_esperado}'">
+<kw name="Fatal Error" library="BuiltIn">
+<arg>\n Retorno da API diferente do esperado ${status_recebido} != ${status_esperado}</arg>
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.083" endtime="20231010 21:32:40.083"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:40.083" endtime="20231010 21:32:40.083"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:40.081" endtime="20231010 21:32:40.083"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:40.077" endtime="20231010 21:32:40.084"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${Token}</var>
+<arg>${Response.json()}</arg>
+<arg>access_token</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20231010 21:32:40.088" level="INFO">${Token} = c53d6bb8-e331-411a-9a66-248472139216</msg>
+<status status="PASS" starttime="20231010 21:32:40.084" endtime="20231010 21:32:40.088"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Token}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231010 21:32:40.089" level="INFO">${Token} = c53d6bb8-e331-411a-9a66-248472139216</msg>
+<status status="PASS" starttime="20231010 21:32:40.088" endtime="20231010 21:32:40.089"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:38.706" endtime="20231010 21:32:40.089"/>
+</kw>
+<kw name="Consulta Slot Agendamento" library="ROB0003_ConsultarSlot">
+<tag>ConsultaSlotAgendamento</tag>
+<doc>Keyword encadeador TRG</doc>
+<kw name="Retornar Slot Agendamento" library="ROB0003_ConsultarSlot">
+<tag>RetornarSlotAgendamento</tag>
+<doc>Consome API searchTimeSlot e consulta slot agendamento no intervalo de no maximo 14 dias</doc>
+<kw name="Get Current Date" library="DateTime">
+<var>${DataAgendamento}</var>
+<arg>increment=3 hours</arg>
+<arg>result_format=%Y-%m-%dT08:00:00-03:00</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20231010 21:32:40.090" level="INFO">${DataAgendamento} = 2023-10-11T08:00:00-03:00</msg>
+<status status="PASS" starttime="20231010 21:32:40.090" endtime="20231010 21:32:40.090"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${DataAgendamentoFim}</var>
+<arg>increment=14 days</arg>
+<arg>result_format=%Y-%m-%dT12:00:00-03:00</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20231010 21:32:40.091" level="INFO">${DataAgendamentoFim} = 2023-10-24T12:00:00-03:00</msg>
+<status status="PASS" starttime="20231010 21:32:40.091" endtime="20231010 21:32:40.091"/>
+</kw>
+<kw name="Ler Variavel na Planilha" library="RES_EXCEL">
+<var>${ADDRESS_ID}</var>
+<arg>addressId</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<if>
+<branch type="IF" condition="'${DAT_DB}' != '${EMPTY}'">
+<kw name="Buscar Campo Dat Id" library="dat">
+<var>${Query}</var>
+<arg>${DAT_DB}</arg>
+<msg timestamp="20231010 21:32:40.100" level="INFO">32</msg>
+<msg timestamp="20231010 21:32:40.100" level="INFO">${Query} = 32</msg>
+<status status="PASS" starttime="20231010 21:32:40.096" endtime="20231010 21:32:40.100"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Query}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231010 21:32:40.101" level="INFO">32</msg>
+<status status="PASS" starttime="20231010 21:32:40.100" endtime="20231010 21:32:40.101"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Valor}</var>
+<arg>${Query.${NomeColuna}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:40.111" level="INFO">${Valor} = 200454</msg>
+<status status="PASS" starttime="20231010 21:32:40.101" endtime="20231010 21:32:40.111"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:40.092" endtime="20231010 21:32:40.112"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:40.092" endtime="20231010 21:32:40.112"/>
+</if>
+<if>
+<branch type="IF" condition="'${Valor}' == '${EMPTY}'">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Valor}</arg>
+<arg>None</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.118" endtime="20231010 21:32:40.118"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:40.112" endtime="20231010 21:32:40.118"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:40.112" endtime="20231010 21:32:40.118"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:40.092" endtime="20231010 21:32:40.118"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DAT_CENARIO}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.119" endtime="20231010 21:32:40.119"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.120" endtime="20231010 21:32:40.120"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.120" endtime="20231010 21:32:40.121"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.121" endtime="20231010 21:32:40.121"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:40.119" endtime="20231010 21:32:40.121"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:40.119" endtime="20231010 21:32:40.121"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.123" endtime="20231010 21:32:40.124"/>
+</kw>
+<kw name="Get Worksheet Value" library="RPA.Excel.Files">
+<var>${Valor}</var>
+<arg>row=${NumLinha}</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Alias for keyword ``Get cell value``, see the original keyword
+for documentation.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.125" endtime="20231010 21:32:40.126"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:40.143" endtime="20231010 21:32:40.143"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:40.118" endtime="20231010 21:32:40.143"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:40.092" endtime="20231010 21:32:40.143"/>
+</if>
+<msg timestamp="20231010 21:32:40.143" level="INFO">${ADDRESS_ID} = 200454</msg>
+<status status="PASS" starttime="20231010 21:32:40.091" endtime="20231010 21:32:40.143"/>
+</kw>
+<kw name="Ler Variavel na Planilha" library="RES_EXCEL">
+<var>${ADDRESS_ID}</var>
+<arg>addressId</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<if>
+<branch type="IF" condition="'${DAT_DB}' != '${EMPTY}'">
+<kw name="Buscar Campo Dat Id" library="dat">
+<var>${Query}</var>
+<arg>${DAT_DB}</arg>
+<msg timestamp="20231010 21:32:40.154" level="INFO">32</msg>
+<msg timestamp="20231010 21:32:40.154" level="INFO">${Query} = 32</msg>
+<status status="PASS" starttime="20231010 21:32:40.150" endtime="20231010 21:32:40.154"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Query}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231010 21:32:40.155" level="INFO">32</msg>
+<status status="PASS" starttime="20231010 21:32:40.154" endtime="20231010 21:32:40.155"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Valor}</var>
+<arg>${Query.${NomeColuna}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:40.159" level="INFO">${Valor} = 200454</msg>
+<status status="PASS" starttime="20231010 21:32:40.155" endtime="20231010 21:32:40.159"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:40.145" endtime="20231010 21:32:40.160"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:40.145" endtime="20231010 21:32:40.160"/>
+</if>
+<if>
+<branch type="IF" condition="'${Valor}' == '${EMPTY}'">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Valor}</arg>
+<arg>None</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.163" endtime="20231010 21:32:40.163"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:40.160" endtime="20231010 21:32:40.163"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:40.160" endtime="20231010 21:32:40.163"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:40.144" endtime="20231010 21:32:40.163"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DAT_CENARIO}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.164" endtime="20231010 21:32:40.164"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.164" endtime="20231010 21:32:40.164"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.164" endtime="20231010 21:32:40.165"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.165" endtime="20231010 21:32:40.165"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:40.164" endtime="20231010 21:32:40.165"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:40.164" endtime="20231010 21:32:40.165"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.165" endtime="20231010 21:32:40.165"/>
+</kw>
+<kw name="Get Worksheet Value" library="RPA.Excel.Files">
+<var>${Valor}</var>
+<arg>row=${NumLinha}</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Alias for keyword ``Get cell value``, see the original keyword
+for documentation.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:40.166" endtime="20231010 21:32:40.166"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:40.174" endtime="20231010 21:32:40.175"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:40.163" endtime="20231010 21:32:40.175"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:40.144" endtime="20231010 21:32:40.175"/>
+</if>
+<msg timestamp="20231010 21:32:40.175" level="INFO">${ADDRESS_ID} = 200454</msg>
+<status status="PASS" starttime="20231010 21:32:40.144" endtime="20231010 21:32:40.175"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${StartDate}</var>
+<arg>${DataAgendamento}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:40.176" level="INFO">${StartDate} = 2023-10-11T08:00:00-03:00</msg>
+<status status="PASS" starttime="20231010 21:32:40.175" endtime="20231010 21:32:40.176"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${FinishDate}</var>
+<arg>${DataAgendamentoFim}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:40.177" level="INFO">${FinishDate} = 2023-10-24T12:00:00-03:00</msg>
+<status status="PASS" starttime="20231010 21:32:40.177" endtime="20231010 21:32:40.177"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${AssociatedDocumentDate}</var>
+<arg>${DataAgendamento}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:40.177" level="INFO">${AssociatedDocumentDate} = 2023-10-11T08:00:00-03:00</msg>
+<status status="PASS" starttime="20231010 21:32:40.177" endtime="20231010 21:32:40.177"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${PromiseDate}</var>
+<arg>${DataAgendamento}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:40.178" level="INFO">${PromiseDate} = 2023-10-11T08:00:00-03:00</msg>
+<status status="PASS" starttime="20231010 21:32:40.178" endtime="20231010 21:32:40.178"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${NormativeIndicatorDate}</var>
+<arg>${DataAgendamentoFim}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:40.178" level="INFO">${NormativeIndicatorDate} = 2023-10-24T12:00:00-03:00</msg>
+<status status="PASS" starttime="20231010 21:32:40.178" endtime="20231010 21:32:40.178"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${ActivityType}</var>
+<arg>4927</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231010 21:32:40.178" level="INFO">${ActivityType} = 4927</msg>
+<status status="PASS" starttime="20231010 21:32:40.178" endtime="20231010 21:32:40.178"/>
+</kw>
+<kw name="GET_API" library="RES_API">
+<var>${Response}</var>
+<arg>${API_BASEAPPOINTMENT}/searchTimeSlot?address.id=${ADDRESS_ID}&amp;startDate=${StartDate}&amp;finishDate=${FinishDate}&amp;associatedDocumentDate=${AssociatedDocumentDate}&amp;promiseDate=${PromiseDate}&amp;normativeIndicatorDate=${NormativeIndicatorDate}&amp;activityType=${ActivityType}</arg>
+<doc>Função usada para mandar um GET request para a API.
+| =Arguments= | =Description= |
+| ``REQUEST_URL`` | A URL requisitada para a requisição. exemplo: ``/api/foo``. |
+A resposta é um retorno JSON que contem:
+- ``type`` &lt;int&gt; Tipo da resposta do Retorno. Exemplo: S(Sucesso) e E(ERRO).
+- ``code`` &lt;int&gt; Codigo da reposta do retorno. Exemplo: 200(Ok) 404(Not Found).
+- ``message`` &lt;str&gt; Descrição do código de retorno. Exemplo: 200(Ok) 404(Not Found).
+Alguns exemplos de como usar a função:
+| ${RESPONSE}=                          GET_API                                 https://apitrg.vtal.com.br/api/geographicAddressManagement/v1/addressComplements/195371</doc>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>StartAPI</arg>
+<arg>${URL_API}</arg>
+<arg>verify=true</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20231010 21:32:40.188" level="INFO">Creating Session using : alias=StartAPI, url=https://apitrg.vtal.com.br, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20231010 21:32:40.187" endtime="20231010 21:32:40.188"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${HEADERS}</var>
+<arg>Content-Type=${CONTENT_TYPE}</arg>
+<arg>User-Agent=RobotFramework</arg>
+<arg>Accept=*/*</arg>
+<arg>Authorization=Bearer ${TOKEN}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231010 21:32:40.188" level="INFO">${HEADERS} = {'Content-Type': 'application/json; charset=iso-8859-1', 'User-Agent': 'RobotFramework', 'Accept': '*/*', 'Authorization': 'Bearer c53d6bb8-e331-411a-9a66-248472139216'}</msg>
+<status status="PASS" starttime="20231010 21:32:40.188" endtime="20231010 21:32:40.189"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${RESPONSE}</var>
+<arg>StartAPI</arg>
+<arg>${REQUEST_URL}</arg>
+<arg>headers=${HEADERS}</arg>
+<arg>expected_status=Anything</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20231010 21:32:54.044" level="INFO">GET Request : url=https://apitrg.vtal.com.br/api/appointment/v1/searchTimeSlot?address.id=200454&amp;startDate=2023-10-11T08:00:00-03:00&amp;finishDate=2023-10-24T12:00:00-03:00&amp;associatedDocumentDate=2023-10-11T08:00:00-03:00&amp;promiseDate=2023-10-11T08:00:00-03:00&amp;normativeIndicatorDate=2023-10-24T12:00:00-03:00&amp;activityType=4927 
+ path_url=/api/appointment/v1/searchTimeSlot?address.id=200454&amp;startDate=2023-10-11T08:00:00-03:00&amp;finishDate=2023-10-24T12:00:00-03:00&amp;associatedDocumentDate=2023-10-11T08:00:00-03:00&amp;promiseDate=2023-10-11T08:00:00-03:00&amp;normativeIndicatorDate=2023-10-24T12:00:00-03:00&amp;activityType=4927 
+ headers={'User-Agent': 'RobotFramework', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json; charset=iso-8859-1', 'Authorization': 'Bearer c53d6bb8-e331-411a-9a66-248472139216'} 
+ body=None 
+ </msg>
+<msg timestamp="20231010 21:32:54.044" level="INFO">GET Response : url=https://apitrg.vtal.com.br/api/appointment/v1/searchTimeSlot?address.id=200454&amp;startDate=2023-10-11T08:00:00-03:00&amp;finishDate=2023-10-24T12:00:00-03:00&amp;associatedDocumentDate=2023-10-11T08:00:00-03:00&amp;promiseDate=2023-10-11T08:00:00-03:00&amp;normativeIndicatorDate=2023-10-24T12:00:00-03:00&amp;activityType=4927 
+ status=200, reason=OK 
+ headers={'X-ORACLE-DMS-ECID': '7c97bbc5-4353-4b0a-b6ad-405eb35f77ff-0045d48d', 'X-ORACLE-DMS-RID': '0', 'Content-Encoding': 'gzip', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '206', 'Date': 'Tue, 10 Oct 2023 21:32:55 GMT', 'Server': 'Layer7-API-Gateway', 'Set-Cookie': 'BIGipServerRD16_POOL_APIGQX02LB_8443=rd16o00000000000000000000ffffac128416o8443; path=/; Httponly; Secure'} 
+ body={
+  "control" : {
+    "type" : "S",
+    "code" : "200",
+    "message" : "Ok"
+  },
+  "slots" : [ {
+    "appointmentStart" : "2023-10-11T08:00:00",
+    "appointmentFinish" : "2023-10-11T12:00:00"
+  }, {
+    "appointmentStart" : "2023-10-11T13:00:00",
+    "appointmentFinish" : "2023-10-11T20:00:00"
+  }, {
+    "appointmentStart" : "2023-10-12T08:00:00",
+    "appointmentFinish" : "2023-10-12T12:00:00"
+  }, {
+    "appointmentStart" : "2023-10-12T13:00:00",
+    "appointmentFinish" : "2023-10-12T22:00:00"
+  }, {
+    "appointmentStart" : "2023-10-13T08:00:00",
+    "appointmentFinish" : "2023-10-13T12:00:00"
+  }, {
+    "appointmentStart" : "2023-10-13T13:00:00",
+    "appointmentFinish" : "2023-10-13T22:00:00"
+  }, {
+    "appointmentStart" : "2023-10-14T08:00:00",
+    "appointmentFinish" : "2023-10-14T12:00:00"
+  }, {
+    "appointmentStart" : "2023-10-14T13:00:00",
+    "appointmentFinish" : "2023-10-14T17:00:00"
+  }, {
+    "appointmentStart" : "2023-10-15T08:00:00",
+    "appointmentFinish" : "2023-10-15T12:00:00"
+  }, {
+    "appointmentStart" : "2023-10-15T13:00:00",
+    "appointmentFinish" : "2023-10-15T17:00:00"
+  } ]
+} 
+ </msg>
+<msg timestamp="20231010 21:32:54.044" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231010 21:32:40.189" endtime="20231010 21:32:54.044"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${RESPONSE}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231010 21:32:54.045" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231010 21:32:54.045" endtime="20231010 21:32:54.045"/>
+</kw>
+<msg timestamp="20231010 21:32:54.045" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231010 21:32:40.186" endtime="20231010 21:32:54.046"/>
+</kw>
+<kw name="Valida Retorno da API" library="RES_API">
+<arg>${Response.status_code}</arg>
+<arg>200</arg>
+<arg>Retornar Slot Agendamento</arg>
+<doc>Função usada para mandar validar o retorno da API, caso um retorno 500 seja dado muitas vezes ou  um retorno diferente do esperado ele cria um documento de defect.
+| =Arguments= | =Description= |
+| ``STATUS_RECEBIDO`` | Recebe o status de Retorno da API. exemplo: ``404(Not Found)``. |
+| ``STATUS_ESPERADO`` | Recebe o status Esperado da API. exemplo: ``200(Ok)``. |
+| ``FUNCAO_API`` | Recebe o nome da função para que ela execute novamente caso seja diferente o resultado: exemplo: ``Retornar Address Id``. |
+A resposta é um retorno JSON que contem:
+- ``type`` &lt;int&gt; Tipo da resposta do Retorno. Exemplo: S(Sucesso) e E(ERRO).
+- ``code`` &lt;int&gt; Codigo da reposta do retorno. Exemplo: 200(Ok) 404(Not Found).
+- ``message`` &lt;str&gt; Descrição do código de retorno. Exemplo: 200(Ok) 404(Not Found).
+Alguns exemplos de como usar a função:
+| Valida Retorno da API                   200                 200                                     Retornar Address Id
+Biblioteca utilizada: [https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html#PATCH|RequestsLibrary &gt;&gt;]</doc>
+<if>
+<branch type="IF" condition="'${status_recebido}' == '500'">
+<kw name="Evaluate" library="BuiltIn">
+<var>${Counter_API}</var>
+<arg>${Counter_API} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.056" endtime="20231010 21:32:54.056"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Counter_API}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.056" endtime="20231010 21:32:54.056"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nErro ${status_recebido} recebido, tentando novamente!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.056" endtime="20231010 21:32:54.056"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.057" endtime="20231010 21:32:54.057"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Counter_API}&quot; == &quot;3&quot;">
+<kw name="Fatal Error" library="BuiltIn">
+<arg>\nApós 3 execuções a API continua retornando erro ${status_esperado}</arg>
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.057" endtime="20231010 21:32:54.057"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.057" endtime="20231010 21:32:54.057"/>
+</branch>
+<status status="NOT RUN" starttime="20231010 21:32:54.057" endtime="20231010 21:32:54.057"/>
+</if>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${Funcao_API}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.057" endtime="20231010 21:32:54.057"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.055" endtime="20231010 21:32:54.057"/>
+</branch>
+<branch type="ELSE IF" condition="'${status_recebido}' != '${status_esperado}'">
+<kw name="Fatal Error" library="BuiltIn">
+<arg>\n Retorno da API diferente do esperado ${status_recebido} != ${status_esperado}</arg>
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.058" endtime="20231010 21:32:54.058"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.057" endtime="20231010 21:32:54.058"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.055" endtime="20231010 21:32:54.058"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:54.050" endtime="20231010 21:32:54.058"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${AppointmentStart}</var>
+<arg>${Response.json()}</arg>
+<arg>$.slots[0].appointmentStart</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20231010 21:32:54.080" level="INFO">${AppointmentStart} = ['2023-10-11T08:00:00']</msg>
+<status status="PASS" starttime="20231010 21:32:54.058" endtime="20231010 21:32:54.080"/>
+</kw>
+<kw name="Convert Json To String" library="JSONLibrary">
+<var>${AppointmentStart}</var>
+<arg>${AppointmentStart[0]}</arg>
+<doc>Convert JSON object to string</doc>
+<msg timestamp="20231010 21:32:54.084" level="INFO">${AppointmentStart} = "2023-10-11T08:00:00"</msg>
+<status status="PASS" starttime="20231010 21:32:54.080" endtime="20231010 21:32:54.084"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${AppointmentStart}</var>
+<arg>${AppointmentStart}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20231010 21:32:54.087" level="INFO">${AppointmentStart} = 2023-10-11T08:00:00</msg>
+<status status="PASS" starttime="20231010 21:32:54.084" endtime="20231010 21:32:54.087"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${AppointmentFinish}</var>
+<arg>${Response.json()}</arg>
+<arg>$.slots[0].appointmentFinish</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20231010 21:32:54.108" level="INFO">${AppointmentFinish} = ['2023-10-11T12:00:00']</msg>
+<status status="PASS" starttime="20231010 21:32:54.088" endtime="20231010 21:32:54.108"/>
+</kw>
+<kw name="Convert Json To String" library="JSONLibrary">
+<var>${AppointmentFinish}</var>
+<arg>${AppointmentFinish[0]}</arg>
+<doc>Convert JSON object to string</doc>
+<msg timestamp="20231010 21:32:54.112" level="INFO">${AppointmentFinish} = "2023-10-11T12:00:00"</msg>
+<status status="PASS" starttime="20231010 21:32:54.108" endtime="20231010 21:32:54.112"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${AppointmentFinish}</var>
+<arg>${AppointmentFinish}</arg>
+<arg>"</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20231010 21:32:54.115" level="INFO">${AppointmentFinish} = 2023-10-11T12:00:00</msg>
+<status status="PASS" starttime="20231010 21:32:54.112" endtime="20231010 21:32:54.115"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${AppointmentStart}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231010 21:32:54.116" level="INFO">${AppointmentStart} = 2023-10-11T08:00:00</msg>
+<status status="PASS" starttime="20231010 21:32:54.115" endtime="20231010 21:32:54.116"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${AppointmentFinish}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20231010 21:32:54.116" level="INFO">${AppointmentFinish} = 2023-10-11T12:00:00</msg>
+<status status="PASS" starttime="20231010 21:32:54.116" endtime="20231010 21:32:54.116"/>
+</kw>
+<kw name="Escrever Variavel na Planilha" library="RES_EXCEL">
+<arg>${DataAgendamento}</arg>
+<arg>associatedDocumentDate</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a escrita de valores em determinada coluna na planilha de parâmetros.</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<if>
+<branch type="IF" condition="'${Valor}' == &quot;None&quot;">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Valor}</arg>
+<arg>${EMPTY}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.117" endtime="20231010 21:32:54.117"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.117" endtime="20231010 21:32:54.117"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.117" endtime="20231010 21:32:54.117"/>
+</if>
+<kw name="Atualizar Dados Dat By Id" library="dat">
+<var>${DAT_DB}</var>
+<arg>${DAT_DB}</arg>
+<arg>${NomeColuna}</arg>
+<arg>${Valor}</arg>
+<msg timestamp="20231010 21:32:54.128" level="INFO">32</msg>
+<msg timestamp="20231010 21:32:54.128" level="INFO">${DAT_DB} = 32</msg>
+<status status="PASS" starttime="20231010 21:32:54.117" endtime="20231010 21:32:54.129"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:54.116" endtime="20231010 21:32:54.129"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DAT_CENARIO}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.129" endtime="20231010 21:32:54.129"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.130" endtime="20231010 21:32:54.130"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.130" endtime="20231010 21:32:54.130"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.130" endtime="20231010 21:32:54.130"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.129" endtime="20231010 21:32:54.130"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:54.129" endtime="20231010 21:32:54.130"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.130" endtime="20231010 21:32:54.130"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=${NumLinha}</arg>
+<arg>column=${i}</arg>
+<arg>value=${Valor}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.131" endtime="20231010 21:32:54.131"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.131" endtime="20231010 21:32:54.131"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:54.139" endtime="20231010 21:32:54.139"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.129" endtime="20231010 21:32:54.139"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.116" endtime="20231010 21:32:54.139"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:54.116" endtime="20231010 21:32:54.139"/>
+</kw>
+<kw name="Escrever Variavel na Planilha" library="RES_EXCEL">
+<arg>${AppointmentStart}</arg>
+<arg>appointmentStart</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a escrita de valores em determinada coluna na planilha de parâmetros.</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<if>
+<branch type="IF" condition="'${Valor}' == &quot;None&quot;">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Valor}</arg>
+<arg>${EMPTY}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.140" endtime="20231010 21:32:54.140"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.140" endtime="20231010 21:32:54.140"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.140" endtime="20231010 21:32:54.140"/>
+</if>
+<kw name="Atualizar Dados Dat By Id" library="dat">
+<var>${DAT_DB}</var>
+<arg>${DAT_DB}</arg>
+<arg>${NomeColuna}</arg>
+<arg>${Valor}</arg>
+<msg timestamp="20231010 21:32:54.148" level="INFO">32</msg>
+<msg timestamp="20231010 21:32:54.149" level="INFO">${DAT_DB} = 32</msg>
+<status status="PASS" starttime="20231010 21:32:54.140" endtime="20231010 21:32:54.149"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:54.140" endtime="20231010 21:32:54.149"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DAT_CENARIO}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.149" endtime="20231010 21:32:54.149"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.150" endtime="20231010 21:32:54.150"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.150" endtime="20231010 21:32:54.150"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.150" endtime="20231010 21:32:54.150"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.149" endtime="20231010 21:32:54.150"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:54.149" endtime="20231010 21:32:54.150"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.150" endtime="20231010 21:32:54.151"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=${NumLinha}</arg>
+<arg>column=${i}</arg>
+<arg>value=${Valor}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.151" endtime="20231010 21:32:54.151"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.151" endtime="20231010 21:32:54.151"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:54.190" endtime="20231010 21:32:54.190"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.149" endtime="20231010 21:32:54.190"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.140" endtime="20231010 21:32:54.190"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:54.139" endtime="20231010 21:32:54.190"/>
+</kw>
+<kw name="Escrever Variavel na Planilha" library="RES_EXCEL">
+<arg>${AppointmentFinish}</arg>
+<arg>appointmentFinish</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a escrita de valores em determinada coluna na planilha de parâmetros.</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<if>
+<branch type="IF" condition="'${Valor}' == &quot;None&quot;">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Valor}</arg>
+<arg>${EMPTY}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.192" endtime="20231010 21:32:54.192"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.191" endtime="20231010 21:32:54.192"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.191" endtime="20231010 21:32:54.192"/>
+</if>
+<kw name="Atualizar Dados Dat By Id" library="dat">
+<var>${DAT_DB}</var>
+<arg>${DAT_DB}</arg>
+<arg>${NomeColuna}</arg>
+<arg>${Valor}</arg>
+<msg timestamp="20231010 21:32:54.201" level="INFO">32</msg>
+<msg timestamp="20231010 21:32:54.201" level="INFO">${DAT_DB} = 32</msg>
+<status status="PASS" starttime="20231010 21:32:54.192" endtime="20231010 21:32:54.201"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:54.191" endtime="20231010 21:32:54.201"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DAT_CENARIO}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.202" endtime="20231010 21:32:54.202"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.203" endtime="20231010 21:32:54.203"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.203" endtime="20231010 21:32:54.203"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.203" endtime="20231010 21:32:54.203"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.202" endtime="20231010 21:32:54.203"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:54.202" endtime="20231010 21:32:54.204"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.204" endtime="20231010 21:32:54.204"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=${NumLinha}</arg>
+<arg>column=${i}</arg>
+<arg>value=${Valor}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.204" endtime="20231010 21:32:54.204"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.204" endtime="20231010 21:32:54.204"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:54.214" endtime="20231010 21:32:54.214"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.202" endtime="20231010 21:32:54.214"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.191" endtime="20231010 21:32:54.215"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:54.191" endtime="20231010 21:32:54.215"/>
+</kw>
+<kw name="Escrever Variavel na Planilha" library="RES_EXCEL">
+<arg>${DataAgendamento}</arg>
+<arg>associatedDocumentDate</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a escrita de valores em determinada coluna na planilha de parâmetros.</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<if>
+<branch type="IF" condition="'${Valor}' == &quot;None&quot;">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Valor}</arg>
+<arg>${EMPTY}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.216" endtime="20231010 21:32:54.216"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.216" endtime="20231010 21:32:54.216"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.216" endtime="20231010 21:32:54.216"/>
+</if>
+<kw name="Atualizar Dados Dat By Id" library="dat">
+<var>${DAT_DB}</var>
+<arg>${DAT_DB}</arg>
+<arg>${NomeColuna}</arg>
+<arg>${Valor}</arg>
+<msg timestamp="20231010 21:32:54.224" level="INFO">32</msg>
+<msg timestamp="20231010 21:32:54.224" level="INFO">${DAT_DB} = 32</msg>
+<status status="PASS" starttime="20231010 21:32:54.216" endtime="20231010 21:32:54.224"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:54.215" endtime="20231010 21:32:54.224"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DAT_CENARIO}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.225" endtime="20231010 21:32:54.225"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.225" endtime="20231010 21:32:54.225"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.226" endtime="20231010 21:32:54.226"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.226" endtime="20231010 21:32:54.226"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.225" endtime="20231010 21:32:54.226"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:54.225" endtime="20231010 21:32:54.226"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.226" endtime="20231010 21:32:54.226"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=${NumLinha}</arg>
+<arg>column=${i}</arg>
+<arg>value=${Valor}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.226" endtime="20231010 21:32:54.226"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.227" endtime="20231010 21:32:54.227"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:54.234" endtime="20231010 21:32:54.234"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.224" endtime="20231010 21:32:54.234"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.215" endtime="20231010 21:32:54.234"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:54.215" endtime="20231010 21:32:54.234"/>
+</kw>
+<kw name="Escrever Variavel na Planilha" library="RES_EXCEL">
+<arg>${AppointmentStart}</arg>
+<arg>appointmentStart</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a escrita de valores em determinada coluna na planilha de parâmetros.</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<if>
+<branch type="IF" condition="'${Valor}' == &quot;None&quot;">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Valor}</arg>
+<arg>${EMPTY}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.235" endtime="20231010 21:32:54.236"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.235" endtime="20231010 21:32:54.236"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.235" endtime="20231010 21:32:54.236"/>
+</if>
+<kw name="Atualizar Dados Dat By Id" library="dat">
+<var>${DAT_DB}</var>
+<arg>${DAT_DB}</arg>
+<arg>${NomeColuna}</arg>
+<arg>${Valor}</arg>
+<msg timestamp="20231010 21:32:54.244" level="INFO">32</msg>
+<msg timestamp="20231010 21:32:54.244" level="INFO">${DAT_DB} = 32</msg>
+<status status="PASS" starttime="20231010 21:32:54.236" endtime="20231010 21:32:54.244"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:54.235" endtime="20231010 21:32:54.244"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DAT_CENARIO}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.245" endtime="20231010 21:32:54.245"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.245" endtime="20231010 21:32:54.246"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.246" endtime="20231010 21:32:54.246"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.246" endtime="20231010 21:32:54.246"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.245" endtime="20231010 21:32:54.246"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:54.245" endtime="20231010 21:32:54.246"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.246" endtime="20231010 21:32:54.246"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=${NumLinha}</arg>
+<arg>column=${i}</arg>
+<arg>value=${Valor}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.246" endtime="20231010 21:32:54.247"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.247" endtime="20231010 21:32:54.247"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:54.254" endtime="20231010 21:32:54.254"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.245" endtime="20231010 21:32:54.254"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.235" endtime="20231010 21:32:54.254"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:54.235" endtime="20231010 21:32:54.254"/>
+</kw>
+<kw name="Escrever Variavel na Planilha" library="RES_EXCEL">
+<arg>${AppointmentFinish}</arg>
+<arg>appointmentFinish</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a escrita de valores em determinada coluna na planilha de parâmetros.</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<if>
+<branch type="IF" condition="'${Valor}' == &quot;None&quot;">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Valor}</arg>
+<arg>${EMPTY}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.255" endtime="20231010 21:32:54.255"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.255" endtime="20231010 21:32:54.256"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.255" endtime="20231010 21:32:54.256"/>
+</if>
+<kw name="Atualizar Dados Dat By Id" library="dat">
+<var>${DAT_DB}</var>
+<arg>${DAT_DB}</arg>
+<arg>${NomeColuna}</arg>
+<arg>${Valor}</arg>
+<msg timestamp="20231010 21:32:54.263" level="INFO">32</msg>
+<msg timestamp="20231010 21:32:54.263" level="INFO">${DAT_DB} = 32</msg>
+<status status="PASS" starttime="20231010 21:32:54.256" endtime="20231010 21:32:54.263"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:54.255" endtime="20231010 21:32:54.264"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DAT_CENARIO}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.264" endtime="20231010 21:32:54.264"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.265" endtime="20231010 21:32:54.265"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.265" endtime="20231010 21:32:54.265"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.265" endtime="20231010 21:32:54.265"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.264" endtime="20231010 21:32:54.265"/>
+</iter>
+<status status="NOT RUN" starttime="20231010 21:32:54.264" endtime="20231010 21:32:54.265"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.265" endtime="20231010 21:32:54.265"/>
+</kw>
+<kw name="Set Cell Value" library="RPA.Excel.Files">
+<arg>row=${NumLinha}</arg>
+<arg>column=${i}</arg>
+<arg>value=${Valor}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Set a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.265" endtime="20231010 21:32:54.266"/>
+</kw>
+<kw name="Save Workbook" library="RPA.Excel.Files">
+<doc>Save the active workbook.</doc>
+<status status="NOT RUN" starttime="20231010 21:32:54.266" endtime="20231010 21:32:54.266"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20231010 21:32:54.273" endtime="20231010 21:32:54.273"/>
+</kw>
+<status status="NOT RUN" starttime="20231010 21:32:54.264" endtime="20231010 21:32:54.273"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.255" endtime="20231010 21:32:54.273"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:54.255" endtime="20231010 21:32:54.273"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:40.090" endtime="20231010 21:32:54.273"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:40.089" endtime="20231010 21:32:54.274"/>
+</kw>
+<kw name="Fecha CT" library="DB">
+<arg>API</arg>
+<arg>02_07_Realizar_o_Agendamento</arg>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Log" library="BuiltIn">
+<arg>${DAT_DB}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231010 21:32:54.275" level="INFO">32</msg>
+<status status="PASS" starttime="20231010 21:32:54.274" endtime="20231010 21:32:54.275"/>
+</kw>
+<kw name="Atualizar Steps Dat" library="dat">
+<arg>${DAT_DB}</arg>
+<arg>${RESPONSAVEL}</arg>
+<arg>${SYSTEM}</arg>
+<arg>${NEW_STEP}</arg>
+<msg timestamp="20231010 21:32:54.281" level="INFO">DAT atualizado com sucesso!</msg>
+<status status="PASS" starttime="20231010 21:32:54.275" endtime="20231010 21:32:54.281"/>
+</kw>
+<status status="PASS" starttime="20231010 21:32:54.274" endtime="20231010 21:32:54.281"/>
+</branch>
+<status status="PASS" starttime="20231010 21:32:54.274" endtime="20231010 21:32:54.281"/>
+</if>
+<status status="PASS" starttime="20231010 21:32:54.274" endtime="20231010 21:32:54.281"/>
+</kw>
+<tag>02_06_Realizar_Consulta_de_Slots</tag>
+<tag>COMPLETO</tag>
+<status status="PASS" starttime="20231010 21:32:38.693" endtime="20231010 21:32:54.282"/>
+</test>
+<doc>Agrupador responsavel por chamar TC dos ROBS referentes ao cenario
+INPUT: Address, Customer_Name, Phone_Number, Reference,
+OUTPUT: Address_Id, TypeComplement1, Value1, TypeComplement2, Value2, TypeComplement3, Value3,</doc>
+<status status="PASS" starttime="20231010 21:32:35.490" endtime="20231010 21:32:54.291"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">02_06_Realizar_Consulta_de_Slots</stat>
+<stat pass="1" fail="0" skip="0">COMPLETO</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="002 AtivacaoSemNumResidenciaViaFSL">002 AtivacaoSemNumResidenciaViaFSL</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231010 21:32:35.849" level="ERROR">Error in file '/robot/test/SCRIPTS/RESOURCE/COMMON/RES_UTIL.robot' on line 49: Creating keyword '' failed: Multiple errors:
+- User keyword cannot be empty.
+- User keyword name cannot be empty.</msg>
+<msg timestamp="20231010 21:32:36.100" level="WARN">Any `RPA.*.Application` library works only on Windows platform!</msg>
+<msg timestamp="20231010 21:32:36.101" level="WARN">This Excel application library requires Windows dependencies to work.</msg>
+<msg timestamp="20231010 21:32:36.715" level="WARN">Imported library '/robot/test/SCRIPTS/RESOURCE/COMMON/LIB/lib_geral.py' contains no keywords.</msg>
+</errors>
+</robot>

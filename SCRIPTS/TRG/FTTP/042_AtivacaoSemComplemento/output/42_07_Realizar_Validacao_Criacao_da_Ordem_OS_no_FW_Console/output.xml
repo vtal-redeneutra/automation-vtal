@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20230808 19:07:03.736" rpa="false" schemaversion="3">
+<suite id="s1" name="042 AtivacaoSemComplemento" source="/robot/test/SCRIPTS/TRG/FTTP/042_AtivacaoSemComplemento/042_AtivacaoSemComplemento.robot">
+<test id="s1-t1" name="42.07 - Realizar Validacao Criacao da Ordem (OS) no FW Console" line="53">
+<kw name="Inicia CT" library="DB">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${PORTAL}</var>
+<arg>Variable Should Exist</arg>
+<arg>${PORTAL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Variable Should Exist" library="BuiltIn">
+<arg>${PORTAL}</arg>
+<doc>Fails unless the given variable exists within the current scope.</doc>
+<status status="PASS" starttime="20230808 19:07:05.450" endtime="20230808 19:07:05.450"/>
+</kw>
+<msg timestamp="20230808 19:07:05.451" level="INFO">${PORTAL} = True</msg>
+<status status="PASS" starttime="20230808 19:07:05.449" endtime="20230808 19:07:05.451"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${check_step}</var>
+<arg>Variable Should Exist</arg>
+<arg>${STEP}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Variable Should Exist" library="BuiltIn">
+<arg>${STEP}</arg>
+<doc>Fails unless the given variable exists within the current scope.</doc>
+<status status="PASS" starttime="20230808 19:07:05.452" endtime="20230808 19:07:05.452"/>
+</kw>
+<msg timestamp="20230808 19:07:05.453" level="INFO">${check_step} = True</msg>
+<status status="PASS" starttime="20230808 19:07:05.451" endtime="20230808 19:07:05.453"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PORTAL}</arg>
+<arg>${PORTAL}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230808 19:07:05.453" level="INFO">${PORTAL} = True</msg>
+<status status="PASS" starttime="20230808 19:07:05.453" endtime="20230808 19:07:05.453"/>
+</kw>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Log" library="BuiltIn">
+<arg>${CEP}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230808 19:07:05.454" level="INFO">00000000</msg>
+<status status="PASS" starttime="20230808 19:07:05.454" endtime="20230808 19:07:05.454"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${NUMERO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230808 19:07:05.455" level="INFO">00</msg>
+<status status="PASS" starttime="20230808 19:07:05.455" endtime="20230808 19:07:05.455"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${check_step}</arg>
+<arg>Set Step</arg>
+<arg>${STEP}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Set Step" library="DB">
+<arg>${STEP}</arg>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${STEP}</arg>
+<arg>${STEP}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230808 19:07:05.460" level="INFO">${STEP} = 42_07_Realizar_Validacao_Criacao_da_Ordem_OS_no_FW_Console</msg>
+<status status="PASS" starttime="20230808 19:07:05.459" endtime="20230808 19:07:05.460"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:05.457" endtime="20230808 19:07:05.460"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:05.456" endtime="20230808 19:07:05.461"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${RESPONSAVEL}</arg>
+<arg>${RESPONSAVEL}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230808 19:07:05.462" level="INFO">${RESPONSAVEL} = berg</msg>
+<status status="PASS" starttime="20230808 19:07:05.461" endtime="20230808 19:07:05.462"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${AUTHENTICATION}</arg>
+<arg>${AUTHENTICATION}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230808 19:07:05.464" level="INFO">${AUTHENTICATION} = FTTP</msg>
+<status status="PASS" starttime="20230808 19:07:05.463" endtime="20230808 19:07:05.464"/>
+</kw>
+<kw name="Buscar Dat Do Usuario" library="dat">
+<var>${DAT_DB}</var>
+<arg>${RESPONSAVEL}</arg>
+<arg>${STEP}</arg>
+<msg timestamp="20230808 19:07:05.470" level="INFO">${DAT_DB} = 50</msg>
+<status status="PASS" starttime="20230808 19:07:05.465" endtime="20230808 19:07:05.470"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${DAT_DB}</arg>
+<arg>${DAT_DB}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230808 19:07:05.471" level="INFO">${DAT_DB} = 50</msg>
+<status status="PASS" starttime="20230808 19:07:05.470" endtime="20230808 19:07:05.471"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:05.454" endtime="20230808 19:07:05.471"/>
+</branch>
+<status status="PASS" starttime="20230808 19:07:05.453" endtime="20230808 19:07:05.472"/>
+</if>
+<status status="PASS" starttime="20230808 19:07:05.448" endtime="20230808 19:07:05.472"/>
+</kw>
+<kw name="Validar Criação da Ordem" library="UTILS">
+<doc>Acessa a Auditoria ELK, acessa o evento ProductOrdering.PostProductOrder. Valida, no passo "END - Finalização do serviço", se contém o código &gt;201&lt;.</doc>
+<kw name="Ler Variavel na Planilha" library="RES_EXCEL">
+<var>${valor_pesquisa}</var>
+<arg>${COLUNA_PESQUISA}</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<if>
+<branch type="IF" condition="'${DAT_DB}' != '${EMPTY}'">
+<kw name="Buscar Campo Dat Id" library="dat">
+<var>${Query}</var>
+<arg>${DAT_DB}</arg>
+<msg timestamp="20230808 19:07:05.482" level="INFO">50</msg>
+<msg timestamp="20230808 19:07:05.482" level="INFO">${Query} = 50</msg>
+<status status="PASS" starttime="20230808 19:07:05.479" endtime="20230808 19:07:05.482"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Query}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230808 19:07:05.483" level="INFO">50</msg>
+<status status="PASS" starttime="20230808 19:07:05.482" endtime="20230808 19:07:05.483"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Valor}</var>
+<arg>${Query.${NomeColuna}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230808 19:07:05.486" level="INFO">${Valor} = ibm0808190653</msg>
+<status status="PASS" starttime="20230808 19:07:05.483" endtime="20230808 19:07:05.486"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:05.478" endtime="20230808 19:07:05.486"/>
+</branch>
+<status status="PASS" starttime="20230808 19:07:05.475" endtime="20230808 19:07:05.486"/>
+</if>
+<if>
+<branch type="IF" condition="'${Valor}' == '${EMPTY}'">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Valor}</arg>
+<arg>None</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:05.491" endtime="20230808 19:07:05.492"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 19:07:05.490" endtime="20230808 19:07:05.492"/>
+</branch>
+<status status="PASS" starttime="20230808 19:07:05.486" endtime="20230808 19:07:05.492"/>
+</if>
+<status status="PASS" starttime="20230808 19:07:05.475" endtime="20230808 19:07:05.492"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DAT_CENARIO}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:05.493" endtime="20230808 19:07:05.493"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:05.494" endtime="20230808 19:07:05.494"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:05.495" endtime="20230808 19:07:05.495"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:05.496" endtime="20230808 19:07:05.496"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 19:07:05.494" endtime="20230808 19:07:05.496"/>
+</iter>
+<status status="NOT RUN" starttime="20230808 19:07:05.493" endtime="20230808 19:07:05.496"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:05.496" endtime="20230808 19:07:05.496"/>
+</kw>
+<kw name="Get Worksheet Value" library="RPA.Excel.Files">
+<var>${Valor}</var>
+<arg>row=${NumLinha}</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Alias for keyword ``Get cell value``, see the original keyword
+for documentation.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:05.497" endtime="20230808 19:07:05.497"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20230808 19:07:05.509" endtime="20230808 19:07:05.509"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 19:07:05.492" endtime="20230808 19:07:05.509"/>
+</branch>
+<status status="PASS" starttime="20230808 19:07:05.475" endtime="20230808 19:07:05.509"/>
+</if>
+<msg timestamp="20230808 19:07:05.509" level="INFO">${valor_pesquisa} = ibm0808190653</msg>
+<status status="PASS" starttime="20230808 19:07:05.474" endtime="20230808 19:07:05.510"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${XPATH_XML}</var>
+<arg>//*[text()="END - Finalização do serviço"]/../..//textarea</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230808 19:07:05.510" level="INFO">${XPATH_XML} = //*[text()="END - Finalização do serviço"]/../..//textarea</msg>
+<status status="PASS" starttime="20230808 19:07:05.510" endtime="20230808 19:07:05.510"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${Data_FW}</var>
+<arg>result_format=%d/%m/%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20230808 19:07:05.511" level="INFO">${Data_FW} = 08/08/2023</msg>
+<status status="PASS" starttime="20230808 19:07:05.511" endtime="20230808 19:07:05.511"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${Data_FW}</var>
+<arg>${Data_FW}</arg>
+<arg>/</arg>
+<arg>%2F</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20230808 19:07:05.512" level="INFO">${Data_FW} = 08%2F08%2F2023</msg>
+<status status="PASS" starttime="20230808 19:07:05.511" endtime="20230808 19:07:05.512"/>
+</kw>
+<kw name="Contexto para navegador" library="RES_UTIL">
+<arg>${URL_FW_SEM_LOGIN}?date1=${Data_FW}+01%3A00&amp;date2=${Data_FW}+23%3A59&amp;queryText=${valor_pesquisa}</arg>
+<doc>Keyword responsável por Criar contextos padrões para navegadores</doc>
+<kw name="New Browser" library="Browser">
+<arg>${Navegador}</arg>
+<arg>True</arg>
+<arg>devtools=False</arg>
+<arg>timeout=01:00</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230808 19:07:05.514" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 60000.0, "tracesDir": "/robot/test/SCRIPTS/TRG/FTTP/042_AtivacaoSemComplemento/output/42_07_Realizar_Validacao_Criacao_da_Ordem_OS_no_FW_Console/browser/traces/09c97acc-2e06-4d35-a08a-23d597f3b89f"}</msg>
+<msg timestamp="20230808 19:07:05.788" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":60000,"tracesDir":"/robot/test/SCRIPTS/TRG/FTTP/042_AtivacaoSemComplemento/output/42_07_Realizar_Validacao_Criacao_da_Ordem_OS_no_FW_Console/browser/traces/09c97acc-2e06-4d35-a08a-23d597f3b89f"}</msg>
+<status status="PASS" starttime="20230808 19:07:05.513" endtime="20230808 19:07:05.788"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>1m 30 seconds</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230808 19:07:05.795" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230808 19:07:05.789" endtime="20230808 19:07:05.795"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url_Sistema}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230808 19:07:19.224" level="INFO">Successfully initialized new page object and opened url: http://bsoaqx04a:7003/fwconsole/jsp/auditoriav2?date1=08%2F08%2F2023+01%3A00&amp;date2=08%2F08%2F2023+23%3A59&amp;queryText=ibm0808190653</msg>
+<msg timestamp="20230808 19:07:19.224" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230808 19:07:05.795" endtime="20230808 19:07:19.224"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:05.512" endtime="20230808 19:07:19.224"/>
+</kw>
+<kw name="Input Text Web Element Is Visible" library="RES_UTIL">
+<arg>${input_texto_consulta}</arg>
+<arg>${valor_pesquisa}</arg>
+<doc>Função que insere uma informação num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+| ``VALUE`` | Valor a ser adicionado ao campo. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| ${input_login} //input[contains(@id,'username')]
+| Input Text Web Element Is Visible ${input_login} admin
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>Visible</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230808 19:07:19.261" level="INFO">Waited for Element with selector //input[@placeholder='Texto de Consulta...'] at state visible</msg>
+<status status="PASS" starttime="20230808 19:07:19.234" endtime="20230808 19:07:19.262"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>${VALUE}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20230808 19:07:19.262" level="INFO">Fills the text 'ibm0808190653' in the given field.</msg>
+<status status="PASS" starttime="20230808 19:07:19.262" endtime="20230808 19:07:19.281"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>duration=100ms</arg>
+<arg>width=3.5px</arg>
+<arg>color=/#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 19:07:19.307" level="INFO">Highlighted 1 elements for 100.</msg>
+<status status="PASS" starttime="20230808 19:07:19.281" endtime="20230808 19:07:19.307"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 19:07:19.420" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/1.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/1.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 19:07:19.308" endtime="20230808 19:07:19.422"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 19:07:19.923" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230808 19:07:19.422" endtime="20230808 19:07:19.923"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:19.233" endtime="20230808 19:07:19.924"/>
+</kw>
+<kw name="Click Web Element Is Visible" library="RES_UTIL">
+<arg>${refresh_button}</arg>
+<doc>Função que clica com o botão do mouse num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| ${btn_login} //input[contains(@id,'Login')]
+| Click Web Element Is Visible ${btn_login}
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>Visible</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230808 19:07:19.936" level="INFO">Waited for Element with selector //button[contains(.,'Atualizar')] at state visible</msg>
+<status status="PASS" starttime="20230808 19:07:19.929" endtime="20230808 19:07:19.936"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>duration=100ms</arg>
+<arg>width=4px</arg>
+<arg>color=\#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 19:07:19.945" level="INFO">Highlighted 1 elements for 100.</msg>
+<status status="PASS" starttime="20230808 19:07:19.937" endtime="20230808 19:07:19.945"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 19:07:20.028" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/2.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/2.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 19:07:19.945" endtime="20230808 19:07:20.028"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${ELEMENT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230808 19:07:20.028" endtime="20230808 19:07:20.455"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 19:07:20.955" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230808 19:07:20.455" endtime="20230808 19:07:20.955"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:19.929" endtime="20230808 19:07:20.956"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>${select_number}</arg>
+<arg>value</arg>
+<arg>50</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" starttime="20230808 19:07:20.956" endtime="20230808 19:07:21.790"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${target_event25}</var>
+<arg>Click Web Element Is Visible</arg>
+<arg>${post_product_orderV25}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Click Web Element Is Visible" library="RES_UTIL">
+<arg>${post_product_orderV25}</arg>
+<doc>Função que clica com o botão do mouse num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| ${btn_login} //input[contains(@id,'Login')]
+| Click Web Element Is Visible ${btn_login}
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>Visible</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230808 19:07:21.807" level="INFO">Waited for Element with selector (//a[text()="ProductOrdering.PostProductOrder.v2.5"])[1] at state visible</msg>
+<status status="PASS" starttime="20230808 19:07:21.798" endtime="20230808 19:07:21.807"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>duration=100ms</arg>
+<arg>width=4px</arg>
+<arg>color=\#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 19:07:21.818" level="INFO">Highlighted 1 elements for 100.</msg>
+<status status="PASS" starttime="20230808 19:07:21.808" endtime="20230808 19:07:21.818"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 19:07:21.894" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/3.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/3.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 19:07:21.818" endtime="20230808 19:07:21.894"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${ELEMENT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230808 19:07:21.894" endtime="20230808 19:07:21.951"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 19:07:22.452" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230808 19:07:21.951" endtime="20230808 19:07:22.452"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:21.797" endtime="20230808 19:07:22.452"/>
+</kw>
+<msg timestamp="20230808 19:07:22.452" level="INFO">${target_event25} = True</msg>
+<status status="PASS" starttime="20230808 19:07:21.790" endtime="20230808 19:07:22.452"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${target_event25}&quot; == &quot;False&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${valor_xml}</var>
+<arg>code&gt;201&lt;</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:22.453" endtime="20230808 19:07:22.453"/>
+</kw>
+<kw name="Input Text Web Element Is Visible" library="RES_UTIL">
+<arg>${input_texto_consulta}</arg>
+<arg>${valor_pesquisa}</arg>
+<doc>Função que insere uma informação num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+| ``VALUE`` | Valor a ser adicionado ao campo. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| ${input_login} //input[contains(@id,'username')]
+| Input Text Web Element Is Visible ${input_login} admin
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<status status="NOT RUN" starttime="20230808 19:07:22.458" endtime="20230808 19:07:22.458"/>
+</kw>
+<kw name="Click Web Element Is Visible" library="RES_UTIL">
+<arg>${refresh_button}</arg>
+<doc>Função que clica com o botão do mouse num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| ${btn_login} //input[contains(@id,'Login')]
+| Click Web Element Is Visible ${btn_login}
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<status status="NOT RUN" starttime="20230808 19:07:22.465" endtime="20230808 19:07:22.466"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>${select_number}</arg>
+<arg>value</arg>
+<arg>50</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:22.467" endtime="20230808 19:07:22.467"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${target_eventv1}</var>
+<arg>Click Web Element Is Visible</arg>
+<arg>${post_product_order}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:22.467" endtime="20230808 19:07:22.467"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${target_eventv1}&quot; == &quot;False&quot;">
+<kw name="Input Text Web Element Is Visible" library="RES_UTIL">
+<arg>${input_texto_consulta}</arg>
+<arg>${valor_pesquisa}</arg>
+<doc>Função que insere uma informação num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+| ``VALUE`` | Valor a ser adicionado ao campo. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| ${input_login} //input[contains(@id,'username')]
+| Input Text Web Element Is Visible ${input_login} admin
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<status status="NOT RUN" starttime="20230808 19:07:22.474" endtime="20230808 19:07:22.474"/>
+</kw>
+<kw name="Click Web Element Is Visible" library="RES_UTIL">
+<arg>${refresh_button}</arg>
+<doc>Função que clica com o botão do mouse num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| ${btn_login} //input[contains(@id,'Login')]
+| Click Web Element Is Visible ${btn_login}
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<status status="NOT RUN" starttime="20230808 19:07:22.480" endtime="20230808 19:07:22.480"/>
+</kw>
+<kw name="Select Options By" library="Browser">
+<arg>${select_number}</arg>
+<arg>value</arg>
+<arg>50</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230808 19:07:22.480" endtime="20230808 19:07:22.481"/>
+</kw>
+<kw name="Click Web Element Is Visible" library="RES_UTIL">
+<arg>${post_product_orderV25}</arg>
+<doc>Função que clica com o botão do mouse num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| ${btn_login} //input[contains(@id,'Login')]
+| Click Web Element Is Visible ${btn_login}
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<status status="NOT RUN" starttime="20230808 19:07:22.487" endtime="20230808 19:07:22.487"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 19:07:22.467" endtime="20230808 19:07:22.487"/>
+</branch>
+<status status="NOT RUN" starttime="20230808 19:07:22.467" endtime="20230808 19:07:22.487"/>
+</if>
+<status status="NOT RUN" starttime="20230808 19:07:22.453" endtime="20230808 19:07:22.487"/>
+</branch>
+<status status="PASS" starttime="20230808 19:07:22.452" endtime="20230808 19:07:22.487"/>
+</if>
+<kw name="Close Page" library="Browser">
+<arg>CURRENT</arg>
+<arg>CURRENT</arg>
+<arg>CURRENT</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the ``page`` in ``context`` in ``browser``.</doc>
+<msg timestamp="20230808 19:07:22.497" level="INFO">[
+  {
+    "type": "chromium",
+    "id": "browser=0f935337-53c2-4756-a029-501110b3f685",
+    "contexts": [
+      {
+        "type": "context",
+        "id": "context=918f8342-ae83-4264-9eb0-5bda6f0b0ace",
+        "activePage": "page=89a6ed79-b4c8-4eb1-a1ce-4de377402fda",
+        "pages": [
+          {
+            "type": "page",
+            "title": "Auditoria Fluxo - FWConsole",
+            "url": "http://bsoaqx04a:7003/fwconsole/jsp/auditoriav2?go=steps&amp;_id=1sqL1okBQi4RxIdQzTv9&amp;transactionId=&amp;transactionIdSOA=551daef6-ca25-455b-bfe5-28b3f73d78ae&amp;origem=12c&amp;query=ibm0808190653",
+            "id": "page=b7e33eac-fd5e-4383-9b6e-1cc010d6567e",
+            "timestamp": 1691521642.285
+          },
+          {
+            "type": "page",
+            "title": "Auditoria - FWConsole",
+            "url": "http://bsoaqx04a:7003/fwconsole/jsp/auditoriav2?date1=08%2F08%2F2023+01%3A00&amp;date2=08%2F08%2F2023+23%3A59&amp;queryText=ibm0808190653",
+            "id": "page=89a6ed79-b4c8-4eb1-a1ce-4de377402fda",
+            "timestamp": 1691521625.878
+          }
+        ]
+      }
+    ],
+    "activeContext": "context=918f8342-ae83-4264-9eb0-5bda6f0b0ace",
+    "activeBrowser": true
+  }
+]</msg>
+<msg timestamp="20230808 19:07:22.497" level="INFO">Switching browser to CURRENT</msg>
+<msg timestamp="20230808 19:07:22.499" level="INFO">Active context id</msg>
+<msg timestamp="20230808 19:07:22.499" level="INFO">Switching browser to browser=0f935337-53c2-4756-a029-501110b3f685</msg>
+<msg timestamp="20230808 19:07:22.501" level="INFO">Successfully changed active browser</msg>
+<msg timestamp="20230808 19:07:22.501" level="INFO">Switching context to CURRENT in CURRENT</msg>
+<msg timestamp="20230808 19:07:22.503" level="INFO">Returned active context id</msg>
+<msg timestamp="20230808 19:07:22.503" level="INFO">Switching context to context=918f8342-ae83-4264-9eb0-5bda6f0b0ace in CURRENT</msg>
+<msg timestamp="20230808 19:07:22.508" level="INFO">[
+  {
+    "type": "chromium",
+    "id": "browser=0f935337-53c2-4756-a029-501110b3f685",
+    "contexts": [
+      {
+        "type": "context",
+        "id": "context=918f8342-ae83-4264-9eb0-5bda6f0b0ace",
+        "activePage": "page=89a6ed79-b4c8-4eb1-a1ce-4de377402fda",
+        "pages": [
+          {
+            "type": "page",
+            "title": "Auditoria Fluxo - FWConsole",
+            "url": "http://bsoaqx04a:7003/fwconsole/jsp/auditoriav2?go=steps&amp;_id=1sqL1okBQi4RxIdQzTv9&amp;transactionId=&amp;transactionIdSOA=551daef6-ca25-455b-bfe5-28b3f73d78ae&amp;origem=12c&amp;query=ibm0808190653",
+            "id": "page=b7e33eac-fd5e-4383-9b6e-1cc010d6567e",
+            "timestamp": 1691521642.285
+          },
+          {
+            "type": "page",
+            "title": "Auditoria - FWConsole",
+            "url": "http://bsoaqx04a:7003/fwconsole/jsp/auditoriav2?date1=08%2F08%2F2023+01%3A00&amp;date2=08%2F08%2F2023+23%3A59&amp;queryText=ibm0808190653",
+            "id": "page=89a6ed79-b4c8-4eb1-a1ce-4de377402fda",
+            "timestamp": 1691521625.878
+          }
+        ]
+      }
+    ],
+    "activeContext": "context=918f8342-ae83-4264-9eb0-5bda6f0b0ace",
+    "activeBrowser": true
+  }
+]</msg>
+<msg timestamp="20230808 19:07:22.512" level="INFO">Successfully changed active context</msg>
+<msg timestamp="20230808 19:07:22.517" level="INFO">Successfully closed Page</msg>
+<status status="PASS" starttime="20230808 19:07:22.488" endtime="20230808 19:07:22.517"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 19:07:24.518" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230808 19:07:22.518" endtime="20230808 19:07:24.518"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${STATUS}</var>
+<arg>${xml_retorno}</arg>
+<arg>*=</arg>
+<arg>${valor_xml}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230808 19:07:26.491" level="INFO">Text: '&lt;Header xmlns="http://schemas.xmlsoap.org/soap/envelope/"/&gt;\n&lt;env:Body xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"&gt;\n      &lt;ns0:PostProductOrderResponse xmlns:msg="http://www.oi.net.br/INFRA/SOAFW/SharedResources/Messaging/v2" xmlns:ns2="http://www.infraco.net.br/INFRA/SOAFW/SharedResources/Messaging/v4" xmlns:ns1="http://www.oi.net.br/INFRA/SOAFW/SharedResources/Types/v1" xmlns:ns0="http://www.infraco.net.br/ProductOrdering/PostProductOrder/XSD/v2.5"&gt;\n            &lt;tns:control xmlns:tns="http://www.infraco.net.br/INFRA/SOAFW/SharedResources/Messaging/v4"&gt;\n                  &lt;tns:type&gt;S&lt;/tns:type&gt;\n                  &lt;tns:code&gt;200&lt;/tns:code&gt;\n                  &lt;tns:message&gt;Sucesso&lt;/tns:message&gt;\n            &lt;/tns:control&gt;\n            &lt;ns0:order&gt;\n                  &lt;ns0:id&gt;163901&lt;/ns0:id&gt;\n            &lt;/ns0:order&gt;\n      &lt;/ns0:PostProductOrderResponse&gt;\n&lt;/env:Body&gt;'</msg>
+<msg timestamp="20230808 19:07:26.491" level="INFO">${STATUS} = &lt;Header xmlns="http://schemas.xmlsoap.org/soap/envelope/"/&gt;
+&lt;env:Body xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+      &lt;ns0:PostProductOrderResponse xmlns:msg="http://www.oi.net.br/INFRA/S...</msg>
+<status status="PASS" starttime="20230808 19:07:24.518" endtime="20230808 19:07:26.491"/>
+</kw>
+<kw name="Click Web Element Is Visible" library="RES_UTIL">
+<arg>(//h5[contains(text(),"INVOKE - Request enviado para o SOM")]/../..//i[@class="ace-icon fa fa-chevron-down"])</arg>
+<doc>Função que clica com o botão do mouse num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| ${btn_login} //input[contains(@id,'Login')]
+| Click Web Element Is Visible ${btn_login}
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>Visible</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230808 19:07:26.504" level="INFO">Waited for Element with selector (//h5[contains(text(),"INVOKE - Request enviado para o SOM")]/../..//i[@class="ace-icon fa fa-chevron-down"]) at state visible</msg>
+<status status="PASS" starttime="20230808 19:07:26.498" endtime="20230808 19:07:26.504"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>duration=100ms</arg>
+<arg>width=4px</arg>
+<arg>color=\#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 19:07:26.513" level="INFO">Highlighted 1 elements for 100.</msg>
+<status status="PASS" starttime="20230808 19:07:26.504" endtime="20230808 19:07:26.513"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 19:07:26.590" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/4.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/4.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 19:07:26.514" endtime="20230808 19:07:26.590"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${ELEMENT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230808 19:07:26.591" endtime="20230808 19:07:26.645"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 19:07:27.146" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230808 19:07:26.646" endtime="20230808 19:07:27.146"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:26.498" endtime="20230808 19:07:27.147"/>
+</kw>
+<kw name="Scroll To Element" library="Browser">
+<arg>(//h5[contains(text(),"INVOKE - Request enviado para o SOM")]/../..//textarea)</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" starttime="20230808 19:07:27.147" endtime="20230808 19:07:27.172"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>(//h5[contains(text(),"INVOKE - Request enviado para o SOM")]/../..//textarea)</arg>
+<arg>duration=500ms</arg>
+<arg>width=4px</arg>
+<arg>color=\#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 19:07:27.182" level="INFO">Highlighted 1 elements for 500.</msg>
+<status status="PASS" starttime="20230808 19:07:27.172" endtime="20230808 19:07:27.182"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 19:07:27.268" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/5.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/5.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 19:07:27.182" endtime="20230808 19:07:27.268"/>
+</kw>
+<kw name="Get Text Element is Visible" library="RES_UTIL">
+<var>${invoke_xml}</var>
+<arg>(//h5[contains(text(),"INVOKE - Request enviado para o SOM")]/../..//textarea)</arg>
+<doc>Busca o elemento passado como argumento e retorna a STR na variável Return_ELEMENT
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 19:07:30.269" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230808 19:07:27.269" endtime="20230808 19:07:30.269"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${Return_ELEMENT}</var>
+<arg>${ELEMENT}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230808 19:07:30.281" level="INFO">Text: '&lt;soap-env:Body xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"&gt;\n      &lt;tns:CreateOrder xmlns:tns="http://xmlns.oracle.com/communications/ordermanagement"&gt;\n            &lt;_root&gt;\n                  &lt;order_data&gt;\n                        &lt;api_version&gt;v2.0.0&lt;/api_version&gt;\n                        &lt;source&gt;vtal&lt;/source&gt;\n                        &lt;com_order_service&gt;20230808000040&lt;/com_order_service&gt;\n                        &lt;crm_solicitation&gt;ibm0808190653&lt;/crm_solicitation&gt;\n                        &lt;solicitation_open_date&gt;08/08/2023 22:06:53&lt;/solicitation_open_date&gt;\n                        &lt;order_type&gt;Instalacao&lt;/order_type&gt;\n                        &lt;request_origin&gt;TRGIBMFTTP&lt;/request_origin&gt;\n                        &lt;infra_type&gt;FTTP&lt;/infra_type&gt;\n                        &lt;address_change&gt;false&lt;/address_change&gt;\n                        &lt;gpon_access/&gt;\n                        &lt;catalog_data&gt;\n                              &lt;product_class&gt;WHITELABEL&lt;/product_class&gt;\n                              &lt;contract_model&gt;FTTP&lt;/contract_model&gt;\n                              &lt;installation/&gt;\n                              &lt;mandatory_installation/&gt;\n                              &lt;withdrawal/&gt;\n                              &lt;mandatory_withdrawal/&gt;\n                              &lt;addressChange/&gt;\n                              &lt;mandatory_addressChange/&gt;\n                              &lt;repair/&gt;\n                              &lt;mandatory_repair/&gt;\n                              &lt;backbone/&gt;\n                              &lt;management_ont_hdm/&gt;\n                              &lt;aaa_nass/&gt;\n                              &lt;properties_ont/&gt;\n                              &lt;able/&gt;\n                              &lt;term_contract/&gt;\n                              &lt;activity_code&gt;4927&lt;/activity_code&gt;\n                        &lt;/catalog_data&gt;\n                        &lt;client_data&gt;\n                              &lt;client_name&gt;ibm0808190653&lt;/client_name&gt;\n                              &lt;client_phone_number1&gt;00-000000000&lt;/client_phone_number1&gt;\n                              &lt;client_phone_number2&gt;0000000000&lt;/client_phone_number2&gt;\n                              &lt;client_phone_number3&gt;0000000000&lt;/client_phone_number3&gt;\n                              &lt;client_document&gt;00000000000&lt;/client_document&gt;\n                              &lt;client_business_unity/&gt;\n                              &lt;client_fantasy_name/&gt;\n                              &lt;client_contract_id&gt;ibm0808190653&lt;/client_contract_id&gt;\n                              &lt;original_client_contract_id/&gt;\n                              &lt;client_co&gt;TRGIBMFTTP&lt;/client_co&gt;\n                              &lt;client_address_contact_name/&gt;\n                              &lt;client_address_contact_phone/&gt;\n                              &lt;client_address_contact_email/&gt;\n                        &lt;/client_data&gt;\n                        &lt;schedule_data&gt;\n                              &lt;schedule_date/&gt;\n                              &lt;schedule_hour/&gt;\n                              &lt;schedule_date_end/&gt;\n                              &lt;schedule_hour_end/&gt;\n                              &lt;schedule_period/&gt;\n                              &lt;schedule_type/&gt;\n                              &lt;schedule_mandatory_type&gt;Permitido&lt;/schedule_mandatory_type&gt;\n                              &lt;schedule_slot&gt;false&lt;/schedule_slot&gt;\n                        &lt;/schedule_data&gt;\n                        &lt;address_list&gt;\n                              &lt;address_data&gt;\n                                    &lt;address_street_code/&gt;\n                                    &lt;address_street_type&gt;Rua&lt;/address_street_type&gt;\n                                    &lt;address_street_name&gt;Fernando Tuy&lt;/address_street_name&gt;\n                                    &lt;address_port_number&gt;245&lt;/address_port_number&gt;\n                                    &lt;address_neighborhood&gt;Pituba&lt;/address_neighborhood&gt;\n                                    &lt;address_complement_type1/&gt;\n                                    &lt;address_complement_name1/&gt;\n                                    &lt;address_complement_type2/&gt;\n                                    &lt;address_complement_name2/&gt;\n                                    &lt;address_complement_type3/&gt;\n                                    &lt;address_complement_name3/&gt;\n                                    &lt;address_city&gt;Salvador&lt;/address_city&gt;\n                                    &lt;address_state&gt;BA&lt;/address_state&gt;\n                                    &lt;address_zipcode&gt;41830498&lt;/address_zipcode&gt;\n                                    &lt;address_location_code&gt;71000&lt;/address_location_code&gt;\n                                    &lt;address_location_initials&gt;SDR&lt;/address_location_initials&gt;\n                                    &lt;address_id&gt;234265&lt;/address_id&gt;\n                                    &lt;address_inventory_id&gt;8979983&lt;/address_inventory_id&gt;\n                                    &lt;address_reference_point&gt;Proximo a padaria&lt;/address_reference_point&gt;\n                              &lt;/address_data&gt;\n                        &lt;/address_list&gt;\n                        &lt;product_list&gt;\n                              &lt;product_data&gt;\n                                    &lt;product_id/&gt;\n                                    &lt;product_type&gt;Banda Larga&lt;/product_type&gt;\n                                    &lt;product_catalog_id&gt;BL_400MB&lt;/product_catalog_id&gt;\n                                    &lt;product_name&gt;VELOC_400MBPS&lt;/product_name&gt;\n                                    &lt;product_tecnology&gt;FTTP&lt;/product_tecnology&gt;\n                                    &lt;product_action&gt;adicionar&lt;/product_action&gt;\n                                    &lt;attribute_list&gt;\n                                          &lt;attribute_data&gt;\n                                                &lt;product_attribute_name&gt;Velocidade&lt;/product_attribute_name&gt;\n                                                &lt;product_attribute_value&gt;400 MBPS&lt;/product_attribute_value&gt;\n                                                &lt;product_attribute_action&gt;adicionar&lt;/product_attribute_action&gt;\n                                          &lt;/attribute_data&gt;\n                                          &lt;attribute_data&gt;\n                                                &lt;product_attribute_name&gt;Download&lt;/product_attribute_name&gt;\n                                                &lt;product_attribute_value&gt;400&lt;/product_attribute_value&gt;\n                                                &lt;product_attribute_action&gt;adicionar&lt;/product_attribute_action&gt;\n                                          &lt;/attribute_data&gt;\n                                          &lt;attribute_data&gt;\n                                                &lt;product_attribute_name&gt;Upload&lt;/product_attribute_name&gt;\n                                                &lt;product_attribute_value&gt;200&lt;/product_attribute_value&gt;\n                                                &lt;product_attribute_action&gt;adicionar&lt;/product_attribute_action&gt;\n                                          &lt;/attribute_data&gt;\n                                    &lt;/attribute_list&gt;\n                              &lt;/product_data&gt;\n                        &lt;/product_list&gt;\n                        &lt;equipamentList/&gt;\n                  &lt;/order_data&gt;\n            &lt;/_root&gt;\n      &lt;/tns:CreateOrder&gt;\n&lt;/soap-env:Body&gt;'</msg>
+<msg timestamp="20230808 19:07:30.283" level="INFO">${Return_ELEMENT} = &lt;soap-env:Body xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+      &lt;tns:CreateOrder xmlns:tns="http://xmlns.oracle.com/communications/ordermanagement"&gt;
+            &lt;_root&gt;
+              ...</msg>
+<status status="PASS" starttime="20230808 19:07:30.269" endtime="20230808 19:07:30.283"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>duration=100ms</arg>
+<arg>width=4px</arg>
+<arg>color=\#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 19:07:30.289" level="INFO">Highlighted 1 elements for 100.</msg>
+<status status="PASS" starttime="20230808 19:07:30.283" endtime="20230808 19:07:30.289"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 19:07:30.348" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/6.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/6.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 19:07:30.290" endtime="20230808 19:07:30.348"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 19:07:30.849" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230808 19:07:30.348" endtime="20230808 19:07:30.849"/>
+</kw>
+<msg timestamp="20230808 19:07:30.849" level="INFO">${invoke_xml} = &lt;soap-env:Body xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+      &lt;tns:CreateOrder xmlns:tns="http://xmlns.oracle.com/communications/ordermanagement"&gt;
+            &lt;_root&gt;
+              ...</msg>
+<status status="PASS" starttime="20230808 19:07:27.268" endtime="20230808 19:07:30.849"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${invoke_xml}</arg>
+<arg>&lt;order_type&gt;${order_type}&lt;/order_type&gt;</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230808 19:07:30.849" endtime="20230808 19:07:30.850"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${invoke_xml}</arg>
+<arg>${valor_pesquisa}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20230808 19:07:30.850" endtime="20230808 19:07:30.850"/>
+</kw>
+<kw name="Click Web Element Is Visible" library="RES_UTIL">
+<arg>${XPATH_XML}/../../..//*[@data-action="collapse"]</arg>
+<doc>Função que clica com o botão do mouse num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| ${btn_login} //input[contains(@id,'Login')]
+| Click Web Element Is Visible ${btn_login}
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>Visible</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230808 19:07:30.861" level="INFO">Waited for Element with selector //*[text()="END - Finalização do serviço"]/../..//textarea/../../..//*[@data-action="collapse"] at state visible</msg>
+<status status="PASS" starttime="20230808 19:07:30.855" endtime="20230808 19:07:30.862"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>duration=100ms</arg>
+<arg>width=4px</arg>
+<arg>color=\#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 19:07:30.868" level="INFO">Highlighted 1 elements for 100.</msg>
+<status status="PASS" starttime="20230808 19:07:30.862" endtime="20230808 19:07:30.868"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 19:07:30.931" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/7.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/7.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 19:07:30.868" endtime="20230808 19:07:30.931"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${ELEMENT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230808 19:07:30.931" endtime="20230808 19:07:30.964"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 19:07:31.465" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230808 19:07:30.965" endtime="20230808 19:07:31.465"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:30.855" endtime="20230808 19:07:31.465"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${XPATH_XML}</arg>
+<arg>Visible</arg>
+<arg>15</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230808 19:07:31.472" level="INFO">Waited for Element with selector //*[text()="END - Finalização do serviço"]/../..//textarea at state visible</msg>
+<status status="PASS" starttime="20230808 19:07:31.466" endtime="20230808 19:07:31.472"/>
+</kw>
+<kw name="Scroll To Element" library="Browser">
+<arg>${XPATH_XML}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" starttime="20230808 19:07:31.472" endtime="20230808 19:07:31.487"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>${XPATH_XML}</arg>
+<arg>duration=500ms</arg>
+<arg>width=4px</arg>
+<arg>color=\#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 19:07:31.495" level="INFO">Highlighted 1 elements for 500.</msg>
+<status status="PASS" starttime="20230808 19:07:31.488" endtime="20230808 19:07:31.495"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 19:07:31.567" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/8.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/8.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 19:07:31.495" endtime="20230808 19:07:31.567"/>
+</kw>
+<kw name="Close Browser" library="Browser">
+<arg>CURRENT</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230808 19:07:31.606" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230808 19:07:31.568" endtime="20230808 19:07:31.606"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:05.473" endtime="20230808 19:07:31.606"/>
+</kw>
+<kw name="Fecha CT" library="DB">
+<arg>FW</arg>
+<arg>42_08_Realizar_Validacao_no_SOM</arg>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Log" library="BuiltIn">
+<arg>${DAT_DB}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230808 19:07:31.609" level="INFO">50</msg>
+<status status="PASS" starttime="20230808 19:07:31.608" endtime="20230808 19:07:31.609"/>
+</kw>
+<kw name="Atualizar Steps Dat" library="dat">
+<arg>${DAT_DB}</arg>
+<arg>${RESPONSAVEL}</arg>
+<arg>${SYSTEM}</arg>
+<arg>${NEW_STEP}</arg>
+<msg timestamp="20230808 19:07:31.614" level="INFO">DAT atualizado com sucesso!</msg>
+<status status="PASS" starttime="20230808 19:07:31.610" endtime="20230808 19:07:31.614"/>
+</kw>
+<status status="PASS" starttime="20230808 19:07:31.607" endtime="20230808 19:07:31.615"/>
+</branch>
+<status status="PASS" starttime="20230808 19:07:31.607" endtime="20230808 19:07:31.615"/>
+</if>
+<status status="PASS" starttime="20230808 19:07:31.607" endtime="20230808 19:07:31.615"/>
+</kw>
+<tag>42_07_Realizar_Validacao_Criacao_da_Ordem_OS_no_FW_Console</tag>
+<tag>COMPLETO</tag>
+<status status="PASS" starttime="20230808 19:07:05.442" endtime="20230808 19:07:31.615"/>
+</test>
+<doc>Agrupador responsavel por chamar TC dos ROBS referentes ao cenario
+INPUT: Address, Number, Customer_Name, Phone_Number, Reference
+OUPUT: Appointment_Start, Work_Order_Id, SOM_Order_Id, MaxBandWidth, Associated_Document, Correlation_Order, Associated_Document_Date, Name, Catalog_Id, Availability_Description, Inventory_Id, Type_Logradouro, Address_Name, TypeComplement1, Value1, TypeComplement2, Value2, TypeComplement3, Value3</doc>
+<status status="PASS" starttime="20230808 19:07:03.738" endtime="20230808 19:07:31.623"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">42_07_Realizar_Validacao_Criacao_da_Ordem_OS_no_FW_Console</stat>
+<stat pass="1" fail="0" skip="0">COMPLETO</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="042 AtivacaoSemComplemento">042 AtivacaoSemComplemento</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230808 19:07:04.114" level="WARN">RPA.Excel.Application library works only on Windows platform</msg>
+<msg timestamp="20230808 19:07:04.115" level="WARN">Excel application library requires Windows dependencies to work.</msg>
+<msg timestamp="20230808 19:07:04.231" level="WARN">Imported library '/robot/test/SCRIPTS/RESOURCE/COMMON/LIB/lib_geral.py' contains no keywords.</msg>
+</errors>
+</robot>

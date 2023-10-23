@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20230808 20:03:00.542" rpa="false" schemaversion="3">
+<suite id="s1" name="002 AtivacaoSemNumResidenciaViaFSL" source="/robot/test/SCRIPTS/TRG/FTTH/002_AtivacaoSemNumResidenciaViaFSL/002_AtivacaoSemNumResidenciaViaFSL.robot">
+<test id="s1-t1" name="02.09 - Validar a Notificação do Agendamento" line="86">
+<kw name="Inicia CT" library="DB">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${PORTAL}</var>
+<arg>Variable Should Exist</arg>
+<arg>${PORTAL}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Variable Should Exist" library="BuiltIn">
+<arg>${PORTAL}</arg>
+<doc>Fails unless the given variable exists within the current scope.</doc>
+<status status="PASS" starttime="20230808 20:03:02.534" endtime="20230808 20:03:02.535"/>
+</kw>
+<msg timestamp="20230808 20:03:02.535" level="INFO">${PORTAL} = True</msg>
+<status status="PASS" starttime="20230808 20:03:02.532" endtime="20230808 20:03:02.535"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${check_step}</var>
+<arg>Variable Should Exist</arg>
+<arg>${STEP}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Variable Should Exist" library="BuiltIn">
+<arg>${STEP}</arg>
+<doc>Fails unless the given variable exists within the current scope.</doc>
+<status status="PASS" starttime="20230808 20:03:02.536" endtime="20230808 20:03:02.537"/>
+</kw>
+<msg timestamp="20230808 20:03:02.537" level="INFO">${check_step} = True</msg>
+<status status="PASS" starttime="20230808 20:03:02.536" endtime="20230808 20:03:02.537"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PORTAL}</arg>
+<arg>${PORTAL}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230808 20:03:02.538" level="INFO">${PORTAL} = True</msg>
+<status status="PASS" starttime="20230808 20:03:02.538" endtime="20230808 20:03:02.539"/>
+</kw>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Log" library="BuiltIn">
+<arg>${CEP}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230808 20:03:02.541" level="INFO">00000000</msg>
+<status status="PASS" starttime="20230808 20:03:02.540" endtime="20230808 20:03:02.541"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${NUMERO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230808 20:03:02.542" level="INFO">00</msg>
+<status status="PASS" starttime="20230808 20:03:02.541" endtime="20230808 20:03:02.542"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${check_step}</arg>
+<arg>Set Step</arg>
+<arg>${STEP}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Set Step" library="DB">
+<arg>${STEP}</arg>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${STEP}</arg>
+<arg>${STEP}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230808 20:03:02.545" level="INFO">${STEP} = 02_09_Validar_a_Notificacao_do_Agendamento</msg>
+<status status="PASS" starttime="20230808 20:03:02.544" endtime="20230808 20:03:02.545"/>
+</kw>
+<status status="PASS" starttime="20230808 20:03:02.543" endtime="20230808 20:03:02.545"/>
+</kw>
+<status status="PASS" starttime="20230808 20:03:02.542" endtime="20230808 20:03:02.545"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${RESPONSAVEL}</arg>
+<arg>${RESPONSAVEL}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230808 20:03:02.546" level="INFO">${RESPONSAVEL} = berg</msg>
+<status status="PASS" starttime="20230808 20:03:02.546" endtime="20230808 20:03:02.546"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${AUTHENTICATION}</arg>
+<arg>${AUTHENTICATION}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230808 20:03:02.547" level="INFO">${AUTHENTICATION} = Whitelabel</msg>
+<status status="PASS" starttime="20230808 20:03:02.547" endtime="20230808 20:03:02.547"/>
+</kw>
+<kw name="Buscar Dat Do Usuario" library="dat">
+<var>${DAT_DB}</var>
+<arg>${RESPONSAVEL}</arg>
+<arg>${STEP}</arg>
+<msg timestamp="20230808 20:03:02.553" level="INFO">${DAT_DB} = 52</msg>
+<status status="PASS" starttime="20230808 20:03:02.548" endtime="20230808 20:03:02.553"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${DAT_DB}</arg>
+<arg>${DAT_DB}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230808 20:03:02.555" level="INFO">${DAT_DB} = 52</msg>
+<status status="PASS" starttime="20230808 20:03:02.554" endtime="20230808 20:03:02.555"/>
+</kw>
+<status status="PASS" starttime="20230808 20:03:02.540" endtime="20230808 20:03:02.555"/>
+</branch>
+<status status="PASS" starttime="20230808 20:03:02.539" endtime="20230808 20:03:02.555"/>
+</if>
+<status status="PASS" starttime="20230808 20:03:02.531" endtime="20230808 20:03:02.556"/>
+</kw>
+<kw name="Validar Evento FW" library="UTILS">
+<arg>VALOR_BUSCA=associatedDocument</arg>
+<arg>XPATH_EVENTO=(//a[normalize-space()='Appointment.PostAppointment'])[1]</arg>
+<arg>RETORNO_ESPERADO=&gt;201&lt;</arg>
+<doc>Valida Evento no FW
+| =Arguments= | =Description= |
+| `VALOR_BUSCA` | Valor que será buscado. Ex: PreDiag_ID, Diag_ID, Configuration_Id, Associated_Document, etc. Argumento obrigatório. |
+| `XPATH_EVENTO` | Evento que deve ser validado. Modelo: (//a[normalize-space()='ServiceTestManagement.ListenerServiceTestResultEvent'])[1]. Argumento obrigatório. |
+| `RETORNO_ESPERADO` | Retorno que deve ser validado, validação simples. Ex: &gt;201&lt;, &gt;200&lt;, &gt;404&lt;, Operação realizada com sucesso, etc. Se não for passado argumento, por padrão, será usado " None " |
+| `XPATH_XML` | Passo do Framework que deve ser acessado para validação. Modelo: //*[text()="INVOKE - Request enviado para a ClienteCo"]/../..//textarea)[1]. Se não for passado argumento, será usado o caminho, por padrão " END - Finalização do serviço " |
+| `DADOS_XML` | Dados XML que devem ser validados, pode validar vários elementos. Se não for passado argumento, por padrão, será usado " None " |
+| `TENTATIVAS_FOR` | Quantas tentativas devem ser realizadas. Se não for passado argumento, por padrão, será usado " 10 " |</doc>
+<kw name="Ler Variavel na Planilha" library="RES_EXCEL">
+<var>${TEXTO_BUSCA}</var>
+<arg>${VALOR_BUSCA}</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<if>
+<branch type="IF" condition="'${DAT_DB}' != '${EMPTY}'">
+<kw name="Buscar Campo Dat Id" library="dat">
+<var>${Query}</var>
+<arg>${DAT_DB}</arg>
+<msg timestamp="20230808 20:03:02.567" level="INFO">52</msg>
+<msg timestamp="20230808 20:03:02.567" level="INFO">${Query} = 52</msg>
+<status status="PASS" starttime="20230808 20:03:02.563" endtime="20230808 20:03:02.568"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Query}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230808 20:03:02.568" level="INFO">52</msg>
+<status status="PASS" starttime="20230808 20:03:02.568" endtime="20230808 20:03:02.568"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Valor}</var>
+<arg>${Query.${NomeColuna}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230808 20:03:02.573" level="INFO">${Valor} = ibm0808200229</msg>
+<status status="PASS" starttime="20230808 20:03:02.569" endtime="20230808 20:03:02.573"/>
+</kw>
+<status status="PASS" starttime="20230808 20:03:02.563" endtime="20230808 20:03:02.574"/>
+</branch>
+<status status="PASS" starttime="20230808 20:03:02.558" endtime="20230808 20:03:02.574"/>
+</if>
+<if>
+<branch type="IF" condition="'${Valor}' == '${EMPTY}'">
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Valor}</arg>
+<arg>None</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.578" endtime="20230808 20:03:02.578"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:02.578" endtime="20230808 20:03:02.579"/>
+</branch>
+<status status="PASS" starttime="20230808 20:03:02.574" endtime="20230808 20:03:02.579"/>
+</if>
+<status status="PASS" starttime="20230808 20:03:02.558" endtime="20230808 20:03:02.579"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${DAT_CENARIO}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.580" endtime="20230808 20:03:02.580"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.580" endtime="20230808 20:03:02.581"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.581" endtime="20230808 20:03:02.581"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.581" endtime="20230808 20:03:02.582"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:02.580" endtime="20230808 20:03:02.582"/>
+</iter>
+<status status="NOT RUN" starttime="20230808 20:03:02.580" endtime="20230808 20:03:02.582"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.583" endtime="20230808 20:03:02.583"/>
+</kw>
+<kw name="Get Worksheet Value" library="RPA.Excel.Files">
+<var>${Valor}</var>
+<arg>row=${NumLinha}</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Alias for keyword ``Get cell value``, see the original keyword
+for documentation.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.584" endtime="20230808 20:03:02.585"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20230808 20:03:02.597" endtime="20230808 20:03:02.597"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:02.579" endtime="20230808 20:03:02.597"/>
+</branch>
+<status status="PASS" starttime="20230808 20:03:02.558" endtime="20230808 20:03:02.597"/>
+</if>
+<msg timestamp="20230808 20:03:02.597" level="INFO">${TEXTO_BUSCA} = ibm0808200229</msg>
+<status status="PASS" starttime="20230808 20:03:02.557" endtime="20230808 20:03:02.598"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${Data_FW}</var>
+<arg>result_format=%d/%m/%Y</arg>
+<arg>increment=- 3 hours</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20230808 20:03:02.598" level="INFO">${Data_FW} = 08/08/2023</msg>
+<status status="PASS" starttime="20230808 20:03:02.598" endtime="20230808 20:03:02.598"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${Data_FW}</var>
+<arg>${Data_FW}</arg>
+<arg>/</arg>
+<arg>%2F</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20230808 20:03:02.600" level="INFO">${Data_FW} = 08%2F08%2F2023</msg>
+<status status="PASS" starttime="20230808 20:03:02.599" endtime="20230808 20:03:02.600"/>
+</kw>
+<kw name="Ler Variavel Param Global" library="RES_EXCEL">
+<var>${bitState}</var>
+<arg>Credencial</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha PARAN GLOBAL</doc>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Ler Global Db" library="globals">
+<var>${Data}</var>
+<arg>${AUTHENTICATION}</arg>
+<msg timestamp="20230808 20:03:02.604" level="INFO">${Data} = 1</msg>
+<status status="PASS" starttime="20230808 20:03:02.602" endtime="20230808 20:03:02.604"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Valor}</var>
+<arg>${Data.${NomeColuna}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230808 20:03:02.609" level="INFO">${Valor} = Whitelabel</msg>
+<status status="PASS" starttime="20230808 20:03:02.605" endtime="20230808 20:03:02.610"/>
+</kw>
+<status status="PASS" starttime="20230808 20:03:02.601" endtime="20230808 20:03:02.610"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Workbook" library="RPA.Excel.Files">
+<arg>${PARAM_GLOBAL}</arg>
+<arg>data_only=True</arg>
+<doc>Open an existing Excel workbook.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.610" endtime="20230808 20:03:02.610"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${1}</value>
+<value>${MAX_COLUNAS}</value>
+<iter>
+<var name="${i}"/>
+<kw name="Get Cell Value" library="RPA.Excel.Files">
+<var>${Coluna}</var>
+<arg>row=1</arg>
+<arg>column=${i}</arg>
+<arg>name=${NomeAba}</arg>
+<doc>Get a cell value in the given worksheet.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.611" endtime="20230808 20:03:02.611"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Passed}</var>
+<arg>Should Be Equal</arg>
+<arg>${Coluna}</arg>
+<arg>${NomeColuna}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.611" endtime="20230808 20:03:02.612"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${Passed}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.612" endtime="20230808 20:03:02.612"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:02.611" endtime="20230808 20:03:02.612"/>
+</iter>
+<status status="NOT RUN" starttime="20230808 20:03:02.611" endtime="20230808 20:03:02.612"/>
+</for>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Passed} == False</arg>
+<arg>Fail</arg>
+<arg>Função percorreu ${MAX_COLUNAS} colunas e não encontrou a coluna ${NomeColuna} desejada</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.612" endtime="20230808 20:03:02.613"/>
+</kw>
+<kw name="Get Worksheet Value" library="RPA.Excel.Files">
+<var>${Valor}</var>
+<arg>row=2</arg>
+<arg>column=${i}</arg>
+<arg>name=${nome_aba}</arg>
+<doc>Alias for keyword ``Get cell value``, see the original keyword
+for documentation.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:02.613" endtime="20230808 20:03:02.613"/>
+</kw>
+<kw name="[Teardown]">
+<arg>Close Workbook</arg>
+<status status="NOT RUN" starttime="20230808 20:03:02.624" endtime="20230808 20:03:02.624"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:02.610" endtime="20230808 20:03:02.625"/>
+</branch>
+<status status="PASS" starttime="20230808 20:03:02.601" endtime="20230808 20:03:02.625"/>
+</if>
+<msg timestamp="20230808 20:03:02.625" level="INFO">${bitState} = Whitelabel</msg>
+<status status="PASS" starttime="20230808 20:03:02.600" endtime="20230808 20:03:02.625"/>
+</kw>
+<kw name="Contexto para navegador" library="RES_UTIL">
+<arg>${URL_FW_SEM_LOGIN}?date1=${Data_FW}+01%3A00&amp;date2=${Data_FW}+23%3A59&amp;queryText=${TEXTO_BUSCA}</arg>
+<doc>Keyword responsável por Criar contextos padrões para navegadores</doc>
+<kw name="New Browser" library="Browser">
+<arg>${Navegador}</arg>
+<arg>True</arg>
+<arg>devtools=False</arg>
+<arg>timeout=01:00</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230808 20:03:02.627" level="INFO">{"browser": "chromium", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 60000.0, "tracesDir": "/robot/test/SCRIPTS/TRG/FTTH/002_AtivacaoSemNumResidenciaViaFSL/output/02_09_Validar_a_Notificacao_do_Agendamento/browser/traces/c895fb85-7c98-41cf-a7fc-28b87bb57ba6"}</msg>
+<msg timestamp="20230808 20:03:02.848" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":60000,"tracesDir":"/robot/test/SCRIPTS/TRG/FTTH/002_AtivacaoSemNumResidenciaViaFSL/output/02_09_Validar_a_Notificacao_do_Agendamento/browser/traces/c895fb85-7c98-41cf-a7fc-28b87bb57ba6"}</msg>
+<status status="PASS" starttime="20230808 20:03:02.626" endtime="20230808 20:03:02.848"/>
+</kw>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>1m 30 seconds</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20230808 20:03:02.854" level="INFO">No context open.</msg>
+<status status="PASS" starttime="20230808 20:03:02.848" endtime="20230808 20:03:02.854"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${url_Sistema}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230808 20:03:15.222" level="INFO">Successfully initialized new page object and opened url: http://bsoaqx04a:7003/fwconsole/jsp/auditoriav2?date1=08%2F08%2F2023+01%3A00&amp;date2=08%2F08%2F2023+23%3A59&amp;queryText=ibm0808200229</msg>
+<msg timestamp="20230808 20:03:15.223" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230808 20:03:02.854" endtime="20230808 20:03:15.223"/>
+</kw>
+<status status="PASS" starttime="20230808 20:03:02.625" endtime="20230808 20:03:15.223"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${x}</var>
+<value>${TENTATIVAS_FOR}</value>
+<iter>
+<var name="${x}">0</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${present}</var>
+<arg>Wait for Elements State</arg>
+<arg>${XPATH_EVENTO}</arg>
+<arg>Visible</arg>
+<arg>10</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${XPATH_EVENTO}</arg>
+<arg>Visible</arg>
+<arg>10</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230808 20:03:16.542" level="INFO">Waited for Element with selector (//a[normalize-space()='Appointment.PostAppointment'])[1] at state visible</msg>
+<status status="PASS" starttime="20230808 20:03:15.224" endtime="20230808 20:03:16.542"/>
+</kw>
+<msg timestamp="20230808 20:03:16.542" level="INFO">${present} = True</msg>
+<status status="PASS" starttime="20230808 20:03:15.224" endtime="20230808 20:03:16.542"/>
+</kw>
+<if>
+<branch type="IF" condition="${present} == True">
+<kw name="Click Web Element Is Visible" library="RES_UTIL">
+<arg>${XPATH_EVENTO}</arg>
+<doc>Função que clica com o botão do mouse num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| //input[contains(@id,'Login')] //input[contains(@id,'Login')]
+| Click Web Element Is Visible //input[contains(@id,'Login')]
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>Visible</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230808 20:03:16.550" level="INFO">Waited for Element with selector (//a[normalize-space()='Appointment.PostAppointment'])[1] at state visible</msg>
+<status status="PASS" starttime="20230808 20:03:16.543" endtime="20230808 20:03:16.550"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>duration=100ms</arg>
+<arg>width=4px</arg>
+<arg>color=\#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 20:03:16.568" level="INFO">Highlighted 1 elements for 100.</msg>
+<status status="PASS" starttime="20230808 20:03:16.550" endtime="20230808 20:03:16.568"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 20:03:16.654" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/1.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/1.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 20:03:16.568" endtime="20230808 20:03:16.655"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${ELEMENT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230808 20:03:16.655" endtime="20230808 20:03:16.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 20:03:17.236" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230808 20:03:16.736" endtime="20230808 20:03:17.236"/>
+</kw>
+<status status="PASS" starttime="20230808 20:03:16.543" endtime="20230808 20:03:17.236"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 20:03:19.237" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230808 20:03:17.237" endtime="20230808 20:03:19.237"/>
+</kw>
+<kw name="Close Page" library="Browser">
+<arg>CURRENT</arg>
+<arg>CURRENT</arg>
+<arg>CURRENT</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the ``page`` in ``context`` in ``browser``.</doc>
+<msg timestamp="20230808 20:03:19.247" level="INFO">[
+  {
+    "type": "chromium",
+    "id": "browser=fa7b5ba0-3660-47cb-9c88-3bc31236438d",
+    "contexts": [
+      {
+        "type": "context",
+        "id": "context=b54cd282-20f1-4c06-8f24-9fa9d9eb9a0f",
+        "activePage": "page=a15a4686-e84e-4924-bfb1-76fed2b6fb61",
+        "pages": [
+          {
+            "type": "page",
+            "title": "Auditoria Fluxo - FWConsole",
+            "url": "http://bsoaqx04a:7003/fwconsole/jsp/auditoriav2?go=steps&amp;_id=L-S-1okBPJI7ZnJNmqc6&amp;transactionId=&amp;transactionIdSOA=1d894f02-0c4d-4355-ba9e-1e4997705d41&amp;origem=12c&amp;query=ibm0808200229",
+            "id": "page=ae8bb937-f6a2-4a10-af84-7ff6d928d7c6",
+            "timestamp": 1691524997.068
+          },
+          {
+            "type": "page",
+            "title": "Auditoria - FWConsole",
+            "url": "http://bsoaqx04a:7003/fwconsole/jsp/auditoriav2?date1=08%2F08%2F2023+01%3A00&amp;date2=08%2F08%2F2023+23%3A59&amp;queryText=ibm0808200229",
+            "id": "page=a15a4686-e84e-4924-bfb1-76fed2b6fb61",
+            "timestamp": 1691524982.918
+          }
+        ]
+      }
+    ],
+    "activeContext": "context=b54cd282-20f1-4c06-8f24-9fa9d9eb9a0f",
+    "activeBrowser": true
+  }
+]</msg>
+<msg timestamp="20230808 20:03:19.247" level="INFO">Switching browser to CURRENT</msg>
+<msg timestamp="20230808 20:03:19.251" level="INFO">Active context id</msg>
+<msg timestamp="20230808 20:03:19.252" level="INFO">Switching browser to browser=fa7b5ba0-3660-47cb-9c88-3bc31236438d</msg>
+<msg timestamp="20230808 20:03:19.256" level="INFO">Successfully changed active browser</msg>
+<msg timestamp="20230808 20:03:19.256" level="INFO">Switching context to CURRENT in CURRENT</msg>
+<msg timestamp="20230808 20:03:19.258" level="INFO">Returned active context id</msg>
+<msg timestamp="20230808 20:03:19.258" level="INFO">Switching context to context=b54cd282-20f1-4c06-8f24-9fa9d9eb9a0f in CURRENT</msg>
+<msg timestamp="20230808 20:03:19.267" level="INFO">[
+  {
+    "type": "chromium",
+    "id": "browser=fa7b5ba0-3660-47cb-9c88-3bc31236438d",
+    "contexts": [
+      {
+        "type": "context",
+        "id": "context=b54cd282-20f1-4c06-8f24-9fa9d9eb9a0f",
+        "activePage": "page=a15a4686-e84e-4924-bfb1-76fed2b6fb61",
+        "pages": [
+          {
+            "type": "page",
+            "title": "Auditoria Fluxo - FWConsole",
+            "url": "http://bsoaqx04a:7003/fwconsole/jsp/auditoriav2?go=steps&amp;_id=L-S-1okBPJI7ZnJNmqc6&amp;transactionId=&amp;transactionIdSOA=1d894f02-0c4d-4355-ba9e-1e4997705d41&amp;origem=12c&amp;query=ibm0808200229",
+            "id": "page=ae8bb937-f6a2-4a10-af84-7ff6d928d7c6",
+            "timestamp": 1691524997.068
+          },
+          {
+            "type": "page",
+            "title": "Auditoria - FWConsole",
+            "url": "http://bsoaqx04a:7003/fwconsole/jsp/auditoriav2?date1=08%2F08%2F2023+01%3A00&amp;date2=08%2F08%2F2023+23%3A59&amp;queryText=ibm0808200229",
+            "id": "page=a15a4686-e84e-4924-bfb1-76fed2b6fb61",
+            "timestamp": 1691524982.918
+          }
+        ]
+      }
+    ],
+    "activeContext": "context=b54cd282-20f1-4c06-8f24-9fa9d9eb9a0f",
+    "activeBrowser": true
+  }
+]</msg>
+<msg timestamp="20230808 20:03:19.272" level="INFO">Successfully changed active context</msg>
+<msg timestamp="20230808 20:03:19.281" level="INFO">Successfully closed Page</msg>
+<status status="PASS" starttime="20230808 20:03:19.238" endtime="20230808 20:03:19.281"/>
+</kw>
+<kw name="Click Web Element Is Visible" library="RES_UTIL">
+<arg>${XPATH_XML}/../../..//*[@data-action="collapse"]</arg>
+<doc>Função que clica com o botão do mouse num elemento da tela.
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |
+Abaixo alguns exemplos de como usar a função, seja como uma variavel ou com o xpath:
+| //input[contains(@id,'Login')] //input[contains(@id,'Login')]
+| Click Web Element Is Visible //input[contains(@id,'Login')]
+Biblioteca ultilizada: [https://marketsquare.github.io/robotframework-browser/Browser.html#Fill%20Text|Browser &gt;&gt;]</doc>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>Visible</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230808 20:03:21.096" level="INFO">Waited for Element with selector //*[text()="END - Finalização do serviço"]/../..//textarea/../../..//*[@data-action="collapse"] at state visible</msg>
+<status status="PASS" starttime="20230808 20:03:19.282" endtime="20230808 20:03:21.096"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>${ELEMENT}</arg>
+<arg>duration=100ms</arg>
+<arg>width=4px</arg>
+<arg>color=\#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 20:03:21.116" level="INFO">Highlighted 1 elements for 100.</msg>
+<status status="PASS" starttime="20230808 20:03:21.097" endtime="20230808 20:03:21.116"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 20:03:21.183" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/2.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/2.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 20:03:21.117" endtime="20230808 20:03:21.183"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${ELEMENT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20230808 20:03:21.184" endtime="20230808 20:03:21.239"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230808 20:03:21.739" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20230808 20:03:21.239" endtime="20230808 20:03:21.739"/>
+</kw>
+<status status="PASS" starttime="20230808 20:03:19.281" endtime="20230808 20:03:21.739"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>${XPATH_XML}</arg>
+<arg>Visible</arg>
+<arg>15</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20230808 20:03:21.746" level="INFO">Waited for Element with selector //*[text()="END - Finalização do serviço"]/../..//textarea at state visible</msg>
+<status status="PASS" starttime="20230808 20:03:21.740" endtime="20230808 20:03:21.747"/>
+</kw>
+<kw name="Scroll To Element" library="Browser">
+<arg>${XPATH_XML}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>This method waits for actionability checks, then tries to scroll element into view,
+unless it is completely visible.</doc>
+<status status="PASS" starttime="20230808 20:03:21.747" endtime="20230808 20:03:21.772"/>
+</kw>
+<kw name="Highlight Elements" library="Browser">
+<arg>${XPATH_XML}</arg>
+<arg>duration=500ms</arg>
+<arg>width=4px</arg>
+<arg>color=\#dd00dd</arg>
+<arg>style=solid</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.</doc>
+<msg timestamp="20230808 20:03:21.782" level="INFO">Highlighted 1 elements for 500.</msg>
+<status status="PASS" starttime="20230808 20:03:21.773" endtime="20230808 20:03:21.782"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>filename={index}</arg>
+<arg>quality=100</arg>
+<arg>fileType=jpeg</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20230808 20:03:21.854" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/3.jpeg" target="_blank"&gt;&lt;img src="browser/screenshot/3.jpeg" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230808 20:03:21.782" endtime="20230808 20:03:21.854"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${DADOS_XML}&quot; == &quot;None&quot; and &quot;${RETORNO_ESPERADO}&quot; != &quot;None&quot;">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${STATUS}</var>
+<arg>Browser.Get Text</arg>
+<arg>${XPATH_XML}</arg>
+<arg>*=</arg>
+<arg>${RETORNO_ESPERADO}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Get Text" library="Browser">
+<arg>${XPATH_XML}</arg>
+<arg>*=</arg>
+<arg>${RETORNO_ESPERADO}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20230808 20:03:21.872" level="INFO">Text: '&lt;Header xmlns="http://schemas.xmlsoap.org/soap/envelope/"/&gt;\n&lt;Body xmlns="http://schemas.xmlsoap.org/soap/envelope/"&gt;\n      &lt;tns:PostAppointmentResponse xmlns:msg="http://www.oi.net.br/INFRA/SOAFW/SharedResources/Messaging/v2" xmlns:ns2="http://www.infraco.net.br/INFRA/SOAFW/SharedResources/Messaging/v4" xmlns:ns1="http://www.oi.net.br/INFRA/SOAFW/SharedResources/Types/v1" xmlns:tns="http://www.infraco.net.br/Appointment/PostAppointment/XSD/v1.0"&gt;\n            &lt;tns:control xmlns:tns="http://www.infraco.net.br/INFRA/SOAFW/SharedResources/Messaging/v4"&gt;\n                  &lt;tns:type&gt;S&lt;/tns:type&gt;\n                  &lt;tns:code&gt;201&lt;/tns:code&gt;\n                  &lt;tns:message&gt;Created&lt;/tns:message&gt;\n            &lt;/tns:control&gt;\n            &lt;tns:workOrderID&gt;SA-625303&lt;/tns:workOrderID&gt;\n      &lt;/tns:PostAppointmentResponse&gt;\n&lt;/Body&gt;'</msg>
+<status status="PASS" starttime="20230808 20:03:21.855" endtime="20230808 20:03:21.872"/>
+</kw>
+<msg timestamp="20230808 20:03:21.873" level="INFO">${STATUS} = True</msg>
+<status status="PASS" starttime="20230808 20:03:21.855" endtime="20230808 20:03:21.873"/>
+</kw>
+<if>
+<branch type="IF" condition="${STATUS} == False">
+<kw name="Fatal Error" library="BuiltIn">
+<arg>\nValor no FW está diferente de ${RETORNO_ESPERADO}!</arg>
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.874" endtime="20230808 20:03:21.874"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:21.873" endtime="20230808 20:03:21.874"/>
+</branch>
+<status status="PASS" starttime="20230808 20:03:21.873" endtime="20230808 20:03:21.874"/>
+</if>
+<kw name="Close Browser" library="Browser">
+<arg>CURRENT</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230808 20:03:21.909" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230808 20:03:21.874" endtime="20230808 20:03:21.909"/>
+</kw>
+<break>
+<status status="PASS" starttime="20230808 20:03:21.909" endtime="20230808 20:03:21.909"/>
+</break>
+<status status="PASS" starttime="20230808 20:03:21.854" endtime="20230808 20:03:21.909"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${DADOS_XML}&quot; != &quot;None&quot; and &quot;${RETORNO_ESPERADO}&quot; == &quot;None&quot;">
+<kw name="Split String" library="String">
+<var>@{VALIDAR_XML}</var>
+<arg>${DADOS_XML}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.910" endtime="20230808 20:03:21.910"/>
+</kw>
+<kw name="Get Text Element is Visible" library="RES_UTIL">
+<var>${TEXTO_XML}</var>
+<arg>xpath=${XPATH_XML}</arg>
+<doc>Busca o elemento passado como argumento e retorna a STR na variável Return_ELEMENT
+| =Arguments= | =Description= |
+| ``ELEMENT`` | Variavel do Elemento HTML ou XPath. |</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.910" endtime="20230808 20:03:21.910"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${ErrorCodeExist}</var>
+<arg>XML.Get Element Text</arg>
+<arg>${TEXTO_XML}</arg>
+<arg>.//errorCode</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.910" endtime="20230808 20:03:21.910"/>
+</kw>
+<if>
+<branch type="IF" condition="${ErrorCodeExist} == True">
+<kw name="Ler Variavel na Planilha" library="RES_EXCEL">
+<var>${erroPlanilha}</var>
+<arg>errorCode</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.911" endtime="20230808 20:03:21.911"/>
+</kw>
+<kw name="Get Element Text" library="XML">
+<var>${errorCode}</var>
+<arg>${TEXTO_XML}</arg>
+<arg>.//errorCode</arg>
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.911" endtime="20230808 20:03:21.911"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${errorCode}&quot; != &quot;${erroPlanilha}&quot;">
+<kw name="Fatal Error" library="BuiltIn">
+<arg>\nError Code diferente no FW!</arg>
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.912" endtime="20230808 20:03:21.912"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:21.912" endtime="20230808 20:03:21.912"/>
+</branch>
+<status status="NOT RUN" starttime="20230808 20:03:21.911" endtime="20230808 20:03:21.912"/>
+</if>
+<status status="NOT RUN" starttime="20230808 20:03:21.911" endtime="20230808 20:03:21.912"/>
+</branch>
+<status status="NOT RUN" starttime="20230808 20:03:21.910" endtime="20230808 20:03:21.912"/>
+</if>
+<for flavor="IN">
+<var>${ELEMENTO_XML}</var>
+<value>@{VALIDAR_XML}</value>
+<iter>
+<var name="${ELEMENTO_XML}"/>
+<kw name="Ler Variavel na Planilha" library="RES_EXCEL">
+<var>${RETORNO_ESPERADO}</var>
+<arg>${ELEMENTO_XML}</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.912" endtime="20230808 20:03:21.913"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${EXIST_FREQUENCY_BAND}</var>
+<arg>Ler Variavel na Planilha</arg>
+<arg>frequencyBand</arg>
+<arg>Global</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.913" endtime="20230808 20:03:21.913"/>
+</kw>
+<if>
+<branch type="IF" condition="${EXIST_FREQUENCY_BAND} == True and &quot;${VALOR_BUSCA}&quot; == &quot;Diag_ID&quot; and &quot;${bitState}&quot; != &quot;Bitstream&quot;">
+<kw name="Ler Variavel na Planilha" library="RES_EXCEL">
+<var>${FREQUENCY_BAND}</var>
+<arg>frequencyBand</arg>
+<arg>Global</arg>
+<doc>Keyword responsável por realizar a leitura de valores de determinada coluna da planilha</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.913" endtime="20230808 20:03:21.913"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${FREQUENCY_BAND}&quot; == &quot;2.4GHz&quot;">
+<kw name="Get Element Text" library="XML">
+<var>${target_data}</var>
+<arg>${TEXTO_XML}</arg>
+<arg>.//frequencyBand[text()="2.4GHz"]/..//${ELEMENTO_XML}</arg>
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.914" endtime="20230808 20:03:21.914"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:21.913" endtime="20230808 20:03:21.914"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${FREQUENCY_BAND}&quot; == &quot;5GHz&quot;">
+<kw name="Get Element Text" library="XML">
+<var>${target_data}</var>
+<arg>${TEXTO_XML}</arg>
+<arg>.//frequencyBand[text()="5GHz"]/..//${ELEMENTO_XML}</arg>
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.914" endtime="20230808 20:03:21.914"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:21.914" endtime="20230808 20:03:21.914"/>
+</branch>
+<status status="NOT RUN" starttime="20230808 20:03:21.913" endtime="20230808 20:03:21.914"/>
+</if>
+<status status="NOT RUN" starttime="20230808 20:03:21.913" endtime="20230808 20:03:21.914"/>
+</branch>
+<branch type="ELSE">
+<kw name="Get Element Text" library="XML">
+<var>${target_data}</var>
+<arg>${TEXTO_XML}</arg>
+<arg>.//${ELEMENTO_XML}</arg>
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.914" endtime="20230808 20:03:21.915"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:21.914" endtime="20230808 20:03:21.915"/>
+</branch>
+<status status="NOT RUN" starttime="20230808 20:03:21.913" endtime="20230808 20:03:21.915"/>
+</if>
+<if>
+<branch type="IF" condition="&quot;${RETORNO_ESPERADO}&quot; != &quot;${target_data}&quot;">
+<kw name="Fatal Error" library="BuiltIn">
+<arg>\nValor no FW está diferente de ${RETORNO_ESPERADO}!</arg>
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.915" endtime="20230808 20:03:21.915"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:21.915" endtime="20230808 20:03:21.915"/>
+</branch>
+<status status="NOT RUN" starttime="20230808 20:03:21.915" endtime="20230808 20:03:21.915"/>
+</if>
+<status status="NOT RUN" starttime="20230808 20:03:21.912" endtime="20230808 20:03:21.915"/>
+</iter>
+<status status="NOT RUN" starttime="20230808 20:03:21.912" endtime="20230808 20:03:21.915"/>
+</for>
+<break>
+<status status="NOT RUN" starttime="20230808 20:03:21.915" endtime="20230808 20:03:21.915"/>
+</break>
+<status status="NOT RUN" starttime="20230808 20:03:21.909" endtime="20230808 20:03:21.915"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fatal Error" library="BuiltIn">
+<arg>\nArgumentos passados de maneira incorreta!</arg>
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.916" endtime="20230808 20:03:21.916"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:21.916" endtime="20230808 20:03:21.916"/>
+</branch>
+<status status="PASS" starttime="20230808 20:03:21.854" endtime="20230808 20:03:21.917"/>
+</if>
+<status status="PASS" starttime="20230808 20:03:16.543" endtime="20230808 20:03:21.917"/>
+</branch>
+<branch type="ELSE">
+<kw name="Reload" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Reloads current active page.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.918" endtime="20230808 20:03:21.918"/>
+</kw>
+<if>
+<branch type="IF" condition="${x} == ${TENTATIVAS_FOR}-1">
+<kw name="Fatal Error" library="BuiltIn">
+<arg>\nEvento ${EVENTO_FW} não foi encontrado no FW</arg>
+<doc>Stops the whole test execution.</doc>
+<status status="NOT RUN" starttime="20230808 20:03:21.918" endtime="20230808 20:03:21.919"/>
+</kw>
+<status status="NOT RUN" starttime="20230808 20:03:21.918" endtime="20230808 20:03:21.919"/>
+</branch>
+<status status="NOT RUN" starttime="20230808 20:03:21.918" endtime="20230808 20:03:21.919"/>
+</if>
+<status status="NOT RUN" starttime="20230808 20:03:21.918" endtime="20230808 20:03:21.919"/>
+</branch>
+<status status="PASS" starttime="20230808 20:03:16.543" endtime="20230808 20:03:21.919"/>
+</if>
+<status status="PASS" starttime="20230808 20:03:15.223" endtime="20230808 20:03:21.920"/>
+</iter>
+<status status="PASS" starttime="20230808 20:03:15.223" endtime="20230808 20:03:21.920"/>
+</for>
+<kw name="Close Browser" library="Browser">
+<arg>CURRENT</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230808 20:03:21.922" level="INFO">No browser open, doing nothing</msg>
+<status status="PASS" starttime="20230808 20:03:21.920" endtime="20230808 20:03:21.923"/>
+</kw>
+<status status="PASS" starttime="20230808 20:03:02.556" endtime="20230808 20:03:21.923"/>
+</kw>
+<kw name="Fecha CT" library="DB">
+<arg>FW</arg>
+<arg>02_10_Realizar_a_Criacao_de_Ordem</arg>
+<if>
+<branch type="IF" condition="${PORTAL}">
+<kw name="Log" library="BuiltIn">
+<arg>${DAT_DB}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230808 20:03:21.924" level="INFO">52</msg>
+<status status="PASS" starttime="20230808 20:03:21.924" endtime="20230808 20:03:21.924"/>
+</kw>
+<kw name="Atualizar Steps Dat" library="dat">
+<arg>${DAT_DB}</arg>
+<arg>${RESPONSAVEL}</arg>
+<arg>${SYSTEM}</arg>
+<arg>${NEW_STEP}</arg>
+<msg timestamp="20230808 20:03:21.928" level="INFO">DAT atualizado com sucesso!</msg>
+<status status="PASS" starttime="20230808 20:03:21.925" endtime="20230808 20:03:21.929"/>
+</kw>
+<status status="PASS" starttime="20230808 20:03:21.924" endtime="20230808 20:03:21.929"/>
+</branch>
+<status status="PASS" starttime="20230808 20:03:21.924" endtime="20230808 20:03:21.929"/>
+</if>
+<status status="PASS" starttime="20230808 20:03:21.923" endtime="20230808 20:03:21.929"/>
+</kw>
+<tag>02_09_Validar_a_Notificacao_do_Agendamento</tag>
+<tag>COMPLETO</tag>
+<status status="PASS" starttime="20230808 20:03:02.526" endtime="20230808 20:03:21.929"/>
+</test>
+<doc>Agrupador responsavel por chamar TC dos ROBS referentes ao cenario
+INPUT: Address, Customer_Name, Phone_Number, Reference,
+OUTPUT: Address_Id, TypeComplement1, Value1, TypeComplement2, Value2, TypeComplement3, Value3,</doc>
+<status status="PASS" starttime="20230808 20:03:00.543" endtime="20230808 20:03:21.939"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">02_09_Validar_a_Notificacao_do_Agendamento</stat>
+<stat pass="1" fail="0" skip="0">COMPLETO</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="002 AtivacaoSemNumResidenciaViaFSL">002 AtivacaoSemNumResidenciaViaFSL</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230808 20:03:00.880" level="WARN">RPA.Excel.Application library works only on Windows platform</msg>
+<msg timestamp="20230808 20:03:00.882" level="WARN">Excel application library requires Windows dependencies to work.</msg>
+<msg timestamp="20230808 20:03:01.284" level="WARN">Imported library '/robot/test/SCRIPTS/RESOURCE/COMMON/LIB/lib_geral.py' contains no keywords.</msg>
+</errors>
+</robot>

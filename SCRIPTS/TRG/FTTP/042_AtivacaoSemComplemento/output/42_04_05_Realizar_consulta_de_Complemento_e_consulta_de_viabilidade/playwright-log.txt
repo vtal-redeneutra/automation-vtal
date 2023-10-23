@@ -1,0 +1,35 @@
+{"level":30,"time":"2023-08-08T19:06:34.347Z","pid":9,"hostname":"docker-desktop","msg":"Listening on 47753"}
+{"level":30,"time":"2023-08-08T19:06:34.389Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T19:06:34.390Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T19:06:34.397Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T19:06:34.397Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9380:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9893:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:10139:57)
+    at /usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+=============================================================
+{"level":30,"time":"2023-08-08T19:06:41.136Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T19:06:41.136Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9380:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9893:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:10139:57)
+    at /usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+=============================================================
+{"level":30,"time":"2023-08-08T19:06:41.141Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T19:06:41.141Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T19:06:42.114Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-08-08T19:06:42.115Z","pid":9,"hostname":"docker-desktop","msg":"End of node method closeAllBrowsers"}

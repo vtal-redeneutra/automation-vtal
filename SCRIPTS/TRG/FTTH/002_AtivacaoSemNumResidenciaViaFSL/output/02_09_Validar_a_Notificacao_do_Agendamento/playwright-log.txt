@@ -1,0 +1,107 @@
+{"level":30,"time":"2023-08-08T20:03:02.445Z","pid":9,"hostname":"docker-desktop","msg":"Listening on 40153"}
+{"level":30,"time":"2023-08-08T20:03:02.523Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:02.524Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:02.528Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:02.529Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:02.629Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-08-08T20:03:02.846Z","pid":9,"hostname":"docker-desktop","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-08-08T20:03:02.857Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-08-08T20:03:02.857Z","pid":9,"hostname":"docker-desktop","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-08-08T20:03:02.868Z","pid":9,"hostname":"docker-desktop","msg":"Changed active context"}
+{"level":30,"time":"2023-08-08T20:03:02.918Z","pid":9,"hostname":"docker-desktop","msg":"Video path: undefined"}
+{"level":30,"time":"2023-08-08T20:03:02.918Z","pid":9,"hostname":"docker-desktop","msg":"Changed active page"}
+{"level":30,"time":"2023-08-08T20:03:15.220Z","pid":9,"hostname":"docker-desktop","msg":"End of node method newPage"}
+{"level":30,"time":"2023-08-08T20:03:15.226Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-08-08T20:03:15.226Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is enabled, find Locator with (//a[normalize-space()='Appointment.PostAppointment'])[1] in page."}
+{"level":30,"time":"2023-08-08T20:03:16.541Z","pid":9,"hostname":"docker-desktop","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-08-08T20:03:16.544Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-08-08T20:03:16.544Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is enabled, find Locator with (//a[normalize-space()='Appointment.PostAppointment'])[1] in page."}
+{"level":30,"time":"2023-08-08T20:03:16.548Z","pid":9,"hostname":"docker-desktop","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-08-08T20:03:16.552Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method highlightElements"}
+{"level":30,"time":"2023-08-08T20:03:16.552Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is disabled, return Locator: (//a[normalize-space()='Appointment.PostAppointment'])[1] in page."}
+{"level":30,"time":"2023-08-08T20:03:16.554Z","pid":9,"hostname":"docker-desktop","msg":"Locator count is 1"}
+{"level":30,"time":"2023-08-08T20:03:16.566Z","pid":9,"hostname":"docker-desktop","msg":"End of node method highlightElements"}
+{"level":30,"time":"2023-08-08T20:03:16.571Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-08-08T20:03:16.571Z","pid":9,"hostname":"docker-desktop","Take screenshot with options: ":{"path":"/robot/test/SCRIPTS/TRG/FTTH/002_AtivacaoSemNumResidenciaViaFSL/output/02_09_Validar_a_Notificacao_do_Agendamento/browser/screenshot/1.jpeg","fileType":"jpeg","fullPage":false,"timeout":50000,"omitBackground":false,"quality":100}}
+{"level":30,"time":"2023-08-08T20:03:16.652Z","pid":9,"hostname":"docker-desktop","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-08-08T20:03:16.657Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method click"}
+{"level":30,"time":"2023-08-08T20:03:16.657Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is enabled, find Locator with (//a[normalize-space()='Appointment.PostAppointment'])[1] in page."}
+{"level":30,"time":"2023-08-08T20:03:16.733Z","pid":9,"hostname":"docker-desktop","msg":"End of node method click"}
+{"level":30,"time":"2023-08-08T20:03:19.240Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:19.245Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:19.248Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2023-08-08T20:03:19.249Z","pid":9,"hostname":"docker-desktop","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2023-08-08T20:03:19.254Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2023-08-08T20:03:19.254Z","pid":9,"hostname":"docker-desktop","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2023-08-08T20:03:19.262Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:19.265Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:19.269Z","pid":9,"hostname":"docker-desktop","msg":"Changed active context"}
+{"level":30,"time":"2023-08-08T20:03:19.269Z","pid":9,"hostname":"docker-desktop","msg":"Changing current active page"}
+{"level":30,"time":"2023-08-08T20:03:19.269Z","pid":9,"hostname":"docker-desktop","msg":"Changed active page"}
+{"level":30,"time":"2023-08-08T20:03:19.272Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method closePage"}
+{"level":30,"time":"2023-08-08T20:03:19.279Z","pid":9,"hostname":"docker-desktop","msg":"End of node method closePage"}
+{"level":30,"time":"2023-08-08T20:03:19.287Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-08-08T20:03:19.287Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is enabled, find Locator with //*[text()=\"END - Finalização do serviço\"]/../..//textarea/../../..//*[@data-action=\"collapse\"] in page."}
+{"level":30,"time":"2023-08-08T20:03:21.095Z","pid":9,"hostname":"docker-desktop","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-08-08T20:03:21.098Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method highlightElements"}
+{"level":30,"time":"2023-08-08T20:03:21.098Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is disabled, return Locator: //*[text()=\"END - Finalização do serviço\"]/../..//textarea/../../..//*[@data-action=\"collapse\"] in page."}
+{"level":30,"time":"2023-08-08T20:03:21.101Z","pid":9,"hostname":"docker-desktop","msg":"Locator count is 1"}
+{"level":30,"time":"2023-08-08T20:03:21.114Z","pid":9,"hostname":"docker-desktop","msg":"End of node method highlightElements"}
+{"level":30,"time":"2023-08-08T20:03:21.123Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-08-08T20:03:21.123Z","pid":9,"hostname":"docker-desktop","Take screenshot with options: ":{"path":"/robot/test/SCRIPTS/TRG/FTTH/002_AtivacaoSemNumResidenciaViaFSL/output/02_09_Validar_a_Notificacao_do_Agendamento/browser/screenshot/2.jpeg","fileType":"jpeg","fullPage":false,"timeout":50000,"omitBackground":false,"quality":100}}
+{"level":30,"time":"2023-08-08T20:03:21.181Z","pid":9,"hostname":"docker-desktop","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-08-08T20:03:21.187Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method click"}
+{"level":30,"time":"2023-08-08T20:03:21.187Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is enabled, find Locator with //*[text()=\"END - Finalização do serviço\"]/../..//textarea/../../..//*[@data-action=\"collapse\"] in page."}
+{"level":30,"time":"2023-08-08T20:03:21.237Z","pid":9,"hostname":"docker-desktop","msg":"End of node method click"}
+{"level":30,"time":"2023-08-08T20:03:21.741Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-08-08T20:03:21.741Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is enabled, find Locator with //*[text()=\"END - Finalização do serviço\"]/../..//textarea in page."}
+{"level":30,"time":"2023-08-08T20:03:21.745Z","pid":9,"hostname":"docker-desktop","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-08-08T20:03:21.749Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method scrollToElement"}
+{"level":30,"time":"2023-08-08T20:03:21.749Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is enabled, find Locator with //*[text()=\"END - Finalização do serviço\"]/../..//textarea in page."}
+{"level":30,"time":"2023-08-08T20:03:21.771Z","pid":9,"hostname":"docker-desktop","msg":"End of node method scrollToElement"}
+{"level":30,"time":"2023-08-08T20:03:21.775Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method highlightElements"}
+{"level":30,"time":"2023-08-08T20:03:21.775Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is disabled, return Locator: //*[text()=\"END - Finalização do serviço\"]/../..//textarea in page."}
+{"level":30,"time":"2023-08-08T20:03:21.777Z","pid":9,"hostname":"docker-desktop","msg":"Locator count is 1"}
+{"level":30,"time":"2023-08-08T20:03:21.780Z","pid":9,"hostname":"docker-desktop","msg":"End of node method highlightElements"}
+{"level":30,"time":"2023-08-08T20:03:21.788Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-08-08T20:03:21.788Z","pid":9,"hostname":"docker-desktop","Take screenshot with options: ":{"path":"/robot/test/SCRIPTS/TRG/FTTH/002_AtivacaoSemNumResidenciaViaFSL/output/02_09_Validar_a_Notificacao_do_Agendamento/browser/screenshot/3.jpeg","fileType":"jpeg","fullPage":false,"timeout":50000,"omitBackground":false,"quality":100}}
+{"level":30,"time":"2023-08-08T20:03:21.851Z","pid":9,"hostname":"docker-desktop","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-08-08T20:03:21.856Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getText"}
+{"level":30,"time":"2023-08-08T20:03:21.856Z","pid":9,"hostname":"docker-desktop","msg":"Strict mode is enabled, find Locator with //*[text()=\"END - Finalização do serviço\"]/../..//textarea in page."}
+{"level":30,"time":"2023-08-08T20:03:21.870Z","pid":9,"hostname":"docker-desktop","msg":"Retrieved text for element //*[text()=\"END - Finalização do serviço\"]/../..//textarea containing <Header xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\"/>\n<Body xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\">\n      <tns:PostAppointmentResponse xmlns:msg=\"http://www.oi.net.br/INFRA/SOAFW/SharedResources/Messaging/v2\" xmlns:ns2=\"http://www.infraco.net.br/INFRA/SOAFW/SharedResources/Messaging/v4\" xmlns:ns1=\"http://www.oi.net.br/INFRA/SOAFW/SharedResources/Types/v1\" xmlns:tns=\"http://www.infraco.net.br/Appointment/PostAppointment/XSD/v1.0\">\n            <tns:control xmlns:tns=\"http://www.infraco.net.br/INFRA/SOAFW/SharedResources/Messaging/v4\">\n                  <tns:type>S</tns:type>\n                  <tns:code>201</tns:code>\n                  <tns:message>Created</tns:message>\n            </tns:control>\n            <tns:workOrderID>SA-625303</tns:workOrderID>\n      </tns:PostAppointmentResponse>\n</Body>"}
+{"level":30,"time":"2023-08-08T20:03:21.870Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getText"}
+{"level":30,"time":"2023-08-08T20:03:21.875Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-08-08T20:03:21.878Z","pid":9,"hostname":"docker-desktop","msg":"Removed page=ae8bb937-f6a2-4a10-af84-7ff6d928d7c6 from context=b54cd282-20f1-4c06-8f24-9fa9d9eb9a0f page stack"}
+{"level":30,"time":"2023-08-08T20:03:21.907Z","pid":9,"hostname":"docker-desktop","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2023-08-08T20:03:21.921Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-08-08T20:03:21.921Z","pid":9,"hostname":"docker-desktop","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9380:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9893:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:10139:57)
+    at /usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+=============================================================
+{"level":30,"time":"2023-08-08T20:03:21.936Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:21.936Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9380:15)
+    at PlaywrightServer.getActiveBrowser (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:9893:59)
+    at PlaywrightServer.setTimeout (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/index.js:10139:57)
+    at /usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (/usr/local/lib/python3.8/dist-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+=============================================================
+{"level":30,"time":"2023-08-08T20:03:21.943Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:21.943Z","pid":9,"hostname":"docker-desktop","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-08-08T20:03:22.695Z","pid":9,"hostname":"docker-desktop","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-08-08T20:03:22.695Z","pid":9,"hostname":"docker-desktop","msg":"End of node method closeAllBrowsers"}

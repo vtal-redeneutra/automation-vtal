@@ -1,0 +1,18 @@
+# FROM marketsquare/robotframework-browser
+FROM marketsquare/robotframework-browser:latest AS StableTester
+
+USER root
+
+# USER pwuser
+
+RUN apt-get update
+RUN apt-get install telnet -y
+RUN chmod 777 -R /etc/ssl/
+
+ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF-8
+
+WORKDIR /robot
+COPY    .   .
+RUN pip3 install --no-cache-dir --upgrade pip wheel
+RUN pip install -r requirements.txt
+RUN rfbrowser init
