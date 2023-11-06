@@ -2,7 +2,6 @@
 Documentation                               Tratamento de pendência
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
           
 
 *** Variables ***
@@ -61,7 +60,7 @@ Tratamento de Pendencia 7065
     ...                                     \nSe retornar código diferente de 200, informa que o tratamento não ocorreu.
 
     ${date}=                                Ler Variavel na Planilha                associatedDocumentDate                  Global
-    ${correlationOrder}=                    Ler Variavel na Planilha                Correlation_Order                       Global
+    ${correlationOrder}=                    Ler Variavel na Planilha                correlationOrder                       Global
     ${associatedDocument}=                  Ler Variavel na Planilha                associatedDocument                      Global       
     ${observation}=                         Ler Variavel na Planilha                Observation                             Global
     ${action}=                              Set Variable                            fechar
@@ -72,7 +71,7 @@ Tratamento de Pendencia 7065
     ${updateDate}=                          Get Current Date                        result_format=%Y-%m-%dT%H:%M:%S    
     Escrever Variavel na Planilha           ${updateDate}                           updateDate                              Global
 
-     ${Response}=                            PATCH_API                               ${API_BASEPRODUCTORDERING}/productOrder/${userId}      "order": {"correlationOrder": "${correlationOrder}","associatedDocument": "${associatedDocument}","appointment": {"hasSlot": true,"date": "${date}","mandatoryType": "Permitido","workOrderId": "${orderID}"},"issue": {"code": ${code},"observation": "${observation}","userId": "${userId}","updateDate": "${updateDate}","action": "${action}"}}
+     ${Response}=                            PATCH_API                               ${API_BASEPRODUCTORDERING}/productOrder/${userId}      "order": {"correlationOrder": "${correlationOrder}","associatedDocument": "${associatedDocument}","appointment": {"hasSlot": true,"date": "${date}","mandatoryType": "Permitido","workOrderId": "${orderID}"},"issue": {"code": ${code},"observation": "${observation}","userId":"${userId}","updateDate": "${updateDate}","action": "${action}"}}
 
 
     ${returnedCode}=                        Get Value From Json                     ${Response}                             $.control.code
@@ -102,21 +101,21 @@ Tratamento de Pendencia TroubleTicket
 Resolucao Pendencia 7100
     [Documentation]
     
-    Retornar Token Vtal
+    # Retornar Token Vtal
 
     ${correlationOrder}=                    Ler Variavel na Planilha                correlationOrder                        Global
     ${associatedDocument}=                  Ler Variavel na Planilha                associatedDocument                      Global   
     ${issueCode}=                           Set Variable                            7100
-    ${observation}=                         Set Variable                            Resolução de pendência de contato de obra
+    ${observation}=                         Set Variable                            Resolucao de pendencia de contato de obra
     ${updateDate}=                          Get Current Date                        increment=1 day                         result_format=%Y-%m-%dT%H:%M:%S        
     ${action}                               Set Variable                            fechar
-    ${customer_name}                        Set Variable                            síndico VTAL
+    ${customer_name}                        Set Variable                            sindico VTAL
     ${customer_email}                       Set Variable                            sindicovtal@vtal.com
     ${customer_phone}                       Set Variable                            21999999999
     ${orderID}                              Ler Variavel na Planilha                somOrderId                              Global
 
 
-    ${Response}=                            PATCH_API                               ${API_BASEPRODUCTORDERING}/productOrder/${orderID}      "order": {"correlationOrder": "${correlationOrder}","associatedDocument": "${associatedDocument}","issue": {"code": ${issueCode},"observation": "${observation}","userId": "","updateDate": "${updateDate}","action": "${action}"},"customer": {"workContact": {"name": "${customer_name}","email": "${customer_email}","phone":"${customer_phone}"}}}
+    ${Response}=                            PATCH_API                               ${API_BASEPRODUCTORDERING}/productOrder/${orderID}      "order": {"correlationOrder": "${correlationOrder}","associatedDocument": "${associatedDocument}","issue": {"code": ${issueCode},"observation": "${observation}","userId": "","updateDate": "${updateDate}","action": "${action}"}}
 
 
     ${returnedCode}=                        Get Value From Json                     ${Response}                             $.control.code
@@ -168,14 +167,14 @@ Fechar pendencia de rede 7111
     ${correlationOrder}=                    Ler Variavel na Planilha                correlationOrder                        Global
     ${associatedDocument}=                  Ler Variavel na Planilha                associatedDocument                      Global   
     ${code}=                                Set Variable                            7111
-    ${observation}=                         Set Variable                            Resolução de pendência de rede
+    ${observation}=                         Set Variable                            Resolucao de pendencia de rede
     ${action}                               Set Variable                            fechar
-    ${SOM_orderID}                          Ler Variavel na Planilha                osOrderId                               Global
+    ${osOrderId}                          Ler Variavel na Planilha                  osOrderId                               Global
 
     ${updateDate}=                          Get Current Date                        result_format=%Y-%m-%dT%H:%M:%S    
     Escrever Variavel na Planilha           ${updateDate}                           updateDate                              Global
 
-    ${Response}=                            PATCH_API                               ${API_BASEPRODUCTORDERING}/productOrder/${SOM_orderID}    "order": {"correlationOrder": "${correlationOrder}","associatedDocument": "${associatedDocument}","issue": {"code": ${code},"observation": "${observation}","userId": "","updateDate": "${updateDate}","action": "${action}"}}
+    ${Response}=                            PATCH_API                               ${API_BASEPRODUCTORDERING}/productOrder/${osOrderId}    "order": {"correlationOrder": "${correlationOrder}","associatedDocument": "${associatedDocument}","issue": {"code": ${code},"observation": "${observation}","userId": "","updateDate": "${updateDate}","action": "${action}"}}
 
     ${returnedCode}=                        Get Value From Json                     ${Response}                             $.control.code
 

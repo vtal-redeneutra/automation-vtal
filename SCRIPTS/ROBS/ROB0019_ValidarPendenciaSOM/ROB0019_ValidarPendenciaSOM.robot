@@ -2,7 +2,7 @@
 Documentation                               Validação de pendência
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ../../RESOURCE/SOM/UTILS.robot
 Resource                                    ../../RESOURCE/SOM/PAGE_OBJECTS.robot
           

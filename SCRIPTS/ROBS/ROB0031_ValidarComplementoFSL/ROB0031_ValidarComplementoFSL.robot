@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation                               Validar Complemento no FSL
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ../../RESOURCE/FSL/UTILS.robot
 
 *** Variables ***

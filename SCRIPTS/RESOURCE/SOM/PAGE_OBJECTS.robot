@@ -38,6 +38,7 @@ ${SOM_Ordem_numeroCOM}                      xpath=//*[.='Dados da Ordem']/../../
 ${SOM_Ordem_numeroPedido}                   xpath=//a[.='Dados da Ordem']/../../../../..//*[text()='Número do Pedido']/../../../../..//tr//td//div//input
 ${SOM_Ordem_dtAberturaPedido}               xpath=//a[.='Dados da Ordem']/../../../../..//*[text()='Data de Abertura do Pedido']/../../../../..//tr//td//div//input
 ${SOM_Ordem_tipo}                           xpath=//a[.='Dados da Ordem']/../../../../..//*[text()='Tipo de Ordem']/../../../../..//tr//td//div//input
+${SOM_Acesso_GPON}                          xpath=(//*[.='Dados da Ordem']/../../../../..//*[text()='Acesso GPON']/../../../../..//input)[1]
 ${SOM_btnUpdate}                            (//span[contains(.,'Update')])[1]/..
 
 #Dados do Catálogo
@@ -88,8 +89,8 @@ ${SOM_QVLAN2}                               //a[.='Recursos Lógicos']/../../../
 #Bilhetes de Atividade
 ${SOM_Nome_Atividade}                       (//a[.='Bilhete de Atividade']/../../../../..//*[text()='Bilhete de Atividade']/../../../../..//tr//td//div//input)[1]
 ${SOM_Numero_BA}                            (//a[.='Bilhete de Atividade']/../../../../..//*[text()='Número do BA']/../../../../..//tr//td//div//input)[1]
-${SOM_Codigo_Encerramento}                  //a[.='Bilhete de Atividade']/../../../..//*[normalize-space()="Código de Encerramento"]//input
-${SOM_BilheteAtividade_Observacoes}         //a[.='Bilhete de Atividade']/../../../..//*[normalize-space()="Observações"]//textarea
+${SOM_Codigo_Encerramento}                  (//a[.='Bilhete de Atividade']/../../../..//*[normalize-space()="Código de Encerramento"]//input)[1]
+${SOM_BilheteAtividade_Observacoes}         (//a[.='Bilhete de Atividade']/../../../..//*[normalize-space()="Observações"]//textarea)[1]
 ${SOM_Matricula_Tecnico}                    //a[.='Bilhete de Atividade']/../../../../../..//label[normalize-space()='Matrícula do Técnico']/../../../..//input
 ${SOM_Equipamento_Extraviado}               //a[.='Bilhete de Atividade']/../../../../../../..//label[normalize-space()='Equipamento Extraviado']/../../../../..//select
 ${SOM_btn_AdicionarTecAuxiliar}             //a[.='Bilhete de Atividade']/../../../..//a[normalize-space()='A']
@@ -134,16 +135,16 @@ ${SOM_vel_054}                              xpath=//a[text()="Tarefas"]/../../..
 ${SOM_vel_055}                              xpath=//a[text()="Tarefas"]/../../../..//*[@value="T055 - Alterar Velocidade - NASS"]
 ${SOM_encerrado}                            xpath=//a[text()="Tarefas"]/../../../..//*[@value="T026 - Notificar Encerramento de Ordem"]
 ${SOM_infraType}                            xpath=//a[.='Dados da Ordem']/../../../../..//*[text()='Tipo de Infra']/../../../../..//tr//td//div//input
-${SOM_NomeDoProdutoAdd}                     xpath=//*[text()="Produto"]/../../../../../../div[1]//*[text()="Nome do Produto"]/../../../../..//input
-${SOM_TipoDeProdutoAdd}                     xpath=//*[text()="Produto"]/../../../../../../div[1]//*[text()="Tipo de Produto"]/../../../../..//input
-${SOM_TecnologiaAdd}                        xpath=//*[text()="Produto"]/../../../../../../div[1]//*[text()="Tecnologia"]/../../../../..//input
-${SOM_AcaoAdd}                              xpath=//*[text()="Atributo"]/../../../../../../../../../../../../../../../../../../../../div[1]//*[text()="Atributo"]/../../../../../../../../../../../../../../../../div[5]//*[text()="Ação"]/../../../../..//input
-${SOM_IdCatalogRemove}                      xpath=//*[text()="Produto"]/../../../..//*[text()="Id do Catálogo"]/../../../../..//input
-${SOM_NomeDoProdutoRemove}                  xpath=//*[text()="Produto"]/../../../../../../div[2]//*[text()="Nome do Produto"]/../../../../..//input
-${SOM_TipoDeProdutoRemove}                  xpath=//*[text()="Produto"]/../../../../../../div[2]//*[text()="Tipo de Produto"]/../../../../..//input
-${SOM_TecnologiaRemove}                     xpath=//*[text()="Produto"]/../../../../../../div[2]//*[text()="Tecnologia"]/../../../../..//input
-${SOM_AcaoRemove}                           xpath=//*[text()="Atributo"]/../../../../../../../../../../../../../../../../../../../../div[2]//*[text()="Atributo"]/../../../../../../../../../../../../../../../../div[5]//*[text()="Ação"]/../../../../..//input
-${SOM_IdCatalogAdd}                         xpath=//*[text()="Produto"]/../../../../../../div[1]//*[text()="Id do Catálogo"]/../../../../..//input
+${SOM_NomeDoProdutoAdd}                     xpath=//*[text()="Produto"]/../../../../../..//*[text()="Nome do Produto"]/../../../../..//input
+${SOM_TipoDeProdutoAdd}                     xpath=//*[text()="Produto"]/../../../../../..//*[text()="Tipo de Produto"]/../../../../..//input
+${SOM_TecnologiaAdd}                        xpath=//*[text()="Produto"]/../../../../../..//*[text()="Tecnologia"]/../../../../..//input
+${SOM_AcaoAdd}                              xpath=//*[text()="Atributo"]/../../../../../../../../../../../../../../../../../../../..//*[text()="Atributo"]/../../../../../../../../../../../../../../../../div[5]//*[text()="Ação"]/../../../../..//input
+${SOM_IdCatalogRemove}                      xpath=//*[text()="Produto"]/../../../../../../div[1]//*[text()="Id do Catálogo"]/../../../../..//input
+${SOM_NomeDoProdutoRemove}                  xpath=//*[text()="Produto"]/../../../../../../div[1]//*[text()="Nome do Produto"]/../../../../..//input
+${SOM_TipoDeProdutoRemove}                  xpath=//*[text()="Produto"]/../../../../../../div[1]//*[text()="Tipo de Produto"]/../../../../..//input
+${SOM_TecnologiaRemove}                     xpath=//*[text()="Produto"]/../../../../../../div[1]//*[text()="Tecnologia"]/../../../../..//input
+${SOM_AcaoRemove}                           xpath=//*[text()="Atributo"]/../../../../../../../../../../../../../../../../../../../../div[1]//*[text()="Atributo"]/../../../../../../../../../../../../../../../../div[5]//*[text()="Ação"]/../../../../..//input
+${SOM_IdCatalogAdd}                         xpath=//*[text()="Produto"]/../../../../../..//*[text()="Id do Catálogo"]/../../../../..//input
 
 #Validação última tarefa
 ${ultimaTarefaSOM}                          (//a[text()="Tarefas"])[last()]/../../../..//a[contains(text(),'Nome')]/../../../../..//input

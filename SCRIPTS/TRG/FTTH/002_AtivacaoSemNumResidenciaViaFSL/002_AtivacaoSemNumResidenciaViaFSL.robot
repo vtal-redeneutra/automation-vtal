@@ -6,13 +6,13 @@ Documentation                               Agrupador responsavel por chamar TC 
 
 
 
-
-Resource                                     ../../../../DATABASE/ROB/DB.robot
+Suite Setup                                 Setup cenario                           Whitelabel
 
 
 Resource                                    ../../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../../RESOURCE/FW/UTILS.robot
 Resource                                    ../../../RESOURCE/API/RES_API.robot
+Resource                                    ../../../RESOURCE/MS/UTILS.robot
 Resource                                    ${DIR_FSL}/UTILS.robot
 Resource                                    ${DIR_SOM}/UTILS.robot
 Resource                                    ${DIR_ROBS}/ROB0001_ConsultarIdEndereco/ROB0001_ConsultarIdEndereco.robot
@@ -41,72 +41,51 @@ ${DAT_CENARIO}                              ${DIR_DAT}/002_AtivacaoSemNumResiden
 
 
 *** Test Cases ***
-02.01 - Gerar Token de Acesso 
-    [TAGS]                                  COMPLETO    02_01_Gerar_Token_de_Acesso 
-    Inicia CT
-    Criar Tabela Execucao                   ${RESPONSAVEL}
+XX.XX - Gerar Token Acesso
+    [TAGS]                                  COMPLETO
     Retornar Token Vtal
-    Fecha CT  API  02_02_3_Realizar_Consulta_de_Logradouro
 
-02.02-3 - Realizar Consulta de Logradouro
-    [TAGS]                                  COMPLETO    02_02_3_Realizar_Consulta_de_Logradouro
-    Inicia CT
-    Retornar Token Vtal
-    Consulta Id Logradouro                  UF=BAHIA	                            Municipio=FEIRA DE SANTANA
-    Fecha CT  API  02_04_5_Realizar_Consulta_de_Viabilidade
+02.01-3 - Realizar Consulta de Logradouro
+    [TAGS]                                  COMPLETO
+    Consulta Id Logradouro
 
 02.04-5 - Realizar Consulta de Viabilidade
-    [TAGS]                                  COMPLETO    02_04_5_Realizar_Consulta_de_Viabilidade
-    Inicia CT
-    Retornar Token Vtal
+    [TAGS]                                  COMPLETO
     Retorna Viabilidade dos Produtos
-    Fecha CT  API  02_06_Realizar_Consulta_de_Slots
 
 02.06 - Realizar Consulta de Slots
-    [TAGS]                                  COMPLETO    02_06_Realizar_Consulta_de_Slots
-    Inicia CT
-    Retornar Token Vtal
+    [TAGS]                                  COMPLETO
     Consulta Slot Agendamento
-    Fecha CT  API  02_07_Realizar_o_Agendamento
 
 02.07 - Realizar o Agendamento
-    [TAGS]                                  COMPLETO    02_07_Realizar_o_Agendamento
-    Inicia CT
-    Retornar Token Vtal
+    [TAGS]                                  COMPLETO
     Realizar Agendamento
-    Fecha CT  API  02_08_Realizar_a_Consulta_do_Agendamento
 
 02.08 - Realizar a Consulta do Agendamento
-    [TAGS]                                  COMPLETO    02_08_Realizar_a_Consulta_do_Agendamento
-    Inicia CT
-    Retornar Token Vtal
+    [TAGS]                                  COMPLETO
     Consultar Agendamento
-    Fecha CT  FW  02_09_Validar_a_Notificacao_do_Agendamento
 
 02.09 - Validar a Notificação do Agendamento
-    [TAGS]                                  COMPLETO    02_09_Validar_a_Notificacao_do_Agendamento
-    Inicia CT
-    Validar Evento FW                       VALOR_BUSCA=associatedDocument    
-    ...                                     XPATH_EVENTO=(//a[normalize-space()='Appointment.PostAppointment'])[1]
-    ...                                     RETORNO_ESPERADO=>201<
-    Fecha CT  FW  02_10_Realizar_a_Criacao_de_Ordem
+    [TAGS]                                  COMPLETO
+    Login ao Portal de Microserviços
+    Acessar SOA no menu do PORTAL de Microserviços
+    Procurar por Appointment.PostAppointment referente ao associatedDocument
+    Validar dado do Bloco com o Argumento   XML     END - Finalização do serviço    tns:code    201
 
 02.10 - Realizar a Criação de Ordem (OS)
-    [TAGS]                                  COMPLETO    02_10_Realizar_a_Criacao_de_Ordem
-    Inicia CT
+    [TAGS]                                  COMPLETO
     Criar Ordem Agendamento
     Escrever Variavel na Planilha           Atribuído                               Estado                                  Global
-    Fecha CT  FW  02_11_Validar_a_Notificacao_da_Criacao_da_Ordem_via_FW_Console
 
 02.11 - Validar a Notificação da Criação da Ordem (OS) via FW Console
-    [TAGS]                                  COMPLETO    02_11_Validar_a_Notificacao_da_Criacao_da_Ordem_via_FW_Console
-    Inicia CT
-    Validar Criação da Ordem                associatedDocument                      >200<
-    Fecha CT  SOM  02_12_Validar_a_Criacao_da_OS_de_Instalacao_via_SOM
+    [TAGS]                                  COMPLETO
+    Login ao Portal de Microserviços
+    Acessar Microserviços no menu do PORTAL de Microserviços
+    Procurar por ProductOrdering.listenerProductOrderCreateEvent referente ao associatedDocument
+    Validar texto do Bloco com o Argumento    END - Finalização do serviço      204   
 
 02.12 - Validar a Criação da OS de Instalação via SOM
-    [TAGS]                                  COMPLETO    02_12_Validar_a_Criacao_da_OS_de_Instalacao_via_SOM
-    Inicia CT
+    [TAGS]                                  COMPLETO
     @{LIST}=                                Create List                             ${SOM_Numero_Pedido}                    
 
     @{RETORNO}=                             Create List                             associatedDocument                      
@@ -118,66 +97,48 @@ ${DAT_CENARIO}                              ${DIR_DAT}/002_AtivacaoSemNumResiden
     ...                                     RETORNO_ESPERADO=${RETORNO}
     ...                                     XPATH_VALIDACOES=${LIST}
     ...                                     TENTATIVAS_FOR=30
-    Fecha CT  API  XX_XX_Atualizacao_da_data_de_agendamento_via_API
 
 XX.XX - Atualização da data de agendamento via API
-    [TAGS]                                  COMPLETO    XX_XX_Atualizacao_da_data_de_agendamento_via_API
-    Inicia CT
-    Retornar Token Vtal
+    [TAGS]                                  COMPLETO
     Reagendar Pedido OPM e FSL
-    Fecha CT  FSL  XX_XX_Troca_de_tecnico_via_FSL
 
 XX.XX - Troca de técnico via FSL
-    [TAGS]                                  COMPLETO    XX_XX_Troca_de_tecnico_via_FSL
-    Inicia CT
+    [TAGS]                                  COMPLETO
     Troca de Tecnico no Field Service
     Close Browser                           CURRENT
-    Fecha CT  FSL  02_13_Realizar_o_Encerramento_da_OS_de_Instalacao_via_FSL
 
 02.13 - Realizar o Encerramento da OS de Instalação via FSL
-    [TAGS]                                  COMPLETO    02_13_Realizar_o_Encerramento_da_OS_de_Instalacao_via_FSL
-    Inicia CT
+    [TAGS]                                  COMPLETO
     Validar Atribuicao Automatica FSL
     Atualiza Status SA
     Validar Estado do pedido FSL
     Atualizar e Encerrar o SA
     Validar Estado do pedido FSL
-    Fecha CT  FW  02_14_Validar_Mudanca_de_Estados_no_FW
 
 02.14 - Validar Mudança de Estados no FW
-    [TAGS]                                  COMPLETO    02_14_Validar_Mudanca_de_Estados_no_FW
-    Inicia CT
+    [TAGS]                                  COMPLETO
     ${state_list}=                          Create List                             EN_ROUTE                                IN_EXECUTION                            ACTIVITY_CONCLUDED_SUCESSFULLY
-
-    Validar Mudancas de Estado FW           associatedDocument                      ${state_list}                           WorkOrderManagement.ListenerWorkOrderStateChangeEvent                           tns:name      
-    Fecha CT  FSL  02_15_Validar_no_Field_Service
-
+    
+    Validar Mudanca de Estados no Portal de Microserviços                           associatedDocument                      ${state_list}                            WorkOrderManagement.ListenerWorkOrderStateChangeEvent                          tns:name      
 
 02.15 - Validar no Field Service
-    [TAGS]                                  COMPLETO    02_15_Validar_no_Field_Service
-    Inicia CT
+    [TAGS]                                  COMPLETO
     Valida SA no Field Service
-    Fecha CT  SOM  02_16_Realizar_Validacao_de_Retorno_via_SOM
 
 02.16 - Realizar Validação de Retorno via SOM
-    [TAGS]                                  COMPLETO    02_16_Realizar_Validacao_de_Retorno_via_SOM
-    Inicia CT
+    [TAGS]                                  COMPLETO
     Valida Ordem SOM Finalizada com sucesso
-    Fecha CT  FW  02_17_Validar_a_Notificacao_de_Encerramento_via_FW_Console
 
 02.17 - Validar a Notificação de Encerramento via FW Console
-    [TAGS]                                  COMPLETO    02_17_Validar_a_Notificacao_de_Encerramento_via_FW_Console
-    Inicia CT
-    Validar Evento FW                       VALOR_BUSCA=associatedDocument    
-    ...                                     XPATH_EVENTO=(//a[normalize-space()='ProductOrdering.ListenerProductOrderStateChangeEvent'])[1]
-    ...                                     RETORNO_ESPERADO=>204<
-    Fecha CT  FSL  02_18_Auditoria_de_Tarefas
+    [TAGS]                                  COMPLETO
+    Login ao Portal de Microserviços
+    Acessar Microserviços no menu do PORTAL de Microserviços
+    Procurar por ProductOrdering.listenerProductOrderStateChangeEvent referente ao associatedDocument
+    Validar texto do Bloco com o Argumento    END - Finalização do serviço      204  
 
 02.18 - Auditoria de Tarefas
-    [TAGS]                                  COMPLETO    02_18_Auditoria_de_Tarefas
-    Inicia CT
+    [TAGS]                                  COMPLETO
     Auditoria de Tarefas
-    Fecha CT  COMPLETO  COMPLETO
 
 #===========================================================================================================================#    
 
@@ -208,9 +169,10 @@ XX.XX - Gerar Token de Acesso
 
 02.09 - Validar a Notificação do Agendamento
     [TAGS]                                  SCRIPT_A
-    Validar Evento FW                       VALOR_BUSCA=associatedDocument    
-    ...                                     XPATH_EVENTO=(//a[normalize-space()='Appointment.PostAppointment'])[1]
-    ...                                     RETORNO_ESPERADO=>201<
+    Login ao Portal de Microserviços
+    Acessar SOA no menu do PORTAL de Microserviços
+    Procurar por Appointment.PostAppointment referente ao associatedDocument
+    Validar dado do Bloco com o Argumento   XML     END - Finalização do serviço    tns:code    201
 
 02.10 - Realizar a Criação de Ordem (OS)
     [TAGS]                                  SCRIPT_A
@@ -219,7 +181,10 @@ XX.XX - Gerar Token de Acesso
 
 02.11 - Validar a Notificação da Criação da Ordem (OS) via FW Console
     [TAGS]                                  SCRIPT_A
-    Validar Criação da Ordem                associatedDocument                      >200<
+    Login ao Portal de Microserviços
+    Acessar Microserviços no menu do PORTAL de Microserviços
+    Procurar por ProductOrdering.listenerProductOrderCreateEvent referente ao associatedDocument
+    Validar texto do Bloco com o Argumento    END - Finalização do serviço      204    
 
 02.12 - Validar a Criação da OS de Instalação via SOM
     [TAGS]                                  SCRIPT_A
@@ -256,9 +221,8 @@ XX.XX - Troca de técnico via FSL
 02.15 - Validar Mudança de Estados no FW
     [TAGS]                                  SCRIPT_B
     ${state_list}=                          Create List                             EN_ROUTE                                IN_EXECUTION                            ACTIVITY_CONCLUDED_SUCESSFULLY
-
-    Validar Mudancas de Estado FW           associatedDocument                      ${state_list}                           WorkOrderManagement.ListenerWorkOrderStateChangeEvent                           tns:name      
-
+    
+    Validar Mudanca de Estados no Portal de Microserviços                           associatedDocument                      ${state_list}                            WorkOrderManagement.ListenerWorkOrderStateChangeEvent                          tns:name      
 
 02.16 - Validar no Field Service
     [TAGS]                                  SCRIPT_B
@@ -270,9 +234,10 @@ XX.XX - Troca de técnico via FSL
 
 02.18 - Validar a Notificação de Encerramento via FW Console
     [TAGS]                                  SCRIPT_B
-    Validar Evento FW                       VALOR_BUSCA=associatedDocument    
-    ...                                     XPATH_EVENTO=(//a[normalize-space()='ProductOrdering.ListenerProductOrderStateChangeEvent'])[1]
-    ...                                     RETORNO_ESPERADO=>204<
+    Login ao Portal de Microserviços
+    Acessar Microserviços no menu do PORTAL de Microserviços
+    Procurar por ProductOrdering.listenerProductOrderStateChangeEvent referente ao associatedDocument
+    Validar texto do Bloco com o Argumento    END - Finalização do serviço      204 
 
 02.19 - Auditoria de Tarefas
     [TAGS]                                  SCRIPT_B

@@ -1,0 +1,48 @@
+{
+    "Dados": [
+        {
+            "Input": {
+                "atribuirTecnico": "Jose Luiz Bermudez Calo Junior-OPM",
+                "customerName": "Voip Internet",
+                "phoneNumber": "21999999999",
+                "Reference": "Proximo a padaria",
+                "Address": "44065586",
+                "Number": "155",
+                "typeComplement1": "CA",
+                "value1": "9F",
+                "typeComplement2": "",
+                "value2": "",
+                "typeComplement3": "",
+                "value3": ""
+            },
+            "Output": {
+                "addressId": 203140,
+                "idComplements": 22417878,
+                "addressName": "Mananguape",
+                "typeLogradouro": "Rua",
+                "UF": "BA",
+                "Cidade": "Feira De Santana",
+                "Bairro": "Conceição",
+                "Description": "Rua Mananguape 155, Conceição - Feira De Santana, BA (44065-586)",
+                "LocationCode": "71220",
+                "Abbreviation": "FSA",
+                "State": "Bahia",
+                "inventoryId": 22417747,
+                "availabilityDescription": "Viável – Viabilidade técnica confirmada",
+                "associatedDocumentDate": "2023-09-30T15:10:00",
+                "appointmentStart": "2023-09-30T13:00:00",
+                "appointmentFinish": "2023-09-30T17:00:00",
+                "associatedDocument": "ibm0929151016",
+                "slotId": "84a85601-f4c3-450d-8878-a4fda2603de3",
+                "workOrderId": "SA-630492",
+                "subscriberId": "ibm0929151016",
+                "osOrderId": "20230929000026",
+                "somOrderId": "178528",
+                "maxBandWidth": 2000,
+                "senhaFsl": "",
+                "Estado": "",
+                "correlationOrder": "ibm0929151016"
+            }
+        }
+    ]
+}

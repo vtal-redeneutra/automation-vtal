@@ -11,7 +11,7 @@ Resource                                    ${DIR_SOM}/PAGE_OBJECTS.robot
 *** Keywords ***
 Tramitar ate encerramento da ordem via SOM
 
-    ${UsuarioSOM}=                          Ler Variavel Param Global               Usuario_SOM                             Global
+    ${UsuarioSOM}=                          Ler Variavel Param Global               $.Logins.SOM.Usuario                             
     ${trUsuarioSOM}=                        Convert To Lower Case                   ${UsuarioSOM}
     ${Associated_Document}=                 Ler Variavel na Planilha                associatedDocument                      Global
 

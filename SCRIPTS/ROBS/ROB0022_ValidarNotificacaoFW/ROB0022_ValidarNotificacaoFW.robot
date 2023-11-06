@@ -2,7 +2,7 @@
 Documentation                               Validação a Notificacao de criação da ordem no FW
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ../../RESOURCE/FW/UTILS.robot
   
 
@@ -204,7 +204,7 @@ Valida Notificacao Diagnostico no FW
        ${numLinhas}=                        Get Element Count is Visible            xpath=//table//td//a[text()="ServiceTestManagement.ListenerServiceTestResultEvent"]
        
         IF    ${numLinhas} != 1
-        
+            Sleep                           5s
             Reload
             IF    ${z} == 9
                 Fatal Error                     \n -> Existe apenas um evento, o esperado são dois eventos.

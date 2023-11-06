@@ -2,7 +2,7 @@
 Documentation                               Consultar Agendamento
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 
 
 *** Variables ***
@@ -17,7 +17,7 @@ Consultar o Agendamento
     ...                                     \nConsultar Agendamento
     [Tags]                                  ConsultarAgendamento
 
-    Retornar Token Vtal
+    # Retornar Token Vtal
     Consultar Agendamento
 
 #===================================================================================================================================================================
@@ -95,25 +95,43 @@ Consultar Agendamento
 
 #===================================================================================================================================================================
 Consultar Historico Agendamento
+    [Arguments]                             ${VERSAO_API}=v1
     [Documentation]                         Consulta o Historico Agendamento através da API pelo método GET
     ...                                     \nLê os campos "associatedDocument" e "Address_Id" na planilha
     ...                                     | ``URL_API`` | A URL base para a criação das requisições. ``https://apitrg.vtal.com.br/api/appointment/v1``. |
     [Tags]                                  ConsultarAgendamento
 
-    ${Associated_Document}=                 Ler Variavel na Planilha                associatedDocument                      Global
-    ${ADDRESS_ID}=                          Ler Variavel na Planilha                addressId                               Global
-    ${Response}=                            GET_API                                 ${API_BASEAPPOINTMENT}/appointment/?associatedDocument=${Associated_Document}&address.id=${ADDRESS_ID}
-    @{appointmentsList}=                    Get Value From Json                     ${Response.json()}                      $.workOrders[0].appointments
-    ${workOrderID}=                         Get Value From Json                     ${Response.json()}                      $.workOrders[0].workOrderID
-    ${appointmentsCount}=                   Get Length                              ${appointmentsList}
-    IF    "${appointmentsCount}" == 0 
-        Log To Console                      "\n Não tem histórico de Agendamentos"
-        Fail
-        
-    ELSE
-        Log To Console                      "\n Histórico de agendamentos diponível no Log"
-        log                                 ${appointmentsList}
-        log                                 ${workOrderID}
+    IF    "${VERSAO_API}" == "v1"
+        ${Associated_Document}=             Ler Variavel na Planilha                associatedDocument                      Global
+        ${Address_Id}=                      Ler Variavel na Planilha                addressId                               Global
+        ${Response}=                        GET_API                                 ${API_BASEAPPOINTMENT}/appointment/?associatedDocument=${Associated_Document}&address.id=${Address_Id}
+        @{appointmentsList}=                Get Value From Json                     ${Response.json()}                      $.workOrders[0].appointments
+        ${workOrderID}=                     Get Value From Json                     ${Response.json()}                      $.workOrders[0].workOrderID
+        ${appointmentsCount}=               Get Length                              ${appointmentsList}
+        IF    "${appointmentsCount}" == 0 
+            Log To Console                  "\n Não tem histórico de Agendamentos"
+            Fail
+            
+        ELSE
+            Log To Console                  "\n Histórico de agendamentos diponível no Log"
+            log                             ${appointmentsList}
+            log                             ${workOrderID}
+        END
+
+    ELSE IF    "${VERSAO_API}" == "v2"
+        ${workOrderId}                      Ler Variavel na Planilha                workOrderId                             Global
+        ${Response}                         GET_API                                 ${API_BASEAPPOINTMENT_V2}/appointment/${workOrderId}
+        ${lyfeCycleStatus}                  Get Value From Json                     ${Response.json()}                      $.appointments.lifeCycleStatus
+        ${appointmentsList}=                Get Value From Json                     ${Response.json()}                      $.appointments.occurrences
+        ${appointmentsCount}=               Get Length                              ${appointmentsList}
+        IF    "${appointmentsCount}" == 0 
+            Log To Console                  "\n Não tem histórico de Agendamentos"
+            Fail
+            
+        ELSE
+            Log To Console                  "\n Histórico de agendamentos diponível no Log"
+            log                             ${appointmentsList}
+        END
     END
         
 #===================================================================================================================================================================

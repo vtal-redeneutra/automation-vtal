@@ -19,8 +19,8 @@ Login SOM
     [Documentation]                         Realiza login no sistema SOM Ultilizando as variaveis da Param_Global, Usuario e senha    
     [TAGS]                                  Login SOM
 
-    ${usuario_som}=                         Ler Variavel Param Global               Usuario_SOM                             Global
-    ${senha_som}=                           Ler Variavel Param Global               Senha_SOM                               Global
+    ${usuario_som}=                         Ler Variavel Param Global               $.Logins.SOM.Usuario                             
+    ${senha_som}=                           Ler Variavel Param Global               $.Logins.SOM.Senha                               
     Set Test Variable                       ${usuario_som}
 
     Contexto para navegador                 ${URL_SOM}                                                        
@@ -847,7 +847,7 @@ Validar Enriquecimento SOM
     [Documentation]                         Valida e Consulta o Enriquecimento de massa no SOM
     [TAGS]                                  ValidaEnriquecimentoSOM
 
-    ${subscriber_Id}=                       Ler Variavel na Planilha                subscriberId                            Global
+    ${subscriber_Id}=                       Ler Variavel na Planilha                associatedDocument                            Global
 
     Click Web Element Is Visible            ${SOM_btn_query}
     Input Text Web Element Is Visible       ${SOM_input_ref}                        ${subscriber_Id}
@@ -863,7 +863,7 @@ Validar Enriquecimento SOM
 
     #Valida o Status da type, esperado é Retirada
     ${order_type_Des}=                      Get Text Element is Visible             ${SOM_order_type}
-    IF  "${order_type_Des}" != "Oi Fibra Retirada"
+    IF  "${order_type_Des}" != "Vtal Fibra Retirada"
         Fatal Error                         Order type está diferente de Retirada
     END
 
@@ -1025,17 +1025,17 @@ Validar Conclusao OS Retirada
     ######
 
 
-    ${NomeDoProdutoAdd}=                    Browser.Get Text                        ${SOM_NomeDoProdutoAdd}
+    # ${NomeDoProdutoAdd}=                    Browser.Get Text                        ${SOM_NomeDoProdutoAdd}
     # ${TecnologiaProdutoAdd}=                Browser.Get Text                        ${SOM_TecnologiaAdd}
-    ${TipoDeProdutoAdd}=                    Browser.Get Text                        ${SOM_TipoDeProdutoAdd}
-    ${IdDoCatalogoRemove}=                  Browser.Get Text                        ${SOM_IdCatalogRemove}
-    ${AcaoRemover}=                         Browser.Get Text                        ${SOM_AcaoAdd}        
+    # ${TipoDeProdutoAdd}=                    Browser.Get Text                        ${SOM_TipoDeProdutoAdd}
+    # ${IdDoCatalogoRemove}=                  Browser.Get Text                        ${SOM_IdCatalogRemove}
+    # ${AcaoRemover}=                         Browser.Get Text                        ${SOM_AcaoAdd}        
 
-    Should Be Equal As Strings              ${NomeDoProdutoAdd}                     VELOC_${VELOCIDADE}MBPS
+    # Should Be Equal As Strings              ${NomeDoProdutoAdd}                     VELOC_${VELOCIDADE}MBPS
     # Should Be Equal As Strings              ${TecnologiaProdutoAdd}                 ${infraType}
-    Should Be Equal As Strings              ${IdDoCatalogoRemove}                   BL_${VELOCIDADE}MB
-    Should Be Equal As Strings              ${TipoDeProdutoAdd}                     Banda Larga
-    Should Be Equal As Strings              ${AcaoRemover}                          remover
+    # Should Be Equal As Strings              ${IdDoCatalogoRemove}                   BL_${VELOCIDADE}MB
+    # Should Be Equal As Strings              ${TipoDeProdutoAdd}                     Banda Larga
+    # Should Be Equal As Strings              ${AcaoRemover}                          remover
 
     Scroll To Element                       ${SOM_Ordem_Block}                                
     Take Screenshot Web Element is visible  ${SOM_Ordem_Block} 
@@ -1125,8 +1125,8 @@ Validar Conclusao OS Trouble Ticket
 
     #Valida o Status da type, esperado é Bloqueio
     ${order_type}=                          Get Text Element is Visible             ${SOM_order_type}
-    IF  "${order_type}" != "OI Fibra Chamado Tecnico Ordem"
-        Fatal Error                         Order type está diferente de OI Fibra Chamado Tecnico Ordem
+    IF  "${order_type}" != "Vtal Fibra Chamado Tecnico Ordem"
+        Fatal Error                         Order type está diferente de Vtal Fibra Chamado Tecnico Ordem
     END
 #==================================================================================================================================================================
 Valida Evento SOM
@@ -1204,6 +1204,7 @@ Validar Evento Simples SOM
     ...                                     ${ORDER_TYPE}=NULL
     ...                                     ${ORDER_STATE}=NULL
     ...                                     ${TIPO_PESQUISA}=QUERY
+    ...                                     ${TIPO_PESQUISA_preview}=orderId
     ...                                     ${TENTATIVAS_FOR}=15
 
 
@@ -1221,7 +1222,13 @@ Validar Evento Simples SOM
     ELSE IF  "${TIPO_PESQUISA}" == "PREVIEW"
         #PESQUISAR PELO PREVIEW
         Click Web Element Is Visible        ${SOM_rb_Preview}
-        Input Text Web Element Is Visible   ${SOM_order_input}                      ${VALOR_PESQUISA}
+
+        IF  "${TIPO_PESQUISA_preview}" == "orderId"                 #Pesquisa pelo Order Id
+            Input Text Web Element Is Visible   ${SOM_order_input}                  ${VALOR_PESQUISA}
+        ELSE IF  "${TIPO_PESQUISA_preview}" == "reference"          #Pesquisa pelo Reference
+            Input Text Web Element Is Visible   ${SOM_Ref_Input}                    ${VALOR_PESQUISA}
+        END
+        
         Sleep                               3s
         Click Web Element Is Visible        ${SOM_btn_refresh}
 

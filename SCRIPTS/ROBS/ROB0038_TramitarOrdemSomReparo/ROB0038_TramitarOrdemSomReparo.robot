@@ -3,7 +3,7 @@ Documentation                               Scripts Abertura de Chamado Tecnico.
 
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ${DIR_SOM}/UTILS.robot
 
 
@@ -24,7 +24,7 @@ Resolver o Chamado Tecnico
     
     [Tags]                                  AberturaChamadoTecnico
 
-    ${troubleTicket_id}=                    Ler Variavel na Planilha                troubleTicket_id                        Global
+    ${troubleTicket_id}=                    Ler Variavel na Planilha                troubleTicketId                        Global
     
     Input Text Web Element Is Visible       ${SOM_order_input}                      ${troubleTicket_id}
     Click Web Element Is Visible            ${SOM_btn_search}

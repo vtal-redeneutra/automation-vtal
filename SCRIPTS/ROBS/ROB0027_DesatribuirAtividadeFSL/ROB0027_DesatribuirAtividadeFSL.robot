@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation                               Desatribui de Tecnico via FSL
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ../../RESOURCE/FSL/UTILS.robot
 Resource                                    ../../ROBS/ROB0007_ValidarAtribuicaoCompromissoFSL/ROB0007_ValidarAtribuicaoCompromissoFSL.robot
 
@@ -54,5 +54,6 @@ Desatribui de Tecnico via FSL
             END
         END
     END
-    Close Browser                           CURRENT
+    Consultar SA
+    # Close Browser                           CURRENT
 #===========================================================================================================================================================================================================

@@ -3,7 +3,7 @@ Documentation                               Scripts relacionados ao Processo de 
 
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ${DIR_SOM}/UTILS.robot
 
 *** Keywords ***
@@ -436,9 +436,9 @@ Validar Pendencia Obra Tratada
     [Documentation]                         Validação do Task Name "T072 - Executar Processo de Obra" no SOM e clica nos 3 pontinhos e valida informações.                                                              
 
     Login SOM
-    Altera Filtro Consulta Order ID         Associated_Document
+    Altera Filtro Consulta Order ID         associatedDocument
 
-    ${Associated_Document}=                 Ler Variavel na Planilha                Associated_Document                     Global
+    ${Associated_Document}=                 Ler Variavel na Planilha                associatedDocument                      Global
     ${SOM_Quantia_linha}=                   Get Element Count is Visible            (//td[contains(text(),"${Associated_Document}")]/..)
 
     IF  "${SOM_Quantia_linha}" != "2"
@@ -465,7 +465,7 @@ Validar Pendencia Obra Tratada
 
     #FECHA BROWSER E VALIDA A SEGUNDA LINHA
     Login SOM
-    Altera Filtro Consulta Order ID         Associated_Document
+    Altera Filtro Consulta Order ID         associatedDocument
 
     IF  "${SOM_Quantia_linha}" != "2"
         Fatal Error                         Quantidade de linhas da tabela está diferente do esperado.

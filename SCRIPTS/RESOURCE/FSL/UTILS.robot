@@ -3,8 +3,8 @@ Library                                     String
 Library                                     DateTime
 Library                                     Collections
 Library                                     Browser
-# Library                                     Dialogs
-# Library                                     ../../RESOURCE/COMMON/LIB/lib_geral.py
+Library                                     Dialogs
+Library                                     ../../RESOURCE/COMMON/LIB/lib_geral.py
 
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/FSL/PAGE_OBJECTS.robot
@@ -43,9 +43,9 @@ Abrir site e Logar no FSL
     [Documentation]                         Faz Login colocando a autenticação de dois fatores.
     ...                                     \nPreenche dados de login com usuário e senha da planilha, faz a autenticação de dois fatores, e ao final salva o arquivo com os coockies e permissões.
 
-    ${Usuario_FSL}=                         Ler Variavel Param Global               Usuario_FSL                             Global
-    ${Senha_FSL}=                           Ler Variavel Param Global               Senha_FSL                               Global
-    ${URL_FSL}=                             Ler Variavel Param Global               URL_FSL                                 Global
+    ${Usuario_FSL}=                         Ler Variavel Param Global               $.Logins.FSL.Usuario                             
+    ${Senha_FSL}=                           Ler Variavel Param Global               $.Logins.FSL.Senha                                 
+    ${URL_FSL}=                             Ler Variavel Param Global               $.Urls.FSL                                     
 
     #Usa a Função criada em Python, File Exists para validar se existe o arquivo de Cookies e permissões dentro da pasta
     ${AUTH_EXIST}=                          File Exists                            ${PATH_AUTENTICACAO}
@@ -232,7 +232,7 @@ Auditoria de Tarefas
     Take Screenshot Web Element is visible                                          ${estado_emDeslocamento}
     Take Screenshot Web Element is visible                                          ${estado_emExecucao}
     Take Screenshot Web Element is visible                                          ${estado_fechadoEmWFM}
-    Take Screenshot Web Element is visible                                          (//td[@data-label="Novo Valor"]//*[text()="${estado_encerramento}"])[last()]
+    Take Screenshot Web Element is visible                                          xpath=(//span[@title="${estado_encerramento}"])[last()]
     Close Browser                           CURRENT
 
 #===========================================================================================================================================================================================================

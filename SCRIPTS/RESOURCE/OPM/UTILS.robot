@@ -4,7 +4,7 @@ Library                                     String
 Library                                     DateTime
 Library                                     Collections
 Library                                     AppiumLibrary
-# Library                                     Dialogs
+Library                                     Dialogs
 
 Resource                                    PAGE_OBJECTS.robot
 Resource                                    VARIABLES.robot
@@ -47,8 +47,8 @@ Logar no App OPM
     [Documentation]                         Keyword responsável por realizar o Login no aplicativo OPM
     ...                                     \nLê os campos ``Usuario_OPM`` e ``Senha_OPM`` da planilha.
 
-    ${user_OPM}=                            Ler Variavel Param Global               Usuario_OPM                             Global
-    ${password_OPM}=                        Ler Variavel Param Global               Senha_OPM                               Global
+    ${user_OPM}=                            Ler Variavel Param Global               $.Logins.OPM.Usuario                             
+    ${password_OPM}=                        Ler Variavel Param Global               $.Logins.OPM.Senha                               
     Set Test Variable                       ${user_OPM}
     Set Test Variable                       ${password_OPM}
 
@@ -119,8 +119,6 @@ Take Screenshot App
     AppiumLibrary.Capture Page Screenshot    filename=print.png    
     # BuiltIn.Sleep  0.5
 
-    Validar o Nome da Keyword
-    Inserir Print OPM no DOC
 
 Check Loading
     [Documentation]                         Keyword responsável por aguardar até que a mensagem de loading do aplicativo OPM desapareça, para então seguir com o script

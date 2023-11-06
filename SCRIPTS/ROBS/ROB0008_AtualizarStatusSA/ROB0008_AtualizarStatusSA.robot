@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation                               Atualizar o Estado do Status do SA
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ../../RESOURCE/FSL/UTILS.robot
 
 *** Variables ***

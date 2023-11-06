@@ -3,7 +3,6 @@ Documentation                               Consultar Viabilidade
 
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
 
 
 *** Variables ***
@@ -129,12 +128,15 @@ Valida Banda Maxima
         ${HighestBand}=                     Convert To Integer                      ${HighestBand[0]}
         @{Bands}=                           Get Value From Json                     ${Response}                             $.resource.products.product
     
-        FOR    ${element}    IN    @{Bands[0]}        
+        FOR    ${element}    IN    @{Bands[0]}     
             ${velocity}=                    Get Value From Json                     ${element}    $.catalogId
+
+            IF  "${velocity[0]}"=="VoIP"       CONTINUE
+
             ${velocity}=                    Split String                            ${velocity[0]}    _
             ${velocity}=                    Split String                            ${velocity[1]}    M
             ${velocity}=                    Convert To Integer                      ${velocity[0]}
-
+            
             IF    ${velocity} > ${HighestBand}
                 ${HighestBand}=             ${velocity}
                 Retorna Banda Maxima        ${HighestBand}
@@ -164,7 +166,7 @@ Viabilidade Fora de Cobertura
         Set Global Variable                 ${Response}
     ELSE
 
-        ${ADDRESS_ID}=                      Ler Variavel na Planilha                addressId                              Global
+        ${Address_Id}=                      Ler Variavel na Planilha                addressId                              Global
         ${jsonComplements}=                 Create List
         Set Global Variable                 ${jsonComplements}
 
@@ -223,16 +225,16 @@ Valida Viabilidade Bitstream
 Consultar Viabilidade com Erro
     [Documentation]                     Espera retorno 400 com mensagem "Complemento obrigatório para o endereço informado."
     
-    ${ADDRESS_ID}=                           Ler Variavel na Planilha                addressId                              Global
+    ${AddressId}=                           Ler Variavel na Planilha                addressId                              Global
     
-    ${Response}=                            POST_API                                ${API_BASERESOURCEPOOL_V2}/availabilityCheck      "customer": {"subscriberId": ""},"address": {"id": "${ADDRESS_ID}"}
+    ${Response}=                            POST_API                                ${API_BASERESOURCEPOOL_V2}/availabilityCheck      "customer": {"subscriberId": ""},"address": {"id": "${AddressId}"}
     Set Global Variable                     ${Response}
 
     ${Code}=                                Get Value From Json                     ${Response}                             $.control.code
     ${Message}=                             Get Value From Json                     ${Response}                             $.control.message
 
     Should Be Equal As Strings              ${Code[0]}                              400
-    Should Be Equal As Strings              ${Message[0]}                           Complemento obrigatório para o endereço informado.                ignore_case=True        collapse_spaces=True
+    Should Be Equal As Strings              ${Message[0]}                           Complemento obrigatorio para o endereco informado                ignore_case=True        collapse_spaces=True
     Escrever Variavel na Planilha           ${Code[0]}                              CodigoAPI                               Global
     Escrever Variavel na Planilha           ${Message[0]}                           MensagemAPI                             Global
     Log To Console                          Erro esperado foi retornado.

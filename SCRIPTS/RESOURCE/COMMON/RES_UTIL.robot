@@ -6,13 +6,11 @@ Documentation                               Resource com características em com
 Library                                     JSONLibrary
 
 Resource                                    ./RES_EXCEL.robot
-# Library                                     ./LIB/lib_geral.py
-# Resource                                    ./RES_LOG.robot
+Library                                     ./LIB/lib_geral.py
 
 
 *** Variable ***
-${DIR_VTAL}                                 ${/}robot${/}test
-# ${DIR_VTAL}                                 C:${/}IBM_VTAL
+${DIR_VTAL}                                 C:${/}IBM_VTAL
 ${DIR_DAT}                                  ${DIR_VTAL}${/}DATA
 ${DIR_API}                                  ${DIR_VTAL}${/}SCRIPTS${/}RESOURCE${/}API
 ${DIR_COMMON}                               ${DIR_VTAL}${/}SCRIPTS${/}RESOURCE${/}COMMON
@@ -24,6 +22,9 @@ ${DIR_SOM}                                  ${DIR_VTAL}${/}SCRIPTS${/}RESOURCE${
 ${DIR_NETQ}                                 ${DIR_VTAL}${/}SCRIPTS${/}RESOURCE${/}NETQ
 ${DIR_CEMOBILE}                             ${DIR_VTAL}${/}SCRIPTS${/}RESOURCE${/}CE_MOBILE
 ${DIR_NETWIN}                               ${DIR_VTAL}${/}SCRIPTS${/}RESOURCE${/}NETWIN
+${DIR_SALESFORCE}                           ${DIR_VTAL}${/}SCRIPTS${/}RESOURCE${/}SALESFORCE
+${DIR_PORTALECARE}                          ${DIR_VTAL}${/}SCRIPTS${/}RESOURCE${/}PORTAL_ECARE
+${DIR_MS}                                   ${DIR_VTAL}${/}SCRIPTS${/}RESOURCE${/}MS
 ${DIR_ROBS}                                 ${DIR_VTAL}${/}SCRIPTS${/}ROBS
 ${DIR_TRG}                                  ${DIR_VTAL}${/}SCRIPTS${/}TRG
 ${DIR_MOBS}                                 ${DIR_VTAL}${/}SCRIPTS${/}MOBS
@@ -42,6 +43,7 @@ ${API_BASECONFIGURATION}                    ${API_BASEPATH}/api/serviceActivatio
 ${API_BASETROUBLETICKET}                    ${API_BASEPATH}/api/troubleTicket/v1/troubleTicket
 ${API_BASECANCELTROUBLETICKET}              ${API_BASEPATH}/api/troubleTicket/v1
 ${API_BASECPOI}                             ${API_BASEPATH}/api/productOrdering/v1
+${API_BASECPOI_V2}                          ${API_BASEPATH}/api/productOrdering/v2
 ${Keyword_Cenario_Comparar}                 A
 
 
@@ -63,8 +65,6 @@ Input Text Web Element Is Visible
     Highlight Elements                      ${ELEMENT}                              duration=100ms                          width=3.5px                             color=/#dd00dd                          style=solid      
     Take Screenshot                         filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}
     BuiltIn.Sleep                           0.5
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
 
 #=========================================================================================================================================================================================================================
 Click Web Element Is Visible
@@ -81,8 +81,6 @@ Click Web Element Is Visible
     Take Screenshot                         filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}                 
     Browser.Click                           ${ELEMENT}
     BuiltIn.Sleep                           0.5
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
     
 #=========================================================================================================================================================================================================================
 Right Click Web Element Is Visible
@@ -98,8 +96,6 @@ Right Click Web Element Is Visible
     Take Screenshot                         filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}                 
     Click                                   ${ELEMENT}                              right
     BuiltIn.Sleep                           0.5
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
 
 #=========================================================================================================================================================================================================================
 Get Text Element is Visible
@@ -112,8 +108,6 @@ Get Text Element is Visible
     Highlight Elements                      ${ELEMENT}                              duration=100ms                          width=4px                               color=\#dd00dd                          style=solid
     Take Screenshot                         filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}                
     BuiltIn.Sleep                           0.5
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
     [Return]                                ${Return_ELEMENT}
 
 #=========================================================================================================================================================================================================================
@@ -127,8 +121,6 @@ Get Property With Specific Element is Visible
     Highlight Elements                      ${ELEMENT}                              duration=100ms                          width=4px                               color=\#dd00dd                          style=solid
     Take Screenshot                         filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}                
     BuiltIn.Sleep                           0.5
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
     [Return]                                ${Return_ELEMENT}
 
 #=========================================================================================================================================================================================================================
@@ -142,8 +134,6 @@ Get Class Element is Visible
     Highlight Elements                      ${ELEMENT}                              duration=100ms                          width=4px                               color=\#dd00dd                          style=solid
     Take Screenshot                         filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}                
     BuiltIn.Sleep                           0.5
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
     [Return]                                ${Return_ELEMENT}
 
 #=========================================================================================================================================================================================================================
@@ -157,8 +147,6 @@ Get Element Count is Visible
     Highlight Elements                      ${ELEMENT}                              duration=100ms                          width=4px                               color=\#dd00dd                          style=solid
     Take Screenshot                         filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}                
     BuiltIn.Sleep                           0.5
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
     [Return]                                ${Return_ELEMENT}
 
 #=========================================================================================================================================================================================================================
@@ -173,8 +161,6 @@ Get Text Element is Visible Valida
     Highlight Elements                      ${ELEMENT}                              duration=300ms                          width=4px                               color=\#dd00dd                          style=solid
     Take Screenshot                         filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}                
     BuiltIn.Sleep                           0.5
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
     [Return]                                ${Return_ELEMENT}
 
 #=========================================================================================================================================================================================================================
@@ -188,8 +174,6 @@ Check CheckBox Element is Visible
     Highlight Elements                      ${ELEMENT}                              duration=100ms                          width=4px                               color=\#dd00dd                          style=solid
     Take Screenshot                         filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}                 
     BuiltIn.Sleep                           0.5
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
 
 #=========================================================================================================================================================================================================================
 Select Element is Visible
@@ -203,8 +187,6 @@ Select Element is Visible
     Take Screenshot                         filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}                 
     Select Options By                       ${ELEMENT}                              text                                    ${ELEMENT_SELECT}
     BuiltIn.Sleep                           0.5
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
 
 #=========================================================================================================================================================================================================================
 Take Screenshot Web Element is visible
@@ -216,22 +198,7 @@ Take Screenshot Web Element is visible
     Scroll To Element                       ${ELEMENT}
     Highlight Elements                      ${ELEMENT}                              duration=100ms                          width=4px                               color=\#dd00dd                          style=solid
     Wait Until Keyword Succeeds             ${TIMEOUT}                              5s                                      Take Screenshot                         selector=${ELEMENT}                     filename={index}                        quality=100                             fileType=jpeg                           timeout=${TIMEOUT}
-    # Validar o Nome da Keyword
-    # Write Image in Doc File Evidencia       ${PATH_RESULTS}
 
-#=========================================================================================================================================================================================================================
-Validar o Nome da Keyword
-    [Documentation]                         Escreve o nome da Keyword no documento de evidência
-    ${Keyword_Cenario_image}=               keyword name
-    ${Keyword_Cenario_image}=               Split String                            ${Keyword_Cenario_image}                .
-    ${Keyword_Cenario_image}=               Set Variable                            ${Keyword_Cenario_image}[1]   
-
-    IF  "${Keyword_Cenario_image}"!="${Keyword_Cenario_Comparar}"
-        ${Keyword_Cenario_Comparar}=        Set Variable                            ${Keyword_Cenario_image}
-        Set Global Variable                 ${Keyword_Cenario_Comparar}
-        Break page Evidencia
-        Inserir no Documento Evidencia      Script: ${Keyword_Cenario_image}
-    END
                
 #=========================================================================================================================================================================================================================
 Gerar Nr de Serie
@@ -262,26 +229,25 @@ Pegar porta Appium
 Contexto para navegador
     [Documentation]                         Keyword responsável por Criar contextos padrões para navegadores
     [Arguments]                             ${url_Sistema}                          ${Navegador}=chromium
-    # ${har}=                                 Create Dictionary                       path=${PATH_RESULTS}/har.json           omitContent=False                       #mode=minimal
+    ${har}=                                 Create Dictionary                       path=${PATH_RESULTS}/har.json           omitContent=False                       #mode=minimal
     
-    # ${height}=                              Get Viewport Height
-    # ${width}=                               Get Viewport Width
+    ${height}=                              Get Viewport Height
+    ${width}=                               Get Viewport Width
     
-    New Browser                             ${Navegador}                                
-    ...                                     True
+    New Browser                             ${Navegador}
+    ...                                     False
     ...                                     devtools=False
     ...                                     timeout=01:00
 
-    # New Context
-    # ...                                     viewport={'width': ${width}, 'height': ${height}}
-    # ...                                     colorScheme=dark
-    # ...                                     recordHar=${har}
-    # ...                                     recordVideo={'dir':'videos', 'size':{'width': ${width}, 'height': ${height}}}
-    # ...                                     reducedMotion=reduce
+    New Context
+    ...                                     viewport={'width': ${width}, 'height': ${height}}
+    ...                                     colorScheme=dark
+    ...                                     recordHar=${har}
+    ...                                     recordVideo={'dir':'videos', 'size':{'width': ${width}, 'height': ${height}}}
+    ...                                     reducedMotion=reduce
     
     Set Browser Timeout                     1m 30 seconds
     New Page                                ${url_Sistema}
-
 #=========================================================================================================================================================================================================================
 Contexto para navegador com arquivo
     [Documentation]                         Keyword responsável por Criar contextos padrões para navegadores
@@ -303,7 +269,7 @@ Contexto para navegador com arquivo
     ...                                     recordHar=${har}
     ...                                     recordVideo={'dir':'videos', 'size':{'width': ${width}, 'height': ${height}}}
     ...                                     reducedMotion=reduce
-    
+    ...                                     ignoreHTTPSErrors=True
 
     Set Browser Timeout                     1m 30 seconds
     New Page                                ${url_Sistema}
@@ -312,5 +278,17 @@ Contexto para navegador com arquivo
 Setup cenario
     [Arguments]                             ${Credencial}
 
-    Criar Documento LOG
-    Salvar Crendencial na Planilha          ${Credencial}                     
+    Set Global Variable                     ${Credencial}                     
+    Limpar Variaveis Output
+    
+#=========================================================================================================================================================================================================================
+Limpar Variaveis Output
+    ${Extensao}=                            Split String                            ${DAT_CENARIO}                          .
+
+    IF  "${Extensao[1]}" == "json"
+        ${Json}=    	                    Load Json from file	                    ${DAT_CENARIO}                          UTF-8  
+        ${NumLinha}=                        Evaluate                                ${NumLinha}-2
+        Set Global Variable                 ${NumLinha}
+        ${Json}=                            Update value to Json                    ${Json}                                 $.Dados[${NumLinha}].Output.*                              ${EMPTY}
+        Dump Json To File                   ${DAT_CENARIO}                          ${Json}                                 UTF-8 
+    END

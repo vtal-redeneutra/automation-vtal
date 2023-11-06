@@ -3,7 +3,7 @@ Documentation                               Scripts relacionados ao processo de 
 
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ${DIR_SOM}/UTILS.robot
 
 
@@ -15,8 +15,8 @@ Abrir Pendencia Contato de Obra
     
     #Pesquisa pelo preview
     Click Web Element Is Visible            ${SOM_rb_Editor}
-    ${Associated_Document}=                 Ler Variavel na Planilha                Associated_Document                     Global
-    Input Text Web Element Is Visible       ${SOM_Ref_Input}                        *${Associated_Document}*
+    ${Associated_Document}=                 Ler Variavel na Planilha                associatedDocument                      Global
+    Input Text Web Element Is Visible       ${SOM_Ref_Input}                        *${Associated_Document}* 
     Sleep                                   3s
     Click Web Element Is Visible            ${SOM_btn_refresh}
 

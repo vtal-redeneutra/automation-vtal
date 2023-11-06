@@ -153,23 +153,28 @@ Preencher Consumo Materiais
     #Acao
     Click Element Is Visible                ${select_acao}
     Click Element Is Visible                ${radio_acao_adicionar}
+
     #Grupo
     Click Element Is Visible                ${btn_adicionar_grupo}
-    Sleep                                   2s
-    Click Element Is Visible                ${input_pesquisa_grupo}
-    Input Text Element Is Visible           ${input_pesquisa_grupo}                 ACESSORIOS
-    Click Element Is Visible                ${select_grupo}
+    Pause execution                         Selecione "ACESSORIOS".
+    # Click Element Is Visible                ${input_pesquisa_grupo}
+    # Input Text Element Is Visible           ${input_pesquisa_grupo}                 ACESSORIOS
+    # Click Element Is Visible                ${select_grupo}
+
     #Material
     Click Element Is Visible                ${btn_adicionar_material}
-    Click Element Is Visible                ${input_pesquisa_material}
-    Sleep                                   2s
-    Input Text Element Is Visible           ${input_pesquisa_material}              ${material}
-    Sleep                                   2s
-    Click Element Is Visible                xpath=//android.widget.TextView[@text="${material}"]
+    Pause Execution                         Selecione "${material}"
+    # Click Element Is Visible                ${input_pesquisa_material}
+    # Sleep                                   2s
+    # Input Text Element Is Visible           ${input_pesquisa_material}              ${material}
+    # Sleep                                   2s
+    # Click Element Is Visible                xpath=//android.widget.TextView[@text="${material}"]
+
     #Quantidade
-    Click Element Is Visible                ${input_material_quantidade}
-    Sleep                                   2s
+    # Click Element Is Visible                ${input_material_quantidade}
+    # Sleep                                   2s
     Input Text Element Is Visible           ${input_material_quantidade}            ${quantidadeMaterial}
+    
     #Salvar
     Take Screenshot App                     ${btn_salvar_materiais}
     Click Element Is Visible                ${btn_salvar_materiais}
@@ -271,7 +276,7 @@ Preencher Matricula Auxiliar - Bitstream
 
 ####################################################################################################################################################################################
 Preencher Consumo Equipamento
-    [Arguments]                             ${pause_equipamento}=ONT G-1425-GA NOKIA 2GHZ/5GHZ
+    [Arguments]                             ${pause_equipamento}=ONT INTEGRADA_617617_HG8145-V5 HUAWEI 2GHZ E 5GHZ
 
     Click Element Is Visible                ${btn_consumo_equipamentos}
     Click Element Is Visible                ${btn_editar_equipamento}
@@ -354,4 +359,28 @@ Preencher Finalizacao Planta Externa
     Input Text Element Is Visible           ${input_obs_encerramento_opm}           Encerramento Reparo Voip via OPM
     Click Element Is Visible                ${btn_overview_finaliza}
     Click Element Is Visible                ${dialog_encerrar_sim}
+#===================================================================================================================================================================
+Colocar SA concluida VOIP
+    [Arguments]                             ${adicionarMaterial}=NAO
+    ...                                     ${adicionarAuxilio}=NAO
+    ...                                     ${codCaboRiser}=1275                    ${codCaboDrop}=1274                     ${codCdoia}=1277
+    ...                                     ${equipamento}=ONT HW - HG8245H
+    ...                                     ${codEncerramento}=0058
+
+
+    Abrir Aplicativo OPM 
+    Selecionar SA 
+    Preencher Consumo Equipamento           pause_equipamento=${equipamento}
+    Preencher Facilidades                   cod_cabo_riser=${codCaboRiser}          cod_cabo_drop=${codCaboDrop}            cod_cdoia=${codCdoia}
+    IF    "${adicionarMaterial}" != "NAO"
+        Preencher Consumo Materiais         material=Parafuso C/Bucha Plastica S-6
+        ...                                 quantidadeMaterial=12
+    END
+    IF    "${adicionarAuxilio}" != "NAO"
+        Preencher Auxiliar                  teveAuxilio=Sim
+    END
+    Preencher Finalizacao                   cod_encerramento=${codEncerramento}
+    Sleep                                   3s
+    Escrever Variavel na Planilha           Concluído com sucesso                   Estado                                  Global    
+    [Teardown]                              Finalizar Jornada e Sair
 #===================================================================================================================================================================

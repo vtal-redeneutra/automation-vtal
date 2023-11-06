@@ -25,7 +25,7 @@
 	
 ```
 
-4) Preparação de execução: Criar uma pasta e executar download dos scripts de testes/geração de massa hospedados no Azure Devops:
+4) PREPARAR EXECUÇÃO: Criar uma pasta e executar download dos scripts de testes/geração de massa hospedados no Azure Devops:
 ```
 	a. Acessar a pasta do projeto recentemente clonado com o CMD e executar o arquivo REQUIREMENTS.TXT, com o seguintes passos:
 	dir requeriments.txt
@@ -37,7 +37,7 @@
 	npm install -g appium
 ```
 
-5) Executando teste:
+5) EXECUTANDO UM TESTE:
 ```	
 	a. COPIAR um cenário de testes para a pasta de execução
 	   copy C:\IBM_VTAL\DATA\INPUT\Param_Global.xlsx C:\IBM_VTAL\DATA
@@ -48,7 +48,7 @@
 
 ```
 
-6) Ao término, abrir pasta de logs para ver os resultados dos testes:
+6) Ao término abrir a pasta de logs para ver os resultados:
 ```
 	C:\IBM_VTAL\SCRIPTS\TRG\FTTH\000_script selecionado\RESULTS
 ```

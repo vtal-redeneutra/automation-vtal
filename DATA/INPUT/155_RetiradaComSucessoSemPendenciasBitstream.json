@@ -1,0 +1,40 @@
+{
+    "Dados": [
+        {
+            "Input": {
+                "subscriberId": "",
+                "addressId": "",
+                "inventoryId": "",
+                "customerName": "Voip Internet",
+                "phoneNumber": "21999999999",
+                "Reference": "Proximo a padaria",
+                "Address": "",
+                "Number": "",
+                "typeComplement1": "",
+                "value1": "",
+                "typeComplement2": "",
+                "value2": "",
+                "typeComplement3": "",
+                "value3": "",
+                "typeLogradouro": "",
+                "addressName": "",
+                "UF": "",
+                "Cidade": "",
+                "Bairro": "",
+                "appointmentStart": "",
+                "workOrderId": ""
+            },
+            "Output": {
+                "associatedDocumentDate": "",
+                "associatedDocument": "",
+                "somOrderId": "",
+                "maxBandWidth": "",
+                "Estado": "",
+                "errorCode": "",
+                "correlationOrder": "",
+                "validateDate": "",
+                "osOrderId": ""
+            }
+        }
+    ]
+}

@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation                               Valida a finalização da SA no Field Service
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
 Resource                                    ../../RESOURCE/FSL/UTILS.robot
 
 *** Variables ***
@@ -98,8 +97,9 @@ Consulta Habilidades no Field Service
     # CLICA NO FILTRO DA TABELA E SELIECIONA HABLIDADES
     Click Web Element Is Visible            ${btnFiltrosTabela}
     Click Web Element Is Visible            ${btnFiltroHabilidades}
-    Check CheckBox Element is Visible       ${checkHabilitarHabilidades}
-    Check CheckBox Element is Visible       css=iframe[lang="pt-BR"] >>> //label[@title='${habilitacao}']/../input
+    # Check CheckBox Element is Visible       ${checkHabilitarHabilidades}
+    # Check CheckBox Element is Visible       css=iframe[lang="pt-BR"] >>> //label[@title='${habilitacao}']/../input
+    Click Web Element Is Visible            css=iframe[lang="pt-BR"] >>> //span[@class='pill-label truncate'][contains(.,'${habilitacao}')]
     Click Web Element Is Visible            ${btnFiltrosTabela}
 
     # VALIDA SE O TECNICO ESTÁ HABILITADO AO SERVIÇO

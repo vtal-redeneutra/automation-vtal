@@ -5,17 +5,17 @@ Library                                     RequestsLibrary
 Library                                     Collections
 Library                                     DateTime
 
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ../COMMON/RES_EXCEL.robot
 Library                                     ../../RESOURCE/COMMON/LIB/lib_geral.py
-#Library                                     ../../DATABASE/credentials.py
+
 
 *** Variable ***
 ${URL_API}
 ${USUARIO}
 ${SENHA}
 ${TOKEN}
-${CONTENT_TYPE}                             application/json; charset=iso-8859-1
+${CONTENT_TYPE}                             application/json;charset=UTF-8          # API v1 -> charset=iso-8859-1          API v2 -> charset=UTF-8
 ${AUTH}                                     /auth/oauth/v2/token?grant_type=client_credentials&scope=fttx
 ${DAT}                                      C:/IBM_VTAL/DATA/Param_Global.xlsx
 ${Counter_API}
@@ -43,10 +43,6 @@ GET_API
     ${RESPONSE}=                            GET On Session                          StartAPI                                ${REQUEST_URL}                          headers=${HEADERS}                          expected_status=Anything    
     Set Global Variable                     ${RESPONSE}
     
-    #Escreve o LOGS do arquivo no documento
-    # Escrever no Arquivo sem Body            ${REQUEST_URL}
-
-    #Escreve Retorno API
     [Return]                                ${RESPONSE}
 
 
@@ -74,10 +70,6 @@ POST_API
     ${RESPONSE}=                            POST On Session                         StartAPI                                ${REQUEST_URL}                          data={${REQUEST_DATA}}                          headers=${HEADERS}                          expected_status=Anything                     
     Set Global Variable                     ${RESPONSE}
 
-    #Escreve o LOGS do arquivo no documento
-    # Escrever no Arquivo com Body            ${REQUEST_URL}                          ${REQUEST_DATA}
-
-    #Escreve Retorno API
     [Return]                                ${RESPONSE.json()}
 
 #===================================================================================================================================================================
@@ -104,10 +96,6 @@ DELETE_API
     ${RESPONSE}                             DELETE On Session                       StartAPI                                ${REQUEST_URL}                          headers=${HEADERS}                          expected_status=Anything 
     Set Global Variable                     ${RESPONSE}
 
-    #Escreve o LOGS do arquivo no documento
-    # Escrever no Arquivo sem Body            ${REQUEST_URL}
-        
-    #Escreve Retorno API
     [Return]                                ${RESPONSE.json()}
 
 #===================================================================================================================================================================
@@ -134,10 +122,6 @@ PATCH_API
     ${RESPONSE}                             PATCH On Session                        StartAPI                                ${REQUEST_URL}                          data={${REQUEST_DATA}}                          headers=${HEADERS}                          expected_status=Anything                        
     Set Global Variable                     ${RESPONSE}
 
-    #Escreve o LOGS do arquivo no documento
-    # Escrever no Arquivo com Body            ${REQUEST_URL}                          ${REQUEST_DATA}
-
-    #Escreve Retorno API
     [Return]                                ${RESPONSE.json()}
 
 #===================================================================================================================================================================
@@ -157,28 +141,20 @@ Retornar Token Vtal
     ...                                     Biblioteca utilizada: [https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html#POST%20On%20Session|RequestsLibrary >>]
 
 
-    ${Credencial}=                          Ler Variavel Param Global               Credencial                              Global         
-    # ${ValidadeToken}=                       Ler Variavel Param Global               Validade_Token                          Global
-    ${TokenExcel}=                          Ler Variavel Param Global               Token                                   Global
-
     IF         "${Credencial}" == "Whitelabel"
-        Log To Console                      \nAtencao --> Credenciais Whitelabel foram utilizadas para o cenario.
-        ${Authorization}=   Set Variable    Basic ZDhhODhmZGEtZGI1Ni00MTQzLWFjM2YtZTY3OTZhYTMwMTg2OjgwMmQyYWE5LTg0MjItNGEyMi1hMTQ0LTNhZGZjZjA2MWY2Mw==
-    
+        Log To Console                      \nAtenção --> Credenciais Whitelabel foram utilizadas para o cenário.
+        ${Authorization}=   Set Variable    Basic ZDhhODhmZGEtZGI1Ni00MTQzLWFjM2YtZTY3OTZhYTMwMTg2OjgwMmQyYWE5LTg0MjItNGEyMi1hMTQ0LTNhZGZjZjA2MWY2Mw==              
     ELSE IF    "${Credencial}" == "FTTP"
-        Log To Console                      \nAtencao --> Credenciais FTTP foram utilizadas para o cenario.
+        Log To Console                      \nAtenção --> Credenciais FTTP foram utilizadas para o cenário.
         ${Authorization}=   Set Variable    Basic MzNkNTc3Y2QtYzZmMS00YzMxLTllYzgtMjRiY2IyZWYyMmI3OjQyNWZkYzUyLTIzMmMtNDQ2YS1iOTViLWQyNmFkZGZmYjBkYw==
-    
     ELSE IF    "${Credencial}" == "Bitstream"
-        Log To Console                      \nAtencao --> Credenciais Bitstream foram utilizadas para o cenario.
+        Log To Console                      \nAtenção --> Credenciais Bitstream foram utilizadas para o cenário.
         ${Authorization}=   Set Variable    Basic NDQ0MzdlMjAtMmFjNi00YzY3LTk2NzMtYTMyMDI2N2ZjNmE3OjE1M2ZkYmU4LTcxMzUtNDJiNC05MDQ5LTI4MDM2NmI4MDU2YQ==
-    ELSE IF    "${Credencial}" == "CPOI"
-        Log To Console                      \nAtencao --> Credenciais CP OI foram utilizadas para o cenario.
-        ${Authorization}=   Set Variable    Basic Yzg2MzhhNTUtYTdmNC00OTBlLWIyNGItNWZhNjQxMDUwZDQyOmNjZjUyYzc3LTliN2UtNGM2NC04M2NkLTIwZmY3YWQzZjFkZQ==
     ELSE IF    "${Credencial}" == "Voip"
-        Log To Console                      \nAtencao --> Credenciais Voip foram utilizadas para o cenario.
+        Log To Console                      \nAtenção --> Credenciais Voip foram utilizadas para o cenário.
         ${Authorization}=   Set Variable    Basic Yzg2MzhhNTUtYTdmNC00OTBlLWIyNGItNWZhNjQxMDUwZDQyOmNjZjUyYzc3LTliN2UtNGM2NC04M2NkLTIwZmY3YWQzZjFkZQ==
     END
+
 
     ${HeaderToken}=                         Create Dictionary
     ...                                     Content-Type=application/x-www-form-urlencoded
@@ -186,71 +162,18 @@ Retornar Token Vtal
     ...                                     Accept=*/*
     ...                                     Authorization=${Authorization}
     
-    #Verifica se Token ainda está ativo, caso tenha expirado, um novo será gerado no ELSE
-    # ${HoraAtual}=                           Get Current Date                        exclude_millis=yes
-    # ${ResultadoToken}=                      Subtract Date From Date                 ${ValidadeToken}                        ${HoraAtual}
+    ${UrlApi}=                              Ler Variavel Param Global               $.Urls.TOKEN                            
+    ${Usuario}=                             Ler Variavel Param Global               $.Tokens.${Credencial}.Usuario             
+    ${Senha}=                               Ler Variavel Param Global               $.Tokens.${Credencial}.Senha 
 
-    # IF  ${ResultadoToken} > 0   
-        # ${Token}=                           Set Variable                            ${TokenExcel}
+    Create Session                          StartAPI                                ${UrlApi}                               verify=true
+    ${Response}                             POST On Session                         StartAPI                                ${AUTH}                                 data={"username":"${Usuario}","password":"${Senha}"}   headers=${HeaderToken}
+    Valida Retorno da API                   ${Response.status_code}                 200                                     Retornar Token Vtal
 
-    # ELSE
-    ${UrlApi}=                          Ler Variavel Param Global               URL_Token                               Global
-    ${Usuario}=                         Ler Variavel Param Global               Usuario_Token                           Global
-    ${Senha}=                           Ler Variavel Param Global               Senha_Token                             Global
-    Set Test Variable                   ${UrlApi}
-    Set Test Variable                   ${Usuario}
-    Set Test Variable                   ${Senha}
-    
-    Create Session                      StartAPI                                ${UrlApi}                               verify=true
-    ${Response}                         POST On Session                         StartAPI                                ${AUTH}                                 data={"username":"${Usuario}","password":"${Senha}"}   headers=${HeaderToken}
-    Valida Retorno da API               ${Response.status_code}                 200                                     Retornar Token Vtal
-    
-    ${Token}=                           Get From Dictionary                     ${Response.json()}                      access_token
-        # Atualiza Token VTAL                 ${Token}                                ${Credencial}
-        
-        #Escreve o LOGS do arquivo no documento
-        # ${Keyword_Cenario}=                 keyword name
-        # Inserir no Documento Evidencia      Test Case: ${Keyword_Cenario}
-        # Inserir no Documento Evidencia      Status Code: ${Response.status_code}
-        # Break page Evidencia
-    # END
-
+    ${Token}=                               Get From Dictionary                     ${Response.json()}                      access_token
+    Escrever Variavel Param Global          $.Tokens.${Credencial}.Token            ${Token}
     Set Global Variable                     ${Token}
-
-
-#===================================================================================================================================================================
-Atualiza Token VTAL
-    [Documentation]                         Função que preenche cria uma data de expiração, 1 hora depois de gerar o TOKEN, e atualiza o valor do TOKEN e da DATA na Param_GLOBAL
-    ...                                     Alguns exemplos de como usar a função: 
-    ...                                     | Atualiza Token VTAL                   ${TOKEN}
-    ...                                     Biblioteca utilizada: [https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html#POST%20On%20Session|RequestsLibrary >>]
-    [Arguments]                             ${Token}                                ${Credencial}
-
-    RPA.Excel.Files.Open Workbook           ${PARAM_GLOBAL}                         data_only=False                          
-
-    ${HrAtual}=                             Get Current Date                        exclude_millis=yes
-    ${ValidadeToken}=                       Add Time To Date                        ${HrAtual}                              3600 seconds
-
-    IF         "${Credencial}" == "Whitelabel"
-        Set Cell Value                      row=5                                   column=J                                value=${Token}                          name=Resource
-        Set Cell Value                      row=6                                   column=J                                value=${ValidadeToken}                  name=Resource
-    ELSE IF    "${Credencial}" == "Bitstream"
-        Set Cell Value                      row=5                                   column=K                                value=${Token}                          name=Resource
-        Set Cell Value                      row=6                                   column=K                                value=${ValidadeToken}                  name=Resource
-    ELSE IF    "${Credencial}" == "CPOI"
-        Set Cell Value                      row=5                                   column=M                                value=${Token}                          name=Resource
-        Set Cell Value                      row=6                                   column=M                                value=${ValidadeToken}                  name=Resource
-    ELSE IF    "${Credencial}" == "Voip"
-        Set Cell Value                      row=5                                   column=N                                value=${Token}                          name=Resource
-        Set Cell Value                      row=6                                   column=N                                value=${ValidadeToken}                  name=Resource
-    ELSE IF    "${Credencial}" == "FTTP"
-        Set Cell Value                      row=5                                   column=L                               value=${Token}                          name=Resource
-        Set Cell Value                      row=6                                   column=L                                value=${ValidadeToken}                  name=Resource
-    END
-
-    Save Workbook
-
-    [Teardown]                              RPA.Excel.Files.Close Workbook
+      
 #===================================================================================================================================================================
 Valida Retorno da API
     [Documentation]                         Função usada para mandar validar o retorno da API, caso um retorno 500 seja dado muitas vezes ou  um retorno diferente do esperado ele cria um documento de defect.
@@ -270,7 +193,6 @@ Valida Retorno da API
     
     IF    '${status_recebido}' == '500'
         
-        # Inserir no Documento Defect
 
         #Contador para validar até no máximo 3 vezes 
         ${Counter_API}=                     Evaluate                                ${Counter_API} + 1
@@ -283,7 +205,6 @@ Valida Retorno da API
 
         #Se acontecer 3 vezes ele salva o arquivo e dá um erro
         IF  "${Counter_API}" == "3"
-            # Salvar Documento Defect
             Fatal Error                     \nApós 3 execuções a API continua retornando erro ${status_esperado}
         END
 
@@ -291,56 +212,9 @@ Valida Retorno da API
         Run Keyword                         ${Funcao_API} 
         
     ELSE IF    '${status_recebido}' != '${status_esperado}'
-        # Inserir no Documento Defect
-        # Salvar Documento Defect
         Fatal Error                         \n Retorno da API diferente do esperado ${status_recebido} != ${status_esperado}
     END
 
-#===================================================================================================================================================================
-Escrever no Arquivo sem Body
-    [Documentation]                         Função usada para escrever o retorno da API no arquivo de LOG das funções GET e DELETE.
-    ...                                     | =Arguments= | =Description= |
-    ...                                     | ``REQUEST_URL`` | A URL requisitada para a requisição. exemplo: ``/api/foo``. |
-    ...                                     A resposta é um retorno JSON que contem: 
-    ...                                     - ``type`` <int> Tipo da resposta do Retorno. Exemplo: S(Sucesso) e E(ERRO).
-    ...                                     - ``code`` <int> Codigo da reposta do retorno. Exemplo: 200(Ok) 404(Not Found).
-    ...                                     - ``message`` <str> Descrição do código de retorno. Exemplo: 200(Ok) 404(Not Found).
-    ...                                     Alguns exemplos de como usar a função: 
-    ...                                     | Escrever no Arquivo sem Body            ${REQUEST_URL}
-    ...                                     Biblioteca utilizada: [https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html#PATCH|RequestsLibrary >>]
-    [Arguments]                             ${REQUEST_URL}
-    #Escreve os retornos no DOC de Evidencia
-    #${Keyword_Cenario}=                     keyword name
-    #${Keyword_Cenario}=                     Split String                            ${Keyword_Cenario}                      .
-    #Break page Evidencia
-    #Inserir no Documento Evidencia          Script: ${Keyword_Cenario}[1] \n
-    #Inserir no Documento Evidencia          Status Code: ${RESPONSE.status_code}\n
-    #Inserir no Documento Evidencia          URL: ${REQUEST_URL}\n
-    #Inserir no Documento Evidencia          Response: ${RESPONSE.json()}\n 
-
-#===================================================================================================================================================================
-Escrever no Arquivo com Body
-    [Documentation]                         Função usada para escrever o retorno da API no arquivo de LOG das funções POST, TOKEN e PATCH.
-    ...                                     | =Arguments= | =Description= |
-    ...                                     | ``REQUEST_URL`` | A URL requisitada para a requisição. exemplo: ``/api/foo``. |
-    ...                                     | ``REQUEST_DATA`` | A informação que será enviada pela requisição. |
-    ...                                     A resposta é um retorno JSON que contem: 
-    ...                                     - ``type`` <int> Tipo da resposta do Retorno. Exemplo: S(Sucesso) e E(ERRO).
-    ...                                     - ``code`` <int> Codigo da reposta do retorno. Exemplo: 200(Ok) 404(Not Found).
-    ...                                     - ``message`` <str> Descrição do código de retorno. Exemplo: 200(Ok) 404(Not Found).
-    ...                                     Alguns exemplos de como usar a função: 
-    ...                                     | Escrever no Arquivo com Body            ${REQUEST_URL}                          ${REQUEST_DATA}
-    ...                                     Biblioteca utilizada: [https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html#PATCH|RequestsLibrary >>]
-    [Arguments]                             ${REQUEST_URL}                          ${REQUEST_DATA}
-    #Escreve os retornos no DOC de Evidencia
-    #${Keyword_Cenario}=                     keyword name
-    #${Keyword_Cenario}=                     Split String                            ${Keyword_Cenario}                      .
-    #Break page Evidencia
-    #Inserir no Documento Evidencia          Script: ${Keyword_Cenario}[1] \n
-    #Inserir no Documento Evidencia          Status Code: ${RESPONSE.status_code}\n
-    #Inserir no Documento Evidencia          URL: ${REQUEST_URL}\n
-    #Inserir no Documento Evidencia          Request: ${REQUEST_DATA}\n
-    #Inserir no Documento Evidencia          Response: ${RESPONSE.json()}\n
 
 #===================================================================================================================================================================
 Configuracao Remota 

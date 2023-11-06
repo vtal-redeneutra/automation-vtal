@@ -30,6 +30,8 @@ ${fim_pedido}                               frame#ifr >>> //table[@id="question"
 ${Outside_Plant}                            //a[@id="operational-module-osp"]
 ${Outside_Plant_Visao_Geo}                  //a[@id="operation-module-link-osp-1-0"]
 ${inside_plant_seta}                        //a[contains(@id,'operational-button-isp')]
+${acessoGPON_estado_item}                   iframe#iframe-content-wrapper >>>       //td[text()="Acesso GPON"]/..//td[8]
+${acessoGPON_eye}                           iframe#iframe-content-wrapper >>>       //td[contains(text(),"Acesso GPON")]/..//i
 
 #Outside Plant
 ${Button_Utilitarios}                       iframe#iframe-content-wrapper >>>       //div[@title="Utilitários" and @class="olControlUtilitiesItemInactive"]
