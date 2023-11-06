@@ -2,7 +2,7 @@
 Documentation                               ConsultarSlot 
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 
 *** Variables ***
 ${ADDRESS_ID}
@@ -23,13 +23,13 @@ Retornar Slot Agendamento
     [Documentation]                         Consome API searchTimeSlot e consulta slot agendamento no intervalo de no maximo 14 dias
     ...                                     \nEscreve o slot de agendamento na planilha
     
-    ${DataAgendamento}=                     Get Current Date                        increment=3 hours                       result_format=%Y-%m-%dT08:00:00-03:00
+    ${DataAgendamento}=                     Get Current Date                        increment=1 days                        result_format=%Y-%m-%dT08:00:00-03:00
     ${DataAgendamentoFim}=                  Get Current Date                        increment=14 days                       result_format=%Y-%m-%dT12:00:00-03:00
 
 
 
     ${ADDRESS_ID}                           Ler Variavel na Planilha                addressId                               Global
-    ${ADDRESS_ID}                           Ler Variavel na Planilha                addressId                              Global
+    ${ADDRESS_ID}                           Ler Variavel na Planilha                addressId                               Global
 
     ${StartDate}                            Set Variable                            ${DataAgendamento}
     ${FinishDate}                           Set Variable                            ${DataAgendamentoFim}
@@ -46,11 +46,11 @@ Retornar Slot Agendamento
 
     ${AppointmentStart}                     Get Value From Json                     ${Response.json()}                      $.slots[0].appointmentStart
     ${AppointmentStart}                     Convert Json to String                  ${AppointmentStart[0]}
-    ${AppointmentStart}                     Replace String                          ${AppointmentStart}         "       ${EMPTY}
+    ${AppointmentStart}                     Replace String                          ${AppointmentStart}             "       ${EMPTY}
 
-    ${AppointmentFinish}                    Get Value From Json                     ${Response.json()}          $.slots[0].appointmentFinish
+    ${AppointmentFinish}                    Get Value From Json                     ${Response.json()}                      $.slots[0].appointmentFinish
     ${AppointmentFinish}                    Convert Json to String                  ${AppointmentFinish[0]}
-    ${AppointmentFinish}                    Replace String                          ${AppointmentFinish}         "       ${EMPTY}
+    ${AppointmentFinish}                    Replace String                          ${AppointmentFinish}            "       ${EMPTY}
 
     Set Global Variable                     ${AppointmentStart}
     Set Global Variable                     ${AppointmentFinish}
@@ -60,9 +60,9 @@ Retornar Slot Agendamento
     Escrever Variavel na Planilha           ${AppointmentStart}                     appointmentStart                        Global
     Escrever Variavel na Planilha           ${AppointmentFinish}                    appointmentFinish                       Global
 
-    Escrever Variavel na Planilha           ${DataAgendamento}                      associatedDocumentDate                 Global
-    Escrever Variavel na Planilha           ${AppointmentStart}                     appointmentStart                       Global
-    Escrever Variavel na Planilha           ${AppointmentFinish}                    appointmentFinish                      Global
+    Escrever Variavel na Planilha           ${DataAgendamento}                      associatedDocumentDate                  Global
+    Escrever Variavel na Planilha           ${AppointmentStart}                     appointmentStart                        Global
+    Escrever Variavel na Planilha           ${AppointmentFinish}                    appointmentFinish                       Global
 
 
 #===================================================================================================================================================================
@@ -318,12 +318,13 @@ Retornar Slot Agendamento V2
     [Arguments]                             ${orderType}=Instalacao                 # Instalação, Retirada, RemanejamentoPonto, ChamadoTecnico
     ...                                     ${addressChangeFlag}=false              # Indicador de mudança de endereço, habilitado apenas para Instalação
     ...                                     ${priorityFlag}=false                   # Indicador de agendamento prioritário, habilitado apenas para Instalação e ChamadoTecnico
-    
+    ...                                     ${productType}=Banda Larga
 
-    ${dataAgendamento}=                     Get Current Date                        increment=30 minutes                    result_format=%Y-%m-%dT%H:%M:00
+
+    ${dataAgendamento}=                     Get Current Date                        increment=1 days                        result_format=%Y-%m-%dT%H:%M:00
     ${dataAgendamentoFim}=                  Get Current Date                        increment=14 days                       result_format=%Y-%m-%dT18:00:00
     
-    ${associatedDocument}                   Ler Variavel na Planilha                associatedDocument                     Global
+    ${associatedDocument}                   Ler Variavel na Planilha                associatedDocument                      Global
     
     IF    "${Associated_Document}" == "None"
         Log To Console                      Atenção, um novo Associated Document, Correlation Order e Subscriber Id foram gerados.    
@@ -331,9 +332,9 @@ Retornar Slot Agendamento V2
 
         ${Associated_Document}=             Get Current Date                        result_format=%m%d%H%M%S
         ${Associated_Document}=             Set Variable                            ibm${Associated_Document}   
-        Escrever Variavel na Planilha       ${Associated_Document}                  correlationOrder                       Global
-        Escrever Variavel na Planilha       ${Associated_Document}                  associatedDocument                     Global
-        Escrever Variavel na Planilha       ${Associated_Document}                  subscriberId                           Global
+        Escrever Variavel na Planilha       ${Associated_Document}                  correlationOrder                        Global
+        Escrever Variavel na Planilha       ${Associated_Document}                  associatedDocument                      Global
+        Escrever Variavel na Planilha       ${Associated_Document}                  subscriberId                            Global
     END
     
     ${addressId}                            Ler Variavel na Planilha                addressId                               Global
@@ -341,7 +342,6 @@ Retornar Slot Agendamento V2
     ${subscriberId}                         Ler Variavel na Planilha                subscriberId                            Global
     ${startDate}                            Set Variable                            ${dataAgendamento}
     ${finishDate}                           Set Variable                            ${dataAgendamentoFim}
-    ${productType}                          Set Variable                            Banda Larga
     ${priorityReason}                       Set Variable                            Cliente Diamond
     
     IF    "${priorityFlag}" == "true"
@@ -369,3 +369,6 @@ Retornar Slot Agendamento V2
     Escrever Variavel na Planilha           ${AppointmentStart}                     appointmentStart                        Global
     Escrever Variavel na Planilha           ${AppointmentFinish}                    appointmentFinish                       Global
     Escrever Variavel na Planilha           ${slotId}                               slotId                                  Global
+
+
+    

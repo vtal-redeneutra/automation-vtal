@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation                               Atualizar e Encerrar o SA
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
 Resource                                    ../../RESOURCE/FSL/UTILS.robot
 Resource                                    ../../RESOURCE/OPM/UTILS.robot
 Resource                                    ../../RESOURCE/SOM/UTILS.robot
@@ -20,24 +19,25 @@ ${Counter}
 
 *** Keywords ***
 Atualizar e Encerrar o SA
+    [Arguments]                             ${EQUIPAMENTO}=ONT INTEGRADA_617617_HG8145-V5 HUAWEI 2GHZ E 5GHZ
     [Documentation]                         Atualizar e Encerrar o SA
     [Tags]                                  AtualizarSA
     Logar no FSL
     Consultar SA
     Preencher Auxilio
-    Validar Itens das ordens de trabalho para execucao
+    Validar Itens das ordens de trabalho para execucao        CONSUMO_EQUI=${EQUIPAMENTO}
     Valida inclusao de Materiais e Equipamentos
     Validar Itens das ordens de trabalho apos a execucao
     Encerrar com Sucesso
 
 Atualizar e Encerrar o SA CPOI
-    [Arguments]                             ${EQUIPAMENTO}=ONT HW - HG8245H
+    [Arguments]                             ${EQUIPAMENTO}=ONT INTEGRADA_617617_HG8145-V5 HUAWEI 2GHZ E 5GHZ
     [Documentation]                         Atualizar e Encerrar o SA
     [Tags]                                  AtualizarSA
     Logar no FSL
     Consultar SA
     Preencher Auxilio
-    Validar Itens das ordens de trabalho para execucao                              CONSUMO_EQUI=${EQUIPAMENTO}
+    Validar Itens das ordens de trabalho para execucao        CONSUMO_EQUI=${EQUIPAMENTO}
     Valida inclusao de Materiais e Equipamentos
     Validar Itens das ordens de trabalho apos a execucao
     Encerrar com Sucesso
@@ -254,6 +254,7 @@ Atualizar Facilidades
 #===========================================================================================================================================================================================================
 Atualizar Consumo de Equipamento
     [Arguments]                             ${EQUIPAMENTO}=ONT INTEGRADA - 617396_ONT 240W-C DUAL BAND NOKIA 2GHZ/5GHZ
+    ...                                     ${COMODO}=Cozinha
     [Documentation]                         Função usada para adicionar um consumo de um equipamento pelo técnico.
     Consultar SA
     Click Web Element Is Visible            ${ordem_trabalho}
@@ -274,8 +275,9 @@ Atualizar Consumo de Equipamento
             Select Options By                       ${select_equipamento}                   text                                    ${EQUIPAMENTO}
             Gerar Nr de Serie FSL                        
             Input Text Web Element Is Visible       ${input_nr_serie}                       ${nr_serie}
-            Select Options By                       ${input_comodo}                         text                                    Cozinha
+            Select Options By                       ${input_comodo}                         text                                    ${COMODO}
             Check Checkbox                          ${check_associar}
+            
             Click Web Element Is Visible            ${btn_avancar}
             Check Checkbox                          ${check_adicionar_mais}
             Click Web Element Is Visible            ${btn_avancar}
@@ -568,12 +570,8 @@ Validar Hierarquia da Atividade e Gestão de Polígonos
     Logar no FSL
     BuiltIn.Sleep                           5
     
-    #Pagina da SA, clica no botão relacionado e salva na planilha o tecnico atribuido na SA finalizada.
-    Click Web Element Is Visible            ${btn_relacionado}
-    Sleep                                   3s
-    ${nome_tecnico}=                        Get Text Element is Visible             ${nome_tecnico_atribuido}
-    Escrever Variavel na Planilha           ${nome_tecnico}                         Tecnico_Associado                       Global
-    
+    ${atribuirTecnico}                      Ler Variavel na Planilha                atribuirTecnico                         Global
+
     #Faz a pesquisa do Recurso de Serviço no botão iniciar
     Sleep                                   2s
     Click Web Element Is Visible            ${btn_iniciador}
@@ -583,9 +581,9 @@ Validar Hierarquia da Atividade e Gestão de Polígonos
     
     #Pesquisa e clica no link do tecnico associado.
     Sleep                                   2s
-    Input Text Web Element Is Visible       ${button_Pesquisa_Lista}                ${nome_tecnico}
+    Input Text Web Element Is Visible       ${button_Pesquisa_Lista}                ${atribuirTecnico}
     Click Web Element Is Visible            ${button_Refresh_Lista}
-    Click Web Element Is Visible            xpath=//th[@scope='row']//a[@title='${nome_tecnico}']
+    Click Web Element Is Visible            xpath=//th[@scope='row']//a[@title='${atribuirTecnico}']
     Click Web Element Is Visible            ${pg_Relacionado}
     
     #Valida se o territorio_servico está como "(1)"
@@ -606,7 +604,8 @@ Encerrar SA Bitstream
     Input Text Web Element Is Visible       ${input_code}                           ${COD_ENCERRAMENTO}
     Sleep                                   3s
     Click Web Element Is Visible            ${button_pesquisar}
-    Input Text Web Element Is Visible       ${input_observacao}                     ${MOTIVO_ENCERRAMENTO} 
+    Input Text Web Element Is Visible       ${input_observacao}                     ${MOTIVO_ENCERRAMENTO}
+    ${drop}=                                Run Keyword And Return Status           Select Options By                       ${select_encerramento_drop}             text                                    Não
     Click Web Element Is Visible            ${btn_avancar}
     Click Web Element Is Visible            ${btn_concluir}
     Escrever Variavel na Planilha           ${STATUS_ENCERRAMENTO}                  Estado                                  Global

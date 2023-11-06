@@ -2,7 +2,7 @@
 Documentation                               Cancelar a Ordem de Agendamento
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 
 
 *** Variables ***
@@ -25,7 +25,7 @@ Cancelar a Ordem
     [Arguments]                             ${frente}=Whitelabel                    #Whitelabel ou Voip
 
     Retornar Token Vtal
-    Cancelar a Ordem de Agendamento
+    Cancelar a Ordem de Agendamento         wlOuVoip=${frente}
 
 #===================================================================================================================================================================
 Cancelar a Ordem de Agendamento
@@ -36,9 +36,9 @@ Cancelar a Ordem de Agendamento
     [Tags]                                  CancelaOrdemAgendamento
     [Arguments]                             ${wlOuVoip}                             #Whitelabel ou Voip
 
-    IF    "${wlOuVoip}" = "Whitelabel"
+    IF    "${wlOuVoip}" == "Whitelabel"
         ${SOM_Id}=                          Ler Variavel na Planilha                osOrderId                               Global
-    ELSE IF    "${wlOuVoip}" = "Voip"
+    ELSE IF    "${wlOuVoip}" == "Voip"
         ${SOM_Id}=                          Ler Variavel na Planilha                somOrderId                              Global
     END
 

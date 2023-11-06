@@ -22,9 +22,9 @@ Logar Netwin
     [Documentation]                         Faz Login no Netwin
     ...                                     \nPreenche dados de login com usuário e senha da planilha e inserir a mensagem do captcha fixa.
 
-    ${Usuario_Netwin}=                      Ler Variavel Param Global               Usuario_Netwin                          Global
-    ${Senha_Netwin}=                        Ler Variavel Param Global               Senha_Netwin                            Global
-    ${URL_NETWIN}=                          Ler Variavel Param Global               URL_NETWIN                              Global
+    ${Usuario_Netwin}=                      Ler Variavel Param Global               $.Logins.NETWIN.Usuario                          
+    ${Senha_Netwin}=                        Ler Variavel Param Global               $.Logins.NETQ.Senha                            
+    ${URL_NETWIN}=                          Ler Variavel Param Global               $.Urls.NETWIN                              
     Contexto para navegador                 ${URL_NETWIN}                           Navegador=chromium
     Wait for Elements State                 ${btn_login_Netwin}                     Visible                                 timeout=${timeout}
 
@@ -98,7 +98,7 @@ Ativar Serviço Agregado Ethernet
     ${CURRENT_CONTEXT}=                     Get Page Ids
     Log                                     ${CURRENT_CONTEXT}
 
-    Click Web Element Is Visible            ${botao_ok}                             #Confirma submeter serviço sem associar um cliente
+    # Click Web Element Is Visible            ${botao_ok}                             #Confirma submeter serviço sem associar um cliente
     Click Web Element Is Visible            ${botao_ok}                             #Confirma visualizar ordem criada no RP
 
     # Nova janela do Netwin - Fazer validações e Criação de Atribuição
@@ -1000,7 +1000,7 @@ Cria Ordem IP Connect
     Input Text Web Element Is Visible       ${campoNome_adicionarServico}           ${valor_IDexterno}
     Select Options By                       ${select_produto_VPN}                   value                                   CN
     Select Options By                       ${select_QOS}                           value                                   DA
-    Select Options By                       ${select_ID_perfil}                     value                                   43  # Valor da opção OI_IP_500M_250M
+    Select Options By                       ${select_ID_perfil}                     value                                   42  # Valor da opção OI_IP_400M_200M
     Select Options By                       ${select_tipo_enderacamento}            value                                   IPV6
     Click Web Element Is Visible            ${aba_Servico_Suporte}
     Click Web Element Is Visible            ${btn_confirmar_servico}

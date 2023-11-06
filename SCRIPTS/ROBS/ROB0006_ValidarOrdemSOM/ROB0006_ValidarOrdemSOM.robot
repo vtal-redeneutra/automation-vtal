@@ -2,7 +2,7 @@
 Documentation                               Validar Ordem SOM
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/SOM/UTILS.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ../../RESOURCE/SOM/PAGE_OBJECTS.robot
 
 Library                                     Browser

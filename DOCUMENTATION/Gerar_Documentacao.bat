@@ -8,7 +8,6 @@ for /r "C:\IBM_VTAL\SCRIPTS\ROBS" %%a in (*.robot) do (
 call libdoc C:/IBM_VTAL/SCRIPTS/RESOURCE/API/RES_API.ROBOT                          JSON/RES_API.json
 
 call libdoc C:/IBM_VTAL/SCRIPTS/RESOURCE/COMMON/RES_EXCEL.ROBOT                     JSON/RES_EXCEL.json
-call libdoc C:/IBM_VTAL/SCRIPTS/RESOURCE/COMMON/RES_LOG.ROBOT                       JSON/RES_LOG.json
 call libdoc C:/IBM_VTAL/SCRIPTS/RESOURCE/COMMON/RES_UTIL.ROBOT                      JSON/RES_UTIL.json
 
 call libdoc C:/IBM_VTAL/SCRIPTS/RESOURCE/FSL/UTILS.ROBOT                            JSON/FSL_UTILS.json

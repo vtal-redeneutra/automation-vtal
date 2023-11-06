@@ -83,8 +83,6 @@ Take Screenshot App
     # BuiltIn.Sleep  1
     AppiumLibrary.Capture Page Screenshot    filename=print.png
 
-    Validar o Nome da Keyword
-    Inserir Print CE_MOBILE no DOC
 
 
     

@@ -16,7 +16,7 @@ Importar Arquivo Survey
     
     Click Web Element Is Visible            ${Outside_Plant}
     Click Web Element Is Visible            ${Outside_Plant_Visao_Geo}
-    Sleep                                   10s
+    pause execution                         Clique no OK quando o mapa carregar
     Click Web Element Is Visible            ${Button_Utilitarios}
     Click Web Element Is Visible            ${Button_Utilitarios_Survey}
     Click Web Element Is Visible            ${Button_Utilitarios_Survey_Import}

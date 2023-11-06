@@ -3,9 +3,12 @@ Documentation                               Validar Atribuição do Compromisso 
 Library                                     DateTime
 
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ../../RESOURCE/FSL/UTILS.robot
 Resource                                    ../../RESOURCE/FSL/PAGE_OBJECTS.robot
+Resource                                    ${DIR_ROBS}/ROB0026_TrocaDeTecnicoFSL/ROB0026_TrocaDeTecnicoFSL.robot
+Resource                                    ${DIR_ROBS}/ROB0027_DesatribuirAtividadeFSL/ROB0027_DesatribuirAtividadeFSL.robot
+
 
 
 *** Variables ***
@@ -115,17 +118,26 @@ Validar Atribuicao Automatica Voip
     Fazer Logout
     Close Browser                           CURRENT
 
+Validar BA Oco no FSL
+    [Documentation]                         Valida o BA oco no FSL. Deve estar Não Atribuído e sem Pronto Execução.
+
+    Logar no FSL
+    BuiltIn.Sleep                           5
+    Consultar SA
+    Consultar Estado Nao Atribuido
+    Consultar Tipo de Trabalho              4936-0
+    Consultar Atividade FSL                 INSTALAÇÃO BL + VOIP
+    Consultar Data do Agendamento
+    Validar SA Simples                      valorConta=                             valorOrigem=                            valorProntoExecucao=unchecked           validarEstado=False
+
 #===========================================================================================================================================================================================================
 Consultar Estado
     [Documentation]                         Função usada para ler o estado da SA E validar se está igual o valor da planilha, se estiver em execução ele pega a senha para ser usada no OPM.
 
-    ${ESTADO_ESPERADO}=                     Ler Variavel na Planilha                Estado               	                Global
-    Set Global Variable                     ${ESTADO_ESPERADO}
-
     ${ESTADO_SITE}=                         Get Text Element is Visible             ${estado_item}
 
-    IF  "${ESTADO_SITE}" != "${ESTADO_ESPERADO}"
-        Fatal Error                         \n Estado está diferente de ${ESTADO_ESPERADO}
+    IF  "${ESTADO_SITE}" == "Não atribuído"
+        Troca de Tecnico no Field Service  
     END
 
     IF  "${ESTADO_SITE}" == "Em execução"
@@ -135,6 +147,12 @@ Consultar Estado
         Click Web Element Is Visible        ${btn_concluir}
     END 
 
+#===========================================================================================================================================================================================================
+Consultar Estado Nao Atribuido
+    [Documentation]                         Função usada para ler o estado da SA E validar se está NÃO ATRIBUÍDO.
+
+    ${ESTADO_SITE}=                         Get Text Element is Visible             ${estado_item}
+    Should Be Equal As Strings              ${ESTADO_SITE}                          Não atribuído                           ignore_case=true
 
 #===========================================================================================================================================================================================================
 Consultar Tipo de Trabalho
@@ -166,6 +184,20 @@ Consultar Conta FSL
         Fatal Error                         \n Conta no FSL está diferente! Esperado: ${Valor_Esperado} Site: ${CONTA}
     END
 
+#===========================================================================================================================================================================================================
+Consultar Atividade FSL
+
+    [Documentation]                         Função usada para consultar a atividade e comparar se está igual ao esperado.
+    ...                                     | =Arguments= | =Description= |
+    ...                                     | ``Valor_Esperado`` | Valor do tipo de atividade. exemplo: ``INSTALAÇÃO BL + VOIP`. |
+    ...                                     Alguns exemplos de como usar a função: 
+    ...                                     | Consultar Atividade FSL            INSTALAÇÃO BL + VOIP
+    [Arguments]                             ${Valor_Esperado}
+
+    ${ATIVIDADE}=                           Get Text Element is Visible             ${atividade_FSL}
+    IF  "${ATIVIDADE}" != "${Valor_Esperado}"
+        Fatal Error                         \n Conta no FSL está diferente! Esperado: ${Valor_Esperado} Site: ${ATIVIDADE}
+    END
 
 #===========================================================================================================================================================================================================
 Validacao Basica FSL 
@@ -247,7 +279,7 @@ Valida SA Cancelada
     Logar no FSL
     BuiltIn.Sleep                           5
     
-    ${WORKORDERID}=                         Ler Variavel na Planilha                Work_Order_Id                           Global
+    ${WORKORDERID}=                         Ler Variavel na Planilha                workOrderId                           Global
     Consultar SA
     
     Browser.Get Text                                ${status_cancelado}                     message="Não está cancelado no FSL."
@@ -312,7 +344,7 @@ Validar SA Simples
         Consultar Estado
     END
     
-    ${conta}                                Get Text Element is Visible             ${valorContaFSL}
+    ${conta}                                Get Text Element is Visible             ${conta_fsl}
     Should Be Equal as Strings              ${conta}                                ${valorConta}                           msg=\n Conta no FSL está diferente do esperado! ${conta}!=${valorConta}
     
     ${origem}=                              Get Text Element is Visible             ${origemFSL}
@@ -321,7 +353,7 @@ Validar SA Simples
     END
 
     ${prontoExecucao}=                      Get Class Element is Visible            ${check_pronto_execucao}
-    IF  "${prontoExecucao}" != "${valorProntoExecucao}"
+    IF  "${prontoExecucao[0]}" != "${valorProntoExecucao}"
         Fatal Error                         \n Status de Pronto Execução está diferente do esperado!
     END
 

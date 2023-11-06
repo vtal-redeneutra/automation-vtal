@@ -4,7 +4,7 @@ Documentation                               Consulta Logradouro
 Resource                                    ../../RESOURCE/API/RES_API.robot
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/COMMON/RES_EXCEL.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 
 *** Variables ***
 
@@ -14,16 +14,12 @@ ${NUMBER}
 
 *** Keywords ***
 Consulta Id Logradouro
-    [Arguments]                             ${UF}                                   
-    ...                                     ${Municipio}                                                
-    # ...                                     ${Complemento}                                                
-                      
     [Documentation]                         Keyword encadeador TRG 
     ...                                     \n Função usada para iniciar a API, permitindo assim fazer as requests via GET com o objetivo retornar o Address ID.
     ...                                     | ``URL_API`` | A URL base para a criação das requisições. ``https://apitrg.vtal.com.br/api/geographicAddressManagement/v1/geographicAddress?address=``.|
     
     [Tags]                                  ConsultaIdLogradouro
-    Retornar Address Id                     ${UF}       ${Municipio} 
+    Retornar Address Id
     #Consultar Complements
 
 Consulta Id Logradouro com Id Complements
@@ -36,8 +32,6 @@ Consulta Id Logradouro com Id Complements
     Id Consulta Complemento  
 #===================================================================================================================================================================
 Retornar Address Id
-    [Arguments]                             ${UF}                                   
-    ...                                     ${Municipio}                                                   
     [Documentation]                         Função usada para iniciar a API, permitindo assim fazer as requests via GET com o objetivo retornar o Address ID, armazenar
     ...                                     e escrever dados na DAT relativa ao cenário.
     ...                                     | ``URL_API`` | A URL base para a criação das requisições. ``https://apitrg.vtal.com.br/api/geographicAddressManagement/v1/geographicAddress?address=``.|
@@ -45,30 +39,9 @@ Retornar Address Id
 
     [Tags]                                  RetornarAddressId
 
-    #CASO SEJA EXECUCAO VIA JENKINS    
-    IF  ${PORTAL}
-
-        #CASO O CEP E NUMERO SEJAM PASSADOS POR PARAMETRO
-        IF  "${CEP}" != "00000000" and "${NUMERO}" != "00"
-            ${ADDRESS}=                     Set Variable                            ${CEP}                       
-            ${NUMBER}=                      Set Variable                            ${NUMERO}        
-        
-        #CASO O CEP E NUMERO - NÃO - SEJAM PASSADOS POR PARAMETRO
-        ELSE
-            ${Data}                         Buscar Endereco Nao Utilizado   ${UF}   ${Municipio}
-            Run Keyword If                  '${Data}' == 'None'                     Fail                                    Nenhum endereço disponivel no momento. Atualize sua base de dados
-            Set Global Variable             ${Data} 
-            ${ADDRESS}=                     Set Variable                            ${Data.Cep}                       
-            ${NUMBER}=                      Set Variable                            ${Data.Numero}                             
-            Atualizar Endereco  ${Data}
-        END
-
-    #CASO NÃO SEJA EXECUCAO VIA JENKINS
-    ELSE
-        ${ADDRESS}=                         Ler Variavel na Planilha                Address                                 Global
-        ${NUMBER}=                          Ler Variavel na Planilha                Number                                  Global
-    END
-
+    ${ADDRESS}=                             Ler Variavel na Planilha                Address                                 Global
+    ${NUMBER}=                              Ler Variavel na Planilha                Number                                  Global
+ 
     ${Response}=                            GET_API                                 ${API_BASEGEOGRAPHICADDRES}/geographicAddress?address=${ADDRESS}&number=${NUMBER}
 
     Valida Retorno da API                   ${Response.status_code}                 200                                     Retornar Address Id
@@ -78,18 +51,16 @@ Retornar Address Id
     ${uf_logradouro}=                       Get Value From Json                     ${Response.json()}                      $.addresses.address[0].stateAbbreviation
     ${cidade_logradouro}=                   Get Value From Json                     ${Response.json()}                      $.addresses.address[0].city
     ${bairro_logradouro}=                   Get Value From Json                     ${Response.json()}                      $.addresses.address[0].neighborhood
-    ${ADDRESS_ID}=                          Get Value From Json                     ${Response.json()}                      $.addresses.address[0].id
     
-    Escrever Variavel na Planilha           ${ADDRESS_ID[0]}                        addressId                               Global
-    Escrever Variavel na Planilha           ${typeLogradouro[0]}                    typeLogradouro                          Global
-    Escrever Variavel na Planilha           ${streetName[0]}                        addressName                             Global
+    Escrever Variavel na Planilha           ${typeLogradouro[0]}                    typeLogradouro                         Global
+    Escrever Variavel na Planilha           ${streetName[0]}                        addressName                            Global
     Escrever Variavel na Planilha           ${uf_logradouro[0]}                     UF                                      Global
     Escrever Variavel na Planilha           ${cidade_logradouro[0]}                 Cidade                                  Global 
     Escrever Variavel na Planilha           ${bairro_logradouro[0]}                 Bairro                                  Global 
-    Escrever Variavel na Planilha           ${ADDRESS}                              Address                                  Global 
-    Escrever Variavel na Planilha           ${NUMBER}                               Number                                  Global 
 
 
+    ${AddressId}=                           Get Value From Json                     ${Response.json()}                      $.addresses.address[0].id
+    Escrever Variavel na Planilha           ${AddressId[0]}                         addressId                               Global
     
 
 
@@ -105,9 +76,9 @@ Consultar Complements
     [Tags]                                  ConsultaComplementoEndereco
 
 
-    ${ADDRESS_ID}=                          Ler Variavel na Planilha                addressId                              Global
+    ${Address-ID}=                          Ler Variavel na Planilha                addressId                              Global
 
-    ${Response}=                            GET_API                                 ${API_BASEGEOGRAPHICADDRES}/addressComplements/${ADDRESS_ID}
+    ${Response}=                            GET_API                                 ${API_BASEGEOGRAPHICADDRES}/addressComplements/${Address-ID}
 
     
 
@@ -150,9 +121,9 @@ Id Consulta Complemento
 
     Retornar Address Id
 
-    ${ADDRESS_ID}=                           Ler Variavel na Planilha                addressId                              Global
+    ${AddressId}=                           Ler Variavel na Planilha                addressId                              Global
 
-    ${Response}=                            GET_API                                 ${API_BASEGEOGRAPHICADDRES}/addressComplements/${ADDRESS_ID}
+    ${Response}=                            GET_API                                 ${API_BASEGEOGRAPHICADDRES}/addressComplements/${AddressId}
 
     @{returnedComplementos}=                Get Value From Json                     ${Response.json()}                      $.complementList
 
@@ -223,8 +194,8 @@ Consulta Logradouro CPOi
     Escrever Variavel na Planilha           ${cidade_abreviada[0]}                  Abbreviation                            Global
     Escrever Variavel na Planilha           ${STATE[0]}                             State                                   Global
 
-    ${ADDRESS_ID}=                           Get Value From Json                     ${Response.json()}                      $.addresses.address[0].id
-    Escrever Variavel na Planilha           ${ADDRESS_ID[0]}                         addressId                              Global
+    ${AddressId}=                           Get Value From Json                     ${Response.json()}                      $.addresses.address[0].id
+    Escrever Variavel na Planilha           ${AddressId[0]}                         addressId                              Global
     
 #===================================================================================================================================================================
 Consultar Logradouro LocGeografica
@@ -260,8 +231,8 @@ Consultar Logradouro LocGeografica
     FOR    ${element}    IN    ${List_Address[0]}
         
         IF    "${Complemento_True_False}" == "False"
-            ${ADDRESS_ID}=                   Get Value From Json                      ${element[0]}                              $.id
-            Escrever Variavel na Planilha           ${ADDRESS_ID[0]}                  addressId                                  Global
+            ${AddressId}=                   Get Value From Json                      ${element[0]}                              $.id
+            Escrever Variavel na Planilha           ${AddressId[0]}                  addressId                                  Global
             Consultar Complements
             ${comp}=                        Ler Variavel na Planilha                 typeComplement1                            Global
             IF    "${comp}" == "None"
@@ -281,14 +252,14 @@ Consultar Logradouro LocGeografica
                 Escrever Variavel na Planilha           ${number[0]}                            Number                                  Global 
                 Escrever Variavel na Planilha           ${cep[0]}                               Address                                 Global
 
-                ${ADDRESS_ID}=                           Get Value From Json                     ${element[0]}                      $.id
-                Escrever Variavel na Planilha           ${ADDRESS_ID[0]}                         addressId                              Global
+                ${AddressId}=                           Get Value From Json                     ${element[0]}                      $.id
+                Escrever Variavel na Planilha           ${AddressId[0]}                         addressId                              Global
                 ${STATE}=                               Evaluate                                True                            
                 Exit For Loop
             END
         ELSE
-            ${ADDRESS_ID}=                   Get Value From Json                      ${element[0]}                              $.id
-            Escrever Variavel na Planilha           ${ADDRESS_ID[0]}                  addressId                                Global
+            ${AddressId}=                   Get Value From Json                      ${element[0]}                              $.id
+            Escrever Variavel na Planilha           ${AddressId[0]}                  addressId                                Global
             Consultar Complements
             ${comp}=                        Ler Variavel na Planilha                 typeComplement1                         Global
             IF    "${comp}" != "None"
@@ -308,8 +279,8 @@ Consultar Logradouro LocGeografica
                 Escrever Variavel na Planilha           ${number[0]}                            Number                                  Global 
                 Escrever Variavel na Planilha           ${cep[0]}                               Address                                 Global 
 
-                ${ADDRESS_ID}=                           Get Value From Json                     ${element[0]}                      $.id
-                Escrever Variavel na Planilha           ${ADDRESS_ID[0]}                         addressId                              Global
+                ${AddressId}=                           Get Value From Json                     ${element[0]}                      $.id
+                Escrever Variavel na Planilha           ${AddressId[0]}                         addressId                              Global
                 ${STATE}=                               Evaluate                                True                            
                 Exit For Loop
 

@@ -9,7 +9,7 @@ ${input_login}                              //input[contains(@id,'username')]
 ${input_password}                           //input[contains(@id,'password')]
 ${btn_login}                                //input[contains(@id,'Login')]
 ${btn_perfil}                               //span[text()="Exibir perfil"]/../..
-${span_logout_FSL}                          //a[text()="Fazer logout"]
+${span_logout_FSL}                          //div[@class="profile-card-toplinks"]//a[text()="Fazer logout"]
 
 #Tela da validação dos dois fatores.
 ${input_validacao}                          //input[contains(@id,'smc')]
@@ -44,29 +44,30 @@ ${btn_pesquisar_sa}                         //button[@class='slds-button slds-bu
 ${WORK_ID_ITEM}                             //mark[@class='data-match'][contains(.,'${WORKORDERID}')]
 
 #Item que pega qual o estado do pedido, exemplo: Atribuido
-${estado_item}                              //span[contains(@title,'Estado')]/..//div//div//span
-${conta_fsl}                                //span[contains(@title,'Conta')]/..//div//div//div//a
-${tipo_trabalho}                            //span[contains(@title,'Tipo de trabalho')]/..//div//div//div//a
+${estado_item}                              (//span[contains(text(),"Estado")]/..//div)[1]
+${conta_fsl}                                (//span[text()="Conta"]/../..//div)[2]
+${tipo_trabalho}                            (//span[contains(text(),"Tipo de trabalho")]/..//div)[1]
 ${status_cancelado}                         //*[text()="Em deslocamento"]/../../..//*[text()="Cancelado"]
 ${menu_vendas}                              //span[contains(@title,'Vendas')]
 ${FSL_INICIO_AGENDAMENTO}                   //span[@class='test-id__field-label'][contains(.,'Início Agendamento')]/../..//div//span//span
 ${FSL_FINAL_AGENDAMENTO}                    //span[@class='test-id__field-label'][contains(.,'Fim Agendamento')]/../..//div//span//span
 ${btn_editSA}                               //*[text()="Editar"]/../..//div[@title="Editar"]
 ${optionAux_editSA}                         //*[text()="Teve Auxílio?"]/../../../..//select
+${atividade_FSL}                            (//span[text()="Atividade"]/../..//span)[3]
 
 ${valorContaFSL}                            (//span[contains(@title,'Conta')]/../div//div)[1]
 ${origemFSL}                                (//span[text()="Origem"]/../..//div[2]//span)[1]
 
 
 #Botões da tela que selecionam os menus de um pedido
-${btn_relacionado}                          //span[@class='title'][contains(.,'Relacionado')]
-${btn_acao}                                 //span[@class='title'][contains(.,'Ações')]
-${btn_detalhes}                             (//span[@class='title'][contains(.,'Detalhes')])
+${btn_relacionado}                          //span[text()="Relacionado"]
+${btn_acao}                                 //span[text()="Ações"]
+${btn_detalhes}                             (//span[text()="Detalhes"])[1]
 
 #Text com o valor da SA
 ${value_SA}                                 //span[contains(text(),'Número SA')]/../..//div[2]//span//span
 
-${btn_alterar_status}                       //div[@title='Marcar Status como Completo'][contains(.,'Marcar Status como Completo')]
+${btn_alterar_status}                       //button[text()="Marcar Status como Completo"]
 
 #CheckBox que mostra se a SA está disponivel para ser executada, mudar de estado
 ${check_pronto_execucao}                    //span[contains(text(),'Pronto Execução')]/../..//div[2]//span//span//img
@@ -76,28 +77,28 @@ ${span_tipo_complemento}                    //span[text()="Tipo Complemento"]/..
 ${span_abreviacao_complemento}              //span[text()="Abrev. Tipo Comp."]/../../div[2]/span/span
 
 #Tela e botões da mudança de estado
-${btn_marcar_concluido}                     //div[@title='Marcar Status como Completo'][contains(.,'Marcar Status como Completo')]
+${btn_marcar_concluido}                     //div[@title="Marcar Status como Completo"]
 ${btn_concluir}                             //button[@type='button'][contains(.,'Concluir')]
 ${erro_fluxo}                               //b[contains(.,'Ocorreu uma falha não tratada nesse fluxo')]
-${btn_editar_sa}                            //div[contains(@title,'Editar')]
+${btn_editar_sa}                            //div[@title="Editar"]
 ${select_auxilio}                           //select[@name="sc_TeveAuxilio"]
 ${btn_pesquisar}                            css=button[class="slds-button slds-button_neutral search-button slds-truncate"]
 
 #Tela de atualizar facilidades
-${btn_criar}                                //span[@title='Facilidades'][contains(.,'Facilidades')]/../../../../../..//div//div//ul//li//a//div
+${btn_criar}                                //span[@title='Facilidades'][contains(.,'Facilidades')]/../../../../../../..//div[@title='Criar']
 ${cabo_riser}                               //input[contains(@name,'FSLOI_Cabo_Riser__c')]
 ${cabo_drop}                                //input[contains(@name,'FSLOI_Cabo_Drop__c')]
 ${CDOIA}                                    //input[contains(@name,'FSLOI_CDDOIA__c')]
 ${btn_salvar_criar}                         //button[@name='SaveAndNew'][contains(.,'Salvar e criar')]
-${btn_close_facilidade}                     //button[@type='button'][contains(.,'Fechar esta janela')]
+${btn_close_facilidade}                     //div[contains(@class, "active")]//button[@type='button'][contains(.,'Fechar esta janela')]
 
 
 #Tela Atualizar Equipamento
-${btn_consumo_equipamento}                  //div[@title='Consumo de Materiais e Equipamentos'][contains(.,'Consumo de Materiais e Equipamentos')]
+${btn_consumo_equipamento}                  //div[@title="Consumo de Materiais e Equipamentos"]
 ${check_equipamento}                        (//span[contains(@class,'slds-radio_faux')])[1]
 ${btn_avancar}                              //button[@type='button'][contains(.,'Avançar')]
 ${select_equipamento}                       //select[contains(@name,'sc_EditEquipInstall')]
-${linha_equipamento}                        //span[normalize-space()='Número do produto consumido']//following::a[4]
+${linha_equipamento}                        //span[normalize-space()='Número do produto consumido']/../../../../../../tbody//th[1]//a
 ${equipamento_ok}                           //span[text()="Status da Validação"]/../../..//span[contains(text(),"OK")]
 ${input_nr_serie}                           //input[contains(@name,'sc_EditSerialInstall')]
 ${input_comodo}                             //select[contains(@name,'sc_Room')]
@@ -116,9 +117,9 @@ ${input_acao}                               //select[contains(@name,'sc_AddActio
 ${input_quantidade}                         //input[contains(@name,'sc_AddQuantity')]
 
 #Tela Validar produtos consumidos
-${ordem_trabalho}                           //span[@title='Ordem de Trabalho'][contains(.,'Ordem de Trabalho')]/..//div//div//div//a
-${produtos_consumidos}                      //span[@class='rlql-label'][contains(.,'Produtos consumidos')]
-${itens_linha_trabalho}                     //span[@class='rlql-label'][contains(.,'Itens de linha da ordem de trabalho')]
+${ordem_trabalho}                           //span[@title='Ordem de Trabalho']/..//a
+${produtos_consumidos}                      //a//span[contains(normalize-space(), "Produtos consumidos")]
+${itens_linha_trabalho}                     //a//span[contains(.,"Itens de linha da ordem de trabalho")]
 ${table_produtos_consumidos}                (//table[@role='grid'][@aria-label='Produtos consumidos'])//tbody//tr
 ${itens_de_linha}                           //a//span[text()="Itens de linha da ordem de trabalho"]
 ${linhas_itens_ordem_trabalho}              (//table[@role='grid'][@aria-label='Itens de linha da ordem de trabalho'])//tbody//tr
@@ -128,18 +129,18 @@ ${numero_orden_lista_get}                   (//table[@role='grid'][@aria-label='
 ${numero_linha_ordem_trabalho}              //span[text()='Número do item de linha da ordem de trabalho']/../..
 
 #Tela de adicionar tec auxiliar
-${btn_criar_tecnico}                        (//span[@title='Técnico Auxiliar'][contains(.,'Técnico Auxiliar')])/../../../../..//a//div[contains(.,'Criar')]
+${btn_criar_tecnico}                        (//span[@title='Técnico Auxiliar'][contains(.,'Técnico Auxiliar')])/../../../../../..//div[@title="Criar"]
 ${input_id_tecnico}                         //input[contains(@name,'FSLOI_EngineerID__c')]
-${btn_exibir_tudo_tec}                      (//span[@title='Técnico Auxiliar'][contains(.,'Técnico Auxiliar')])/../../../../../..//a//div//span[contains(.,'Exibir tudo')]
-${btn_tec}                                  //span[@title='Aux Technician Name'][contains(.,'Aux Technician Name')]/../../../../../../..//tbody//a[contains(.,'AUXT')]
+${btn_exibir_tudo_tec}                      //span[contains(text(), "Técnico Auxiliar")]/../../..//span[text()="Exibir tudo"]
+${btn_tec}                                  //div[contains(@class, "active")]//span[@title='Aux Technician Name']/../../../../../../..//tbody//a[contains(.,'AUXT')]
 ${tecnico_id}                               //span[@class='test-id__field-label'][contains(.,'Engineer ID')]/../..//div//span//slot//lightning-formatted-text
 
 #tela de Encerramento
-${btn_encerrar}                             //div[@title='Encerramento'][contains(.,'Encerramento')]
+${btn_encerrar}                             //div[@title="Encerramento"]
 ${input_rsr}                                //input[contains(@name,'sc_RSR')]
 ${input_code}                               //label[@class='slds-form-element__label slds-no-flex'][contains(.,'Código de encerramento')]/..//div//input
 ${input_observacao}                         //input[contains(@name,'sc_Observation')]
-${btn_ver_senha}                            //div[@title='Ver Senha'][contains(.,'Ver Senha')]
+${btn_ver_senha}                            //a[@title="Ver Senha"]
 ${campo_senha}                              //h2[normalize-space()='Ver Senha']//following::p[2]
 ${input_senha}                              //input[contains(@name,'sc_Password')]
 ${button_pesquisar}                         //button[contains(text(),'pesquisar')]
@@ -153,9 +154,9 @@ ${arvore_completion_code}                   //input[@name='completionCode']
 #Tela Field Service
 ${input_pesquisar_SA}                       css=iframe[lang="pt-BR"] >>> //input[contains(@id,'TaskSearchFilterInput')]
 ${SA_field_service}                         css=iframe[lang="pt-BR"] >>> //div[@id='TaskListItems']//div[@class='unselectable draggableService singleServiceBigContainer firstServiceIfSelection']
-${atividade}                                css=iframe[lang="pt-BR"] >>> //div[@id='TaskListItems']//div[@class='unselectable draggableService singleServiceBigContainer firstServiceIfSelection']//div//div[@ng-repeat='field in pair']//div[@title='Atividade']/..//span//span//span
-${doc_associado}                            css=iframe[lang="pt-BR"] >>> //div[@id='TaskListItems']//div[@class='unselectable draggableService singleServiceBigContainer firstServiceIfSelection']//div//div[@ng-repeat='field in pair']//div[@title='Documento Associado']/..//span//span//span
-${pronto_exec}                              css=iframe[lang="pt-BR"] >>> //div[@id='TaskListItems']//div[@class='unselectable draggableService singleServiceBigContainer firstServiceIfSelection']//div//div[@ng-repeat='field in pair']//div[@title='Pronto Execução']/..//span//span//span
+${atividade}                                css=iframe[lang="pt-BR"] >>> //div[@title='Atividade']/..//span//span//span
+${doc_associado}                            css=iframe[lang="pt-BR"] >>> //div[@title='Documento Associado']/..//span//span//span
+${pronto_exec}                              css=iframe[lang="pt-BR"] >>> (//div[@title='Pronto Execução']/..//span//span)[7]
 ${btn_editar}                               css=iframe[lang="pt-BR"] >>> //div[contains(@title,'Editar')]
 ${check_box_SA}                             css=iframe[lang="pt-BR"] >>>
 ${btn_select}                               css=iframe[lang="pt-BR"] >>> //div[contains(@title,'Despachar')]/..//div[contains(@id,'ActionButton')]
@@ -201,16 +202,16 @@ ${estado_ConcluidoComSucesso}               (//td[@data-label="Novo Valor"]//*[t
 
 #Consultar "Resursos de serviços"
 ${btn_Recurso_servicos}                     //a[@data-label="Recursos de serviços"]//p[@class='slds-truncate'][normalize-space()='Recursos de serviços']
-${pg_Relacionado}                           //a[@aria-selected="false"]/..//*[@data-label='Relacionado']
+${pg_Relacionado}                           (//a[@id="relatedListsTab__item"])/../..//a[@data-label="Relacionado"]
 ${valida_1_territorio}                      //span[contains(@title,'Territórios de serviços')]/..//span[contains(@title,'(1)')]
 ${local_territorio_servico}                 //div[@class='listWrapper'][3]
 ${territorio_servico}                       //span[contains(@title,'Territórios de serviços')]
-${nome_tecnico_atribuido}                   //span[@title='Recursos atribuídos'][contains(.,'Recursos atribuídos')]/../../../../../../..//div[3]//tbody//tr//text()/../../..//div
+${nome_tecnico_atribuido}                   //span[contains(text(),"Técnico Atribuído")]/../..//span[@class="uiOutputTextArea"]
 ${button_Pesquisa_Lista}                    //input[contains(@placeholder,'Pesquisar nesta lista...')]
 ${button_Refresh_Lista}                     //div[@class='slds-m-left_xx-small'] //button[@name='refreshButton'][contains(.,'Atualizar')]
 
 #Desatribuir na pagina do compromisso de serviço
-${button_exibir_tudo}                       //span[@title='Recursos atribuídos']/../../../../../../.././/span[@class='view-all-label'][contains(.,'Exibir tudo')]
-${button_excluir_tecnico}                   //button[@class="slds-button slds-button_icon-border slds-button_icon-x-small"]
+${button_exibir_tudo}                       //span[@title='Recursos atribuídos']/../../../../../../..//span[text()="Exibir tudo"]
+${button_excluir_tecnico}                   //div[contains(@class, "active")]//table[@aria-label="Recursos atribuídos"]//td[3]//button
 ${button_excluir}                           (//div[@title="Excluir"]/..)[last()]
 ${caixa_excluir}                            (//span[@dir="ltr"][contains(.,'Excluir')])[last()]

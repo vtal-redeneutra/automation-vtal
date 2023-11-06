@@ -30,8 +30,8 @@ Conectar API NETQ
     ...                                     Referer=http://mocknetq.local.srv.br/
 
 
-    ${Usuario_NETQ}=                        Ler Variavel Param Global               Usuario_NETQ                            Global
-    ${Senha_NETQ}=                          Ler Variavel Param Global               Senha_NETQ                              Global
+    ${Usuario_NETQ}=                        Ler Variavel Param Global               $.Logins.NETQ.Usuario                              
+    ${Senha_NETQ}=                          Ler Variavel Param Global               $.Logins.NETQ.Senha                                
 
 
     ${proxies} =                            Evaluate                                {"http": "http://${Usuario_NETQ}:${Senha_NETQ}@10.21.7.10:82"}
@@ -91,9 +91,8 @@ Buscar GPON LINEID
 
     ${Customer_Name}=                       Ler Variavel na Planilha                customerName                            Global
     ${SubscriberId}=                        Ler Variavel na Planilha                subscriberId                            Global
-    ${bitState}=                            Ler Variavel Param Global               Credencial                              Global
 
-    IF  "${bitState}" == "Bitstream"
+    IF  "${Credencial}" == "Bitstream"
         ${Customer_Name}=                   Set Variable                            TIM
     END  
 

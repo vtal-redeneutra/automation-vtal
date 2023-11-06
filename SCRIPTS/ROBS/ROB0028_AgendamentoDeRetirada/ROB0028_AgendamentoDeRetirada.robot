@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation                               Realiza o agendamento de retirada.
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ../../RESOURCE/FSL/UTILS.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
 
@@ -98,22 +98,22 @@ Realizar Novo Agendamento de Retirada
     ...                                     | ``URL_API`` | A URL base para a criação das requisições. ``https://apitrg.vtal.com.br/api/appointment/v1``. |
     [Tags]                                  RealizarNovoAgendamentoRetirada 
 
-    ${AssociatedDocument}                   Ler Variavel na Planilha                Associated_Document                     Global   
-    ${ASSOCIATEDDOCUMENTDATE}               Ler Variavel na Planilha                Associated_Document_Date                Global
+    ${AssociatedDocument}                   Ler Variavel na Planilha                associatedDocument                     Global   
+    ${ASSOCIATEDDOCUMENTDATE}               Ler Variavel na Planilha                associatedDocumentDate                Global
     ${ActivityType}                         Set Variable                            407
-    ${APPOINTMENTSTART}                     Ler Variavel na Planilha                Appointment_Start                       Global
-    ${APPOINTMENTFINISH}                    Ler Variavel na Planilha                Appointment_Finish                      Global
-    ${NormativeIndicatorDate}               Ler Variavel na Planilha                Appointment_Start                       Global                                  #Mesmo valor de AppointmentStart
-    ${PromiseDate}                          Ler Variavel na Planilha                Appointment_Start                       Global                                  #Mesmo valor de AppointmentStart
-    ${ADDRESS_ID}=                          Ler Variavel na Planilha                Address_Id                              Global
+    ${APPOINTMENTSTART}                     Ler Variavel na Planilha                appointmentStart                       Global
+    ${APPOINTMENTFINISH}                    Ler Variavel na Planilha                appointmentFinish                      Global
+    ${NormativeIndicatorDate}               Ler Variavel na Planilha                appointmentStart                       Global                                  #Mesmo valor de AppointmentStart
+    ${PromiseDate}                          Ler Variavel na Planilha                appointmentStart                       Global                                  #Mesmo valor de AppointmentStart
+    ${ADDRESS_ID}=                          Ler Variavel na Planilha                addressId                              Global
 
-    ${type1}=                               Ler Variavel na Planilha                TypeComplement1                         Global
-    ${type2}=                               Ler Variavel na Planilha                TypeComplement2                         Global
-    ${type3}=                               Ler Variavel na Planilha                TypeComplement3                         Global
+    ${type1}=                               Ler Variavel na Planilha                typeComplement1                         Global
+    ${type2}=                               Ler Variavel na Planilha                typeComplement2                         Global
+    ${type3}=                               Ler Variavel na Planilha                typeComplement3                         Global
 
-    ${value1}=                              Ler Variavel na Planilha                Value1                                  Global
-    ${value2}=                              Ler Variavel na Planilha                Value2                                  Global
-    ${value3}=                              Ler Variavel na Planilha                Value3                                  Global
+    ${value1}=                              Ler Variavel na Planilha                value1                                  Global
+    ${value2}=                              Ler Variavel na Planilha                value2                                  Global
+    ${value3}=                              Ler Variavel na Planilha                value3                                  Global
 
     # Caso possua complemento, verificação de viabilidade passa no máximo 3 parametros
     IF    "${type1}" != "None" or "${type2}" != "None" or "${type3}" != "None"
@@ -158,6 +158,6 @@ Realizar Novo Agendamento de Retirada
 
     # Escrever Variavel na Planilha           ${AssociatedDocument}                   Associated_Document                     Global
     # Escrever Variavel na Planilha           ${AssociatedDocument}                   Correlation_Order                       Global
-    Escrever Variavel na Planilha           ${workOrderID[0]}                       Work_Order_Id                           Global
+    Escrever Variavel na Planilha           ${workOrderID[0]}                       workOrderId                           Global
 
 #===========================================================================================================================================================================================================

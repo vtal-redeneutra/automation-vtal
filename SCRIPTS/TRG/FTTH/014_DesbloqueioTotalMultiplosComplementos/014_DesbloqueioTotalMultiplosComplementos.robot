@@ -5,11 +5,10 @@ Documentation                               Agrupador responsavel por chamar TC 
 
 
 Suite Setup                                 Setup cenario                           Whitelabel
-Suite Teardown                              Salvar Documento Evidencia
 
-Resource                                     ../../../../DATABASE/ROB/DB.robot
 
 Resource                                    ../../../RESOURCE/COMMON/RES_UTIL.robot
+Resource                                    ../../../RESOURCE/MS/UTILS.robot
 Resource                                    ${DIR_SOM}/UTILS.robot
 Resource                                    ${DIR_FW}/UTILS.robot
 Resource                                    ${DIR_ROBS}/ROB0014_RealizarBloqueioAgendamento/ROB0014_RealizarBloqueioAgendamento.robot
@@ -22,22 +21,13 @@ ${DAT_CENARIO}                              ${DIR_DAT}/014_DesbloqueioTotalMulti
 
 *** Test Cases ***
 
-
 14.01 - Gerar Token de Acesso 
-    [TAGS]                                  COMPLETO    14_01_Gerar_Token_de_Acesso 
-    Inicia CT
     Retornar Token Vtal
-    Fecha CT        API                       14_02_Realizar_o_Desbloqueio
     
 14.02 - Realizar o Desbloqueio
-    [TAGS]                                  COMPLETO    14_02_Realizar_o_Desbloqueio 
-    Inicia CT
-    Realizar Bloqueio ou Desbloqueio         Desbloqueio                             FTTH                                    desbloquear total
-    Fecha CT        API                       14_03_Realizar_Validacao_no_SOM
+   Realizar Bloqueio ou Desbloqueio         Desbloqueio                             FTTH                                    desbloquear total
 
 14.03 - Realizar Validação no SOM
-    [TAGS]                                  COMPLETO    14_03_Realizar_Validacao_no_SOM 
-    Inicia CT
     @{LIST}=                                Create List                             ${SOM_Numero_Pedido}                    
 
     @{RETORNO}=                             Create List                             associatedDocument                      
@@ -47,10 +37,9 @@ ${DAT_CENARIO}                              ${DIR_DAT}/014_DesbloqueioTotalMulti
     ...                                     ORDER_STATE=Completed
     ...                                     RETORNO_ESPERADO=${RETORNO}
     ...                                     XPATH_VALIDACOES=${LIST}
-    Fecha CT        SOM                       14_04_Validar_o_Recebimento_da_Notificacao_de_Desbloqueio_via_FW_Console
 
-14.04 - Validar o Recebimento da Notificação de Desbloqueio via FW Console
-    [TAGS]                                  COMPLETO    14_04_Validar_o_Recebimento_da_Notificacao_de_Desbloqueio_via_FW_Console 
-    Inicia CT
-    Validar Confirmacao de Bloqueio ou Desbloqueio Total ou Parcial FW              Desbloqueio                             desbloquear total                       200
-    Fecha CT        COMPLETO                       COMPLETO
+14.04 - Validar o Recebimento da Notificação de Desbloqueio via Microserviços
+    Login ao Portal de Microserviços
+    Acessar SOA no menu do PORTAL de Microserviços
+    Procurar por ProductOrdering.ListenerProductOrderStateChangeEvent referente ao associatedDocument
+    Validar texto do Bloco com o Argumento    END - Finalização do serviço      204

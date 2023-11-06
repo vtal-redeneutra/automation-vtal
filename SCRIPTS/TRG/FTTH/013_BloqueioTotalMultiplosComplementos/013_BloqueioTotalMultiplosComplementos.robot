@@ -5,11 +5,10 @@ Documentation                               Agrupador responsavel por chamar TC 
 
 
 Suite Setup                                 Setup cenario                           Whitelabel
-Suite Teardown                              Salvar Documento Evidencia
 
-Resource                                     ../../../../DATABASE/ROB/DB.robot
 
 Resource                                    ../../../RESOURCE/COMMON/RES_UTIL.robot
+Resource                                    ../../../RESOURCE/MS/UTILS.robot
 Resource                                    ${DIR_SOM}/UTILS.robot
 Resource                                    ${DIR_FW}/UTILS.robot
 Resource                                    ${DIR_ROBS}/ROB0014_RealizarBloqueioAgendamento/ROB0014_RealizarBloqueioAgendamento.robot
@@ -24,20 +23,12 @@ ${DAT_CENARIO}                              ${DIR_DAT}/013_BloqueioTotalMultiplo
 
 
 13.01 - Gerar Token de Acesso 
-    [TAGS]                                  COMPLETO    13_01_Gerar_Token_de_Acesso 
-    Inicia CT
     Retornar Token Vtal
-    Fecha CT        API                       13_02_Realizar_o_Bloqueio
 
 13.02 - Realizar o Bloqueio
-    [TAGS]                                  COMPLETO    13_02_Realizar_o_Bloqueio 
-    Inicia CT
-    Realizar Bloqueio ou Desbloqueio         Bloqueio                                FTTH                                    bloquear total
-    Fecha CT        API                       13_03_Realizar_Validacao_no_SOM
+   Realizar Bloqueio ou Desbloqueio         Bloqueio                                FTTH                                    bloquear total
 
 13.03 - Realizar Validação no SOM
-    [TAGS]                                  COMPLETO    13_03_Realizar_Validacao_no_SOM 
-    Inicia CT
     @{LIST}=                                Create List                             ${SOM_Numero_Pedido}                                 
 
     @{RETORNO}=                             Create List                             associatedDocument                      
@@ -47,9 +38,9 @@ ${DAT_CENARIO}                              ${DIR_DAT}/013_BloqueioTotalMultiplo
     ...                                     ORDER_STATE=Completed
     ...                                     RETORNO_ESPERADO=${RETORNO}
     ...                                     XPATH_VALIDACOES=${LIST}
-    Fecha CT        SOM                       13_04_Validar_o_Recebimento_da_Notificacao_de_Bloqueio_via_FW_Console
-13.04 - Validar o Recebimento da Notificação de Bloqueio via FW Console
-    [TAGS]                                  COMPLETO    13_04_Validar_o_Recebimento_da_Notificacao_de_Bloqueio_via_FW_Console 
-    Inicia CT
-    Validar Confirmacao de Bloqueio ou Desbloqueio Total ou Parcial FW              Bloqueio                                bloquear total                          200
-    Fecha CT        COMPLETO                       COMPLETO
+
+13.04 - Validar o Recebimento da Notificação de Bloqueio via Microserviços
+    Login ao Portal de Microserviços
+    Acessar Microserviços no menu do PORTAL de Microserviços
+    Procurar por ProductOrdering.listenerProductOrderStateChangeEvent referente ao associatedDocument
+    Validar texto do Bloco com o Argumento    END - Finalização do serviço      204

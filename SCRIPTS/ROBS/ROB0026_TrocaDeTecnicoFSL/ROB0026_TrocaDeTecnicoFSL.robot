@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation                               Realiza a Troca de Tecnico via FSL
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 Resource                                    ../../RESOURCE/FSL/UTILS.robot
 
 Resource                                    ${DIR_ROBS}/ROB0027_DesatribuirAtividadeFSL/ROB0027_DesatribuirAtividadeFSL.robot
@@ -57,7 +57,7 @@ Troca de Tecnico no Field Service
     Click Web Element Is Visible            css=iframe[lang="pt-BR"] >>> //h1[contains(text(),'${Atribuir_tecnico}')]/../..//*[contains(text(),'Atribuir')]
     
     Consultar SA
-    Fazer Logout
-    Close Browser                           CURRENT
+    # Fazer Logout
+    # Close Browser                           CURRENT
 
 #===========================================================================================================================================================================================================

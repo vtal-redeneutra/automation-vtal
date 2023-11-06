@@ -1,0 +1,1244 @@
+{
+  "cookies": [
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/KJLtMkL5C9JPWPqSQesMDw",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/ZcF-XNb6rZ4KlqqNtklRLA",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/BHzwFW6m3QWwIuQ3rKNShw",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/S2ReiAUbaU2CIMhPUP7Wwg",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/0OsmInrXzRJLQyRO3v5XuA",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/2Ipoyg07jrGSQEAvI22-oA",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/3WMQYjRi8ahQ-r_vaYVxhg",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/MrUzgWxrgeSo6qZ-ietTOQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/xGfb-EsEyB3eZc9_6iUHUw",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/muBtNULf_gEYCmzq_0NaPw",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/42VKoipPakSTo_DNBGCfxw",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/pu3SvfCIDf8g2boUFQ6guQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/s0Y7ct_kaon5BYaNgjl4aw",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/RjbOAhrEll83OGVSy4MtDQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/42VYTbOgMYm2367v77jcRw",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/-J111fAT0XVi0OErYEs-Ig",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/0h-ny19MM8DNUh3biz0k4A",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/ZZ59IH5TyQ5AjQPbruA7BQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/vo6nwcscEmH3ydwgWM5k4A",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/opDn6fPN1zJTROkmEgrCWw",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/m5oPiwWlJBlZtT7R7mU03g",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/7p13OPNzXCX5UVemCej7Kw",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/xAkN81eDrvo7WUliau_VPA",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/pDDP4qJPGfnT7sSy2aMcnw",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/6rHRFy359gFKy7fu3dAgCQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/3UnPZGZC5mFkIBT6h119hQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/jTeSn-fLMH6l5mhtIrOqIQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/FhI_qoOSPVF7-h6OeZivRA",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/tTWdm98hjSO3SXsXMRZM_w",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs219/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/_LrYwT9zrq9v2KY0k9e3bg",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs219/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/jTeSn-fLMH6l5mhtIrOqIQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs219/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/-92XIktR01rMO_YYILjfDA",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs219/aurafile/%7B%22mode%22%3A%22PROD%22%2C%22app%22%3A%22one%3Aone%22%2C%22ls%22%3A1%2C%22lrmc%22%3A%22618546923%22%7D/VUqm0mFWGKnS-K8es9h4kA",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/auraFW/javascript/NWwyc3VvNW5BSTFiNnhZNHFCLXVfQWI4T1Q3UVpoR0gtemxDX3B4aTM3bVEyNDQuMjAuMS0yLjQxLjQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/auraFW/javascript/c1R3MUZhNldLUm1BS0plaUgwaDhnQWI4T1Q3UVpoR0gtemxDX3B4aTM3bVEyNDQuMjAuMS0yLjQxLjQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/auraFW/javascript/MkNfdDJoMENESUp0R1E4b3hTRjFCUWI4T1Q3UVpoR0gtemxDX3B4aTM3bVEyNDQuMjAuMS0yLjQxLjQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/auraFW/javascript/U29CODJZUktMd3A0d3Q0OE5hWGdZUU9aTWNUb0FHT1BKNlBYY1JVSHlMbWcyNDQuMjAuMS0yLjQxLjQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/auraFW/javascript/YlFCb0tteDV4aGhQNENwMlB3WlU0ZzE0VDFFNVRwUjllNDRPNDJ3WDdmcWcyNDQuMjAuMS0yLjQxLjQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197/auraFW/javascript/YlFCb0tteDV4aGhQNENwMlB3WlU0ZzE0VDFFNVRwUjllNDRPNDJ3WDdmcWcyNDQuMjAuNC0yLjQxLjQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs219/auraFW/javascript/MlRqRU5YT3pjWFRNenJranFOMWFjQXlMaWFpdmxPSTZWeEo0bWtiN0hsaXcyNDQuMjAuNC0yLjQxLjQ",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "t",
+      "value": "!0vaFlJER5UsrfIGrfKp9YI2pARkJi5YS8O/yCf8GE+6HiX+CvWWacnC3MzF+OXsuC3USJWIP3jamDQ==",
+      "domain": "oimoveltrialorg2021--trg.lightning.force.com",
+      "path": "/cometd/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "BAYEUX_BROWSER",
+      "value": "cfae1fhrpt7mbg171lip0732x150u",
+      "domain": "oimoveltrialorg2021--trg.lightning.force.com",
+      "path": "/cometd/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "t",
+      "value": "!0vaFlJER5UsrfIGrfKp9YI2pARkJi5YS8O/yCf8GE+6HiX+CvWWacnC3MzF+OXsuC3USJWIP3jamDQ==",
+      "domain": "vtal--trg.sandbox.lightning.force.com",
+      "path": "/cometd/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "BAYEUX_BROWSER",
+      "value": "96acp68chaj2qendlkwm2j9ntrg",
+      "domain": "vtal--trg.sandbox.lightning.force.com",
+      "path": "/cometd/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs197",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "Geo",
+      "value": "Continent: SA Country: BR State: SP City: SANTOS",
+      "domain": "static.lightning.force.com",
+      "path": "/cs219",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "oimoveltrialorg2021--trg.my.salesforce.com",
+      "path": "/",
+      "expires": 1717877148.225915,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSKey-c$CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "oimoveltrialorg2021--trg.my.salesforce.com",
+      "path": "/",
+      "expires": 1717877148.226118,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "BrowserId",
+      "value": "_yc8ywcAEe6-0tPKIAV4jQ",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1717877148.226159,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "BrowserId_sec",
+      "value": "_yc8ywcAEe6-0tPKIAV4jQ",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1717877148.226192,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CookieConsentPolicy",
+      "value": "0:0",
+      "domain": "test.salesforce.com",
+      "path": "/",
+      "expires": 1717877149.39034,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSKey-c$CookieConsentPolicy",
+      "value": "0:0",
+      "domain": "test.salesforce.com",
+      "path": "/",
+      "expires": 1717877149.390371,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "session",
+      "value": "1686341149786",
+      "domain": "test.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "v0",
+      "value": "SFDC%20Network%7C%5BSalesforce.com%20App%5D",
+      "domain": ".c.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "c22",
+      "value": "SFDC%20Network",
+      "domain": ".c.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "cvtdt",
+      "value": "SFDC%20Network",
+      "domain": ".c.salesforce.com",
+      "path": "/",
+      "expires": 1720901150.359188,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "c40",
+      "value": "SFDC%20Network",
+      "domain": ".c.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "v20",
+      "value": "Direct%20Landing",
+      "domain": ".c.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "convertingPageUrl",
+      "value": "Direct%20Landing",
+      "domain": ".c.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "cleared-onetrust-cookies",
+      "value": "",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1721408868,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_cq_duid",
+      "value": "1.1686341151.KsfAKm12bzgjWR8p",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1699038877,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cq_suid",
+      "value": "1.1686341151.XVMzsPXJemmPsbGy",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "cg_uuid",
+      "value": "d09e49c459df8652e4be41d3d1fcd4d7",
+      "domain": "bite.australiarevival.com",
+      "path": "/",
+      "expires": 1715371551.831155,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "rememberUn",
+      "value": "false",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1696338881.607966,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "com.salesforce.LocaleInfo",
+      "value": "br",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1696338881.608022,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "autocomplete",
+      "value": "1",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1696338881.816758,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "oid",
+      "value": "00D040000004cgM",
+      "domain": "oimoveltrialorg2021--trg.my.salesforce.com",
+      "path": "/",
+      "expires": 1721929543.757623,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "BrowserId",
+      "value": "XgPokgcBEe6-0tPKIAV4jQ",
+      "domain": "oimoveltrialorg2021--trg--c.documentforce.com",
+      "path": "/",
+      "expires": 1717877307.447678,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "BrowserId_sec",
+      "value": "XgPokgcBEe6-0tPKIAV4jQ",
+      "domain": "oimoveltrialorg2021--trg--c.documentforce.com",
+      "path": "/",
+      "expires": 1717877307.447696,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "inst",
+      "value": "APP_04",
+      "domain": "oimoveltrialorg2021--trg--c.documentforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "oimoveltrialorg2021--trg--c.documentforce.com",
+      "path": "/",
+      "expires": 1717877307.634426,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSKey-c$CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "oimoveltrialorg2021--trg--c.documentforce.com",
+      "path": "/",
+      "expires": 1717877307.634474,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "oimoveltrialorg2021--trg.lightning.force.com",
+      "path": "/",
+      "expires": 1717877314.334067,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSKey-c$CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "oimoveltrialorg2021--trg.lightning.force.com",
+      "path": "/",
+      "expires": 1717877314.334123,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CookieConsentPolicy",
+      "value": "0:0",
+      "domain": "static.lightning.force.com",
+      "path": "/",
+      "expires": 1722691155.829372,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSKey-c$CookieConsentPolicy",
+      "value": "0:0",
+      "domain": "static.lightning.force.com",
+      "path": "/",
+      "expires": 1722691155.829493,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sid_Client",
+      "value": "4000001s2CM40000004cgM",
+      "domain": "oimoveltrialorg2021--trg.my.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid_Client",
+      "value": "4000001s2CM40000004cgM",
+      "domain": "oimoveltrialorg2021--trg--c.documentforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid_Client",
+      "value": "4000001s2CM40000004cgM",
+      "domain": "oimoveltrialorg2021--trg.lightning.force.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "BrowserId",
+      "value": "QvjpZhH2Ee6SYFPfrl-lrA",
+      "domain": ".force.com",
+      "path": "/",
+      "expires": 1720105002.923435,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "BrowserId_sec",
+      "value": "QvjpZhH2Ee6SYFPfrl-lrA",
+      "domain": ".force.com",
+      "path": "/",
+      "expires": 1720105002.923482,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sfdcConsent",
+      "value": "1",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1722777277,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "clientSrc",
+      "value": "177.102.166.126",
+      "domain": "oimoveltrialorg2021--trg.my.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "clientSrc",
+      "value": "177.102.166.126",
+      "domain": "oimoveltrialorg2021--trg--c.documentforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "clientSrc",
+      "value": "177.102.166.126",
+      "domain": "oimoveltrialorg2021--trg.lightning.force.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid",
+      "value": "00D040000004cgM!ARwAQEaBOgb0FXKRrVwP066bHN0GGlHFmYp7AyIBkeoLiunMhuMto0BHJqukAWg_wc1NU4kmjF0QfXoCHlpYyWKhvW1nbce4",
+      "domain": "oimoveltrialorg2021--trg.my.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid",
+      "value": "00D040000004cgM!ARwAQNCP3w3qA0fFDTgt5k.D_bJQMY.tAg1pBF3GRhrEa6gjIomsQQnoBIBtU0.CxNomyf9xezevo3sEk8_r1AkkLzIMe3Kl",
+      "domain": "oimoveltrialorg2021--trg--c.documentforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "79eb100099b9a8bf",
+      "value": "3:false:.salesforce.com",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid",
+      "value": "00D040000004cgM!ARwAQB_vm2azyvTFOCqq1k6EegtVj_CSECsLyRSQTpZ5qUtZalLByVWS1jGtyKWxXyavPW8wt7Z3GbqsQkZL_7FtRSXlBS.u",
+      "domain": "oimoveltrialorg2021--trg.lightning.force.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sfdc-stream",
+      "value": "!B4lByQRklHePun/m1kiL/cJKZbCnorJy8llPYHpwB3/OqYArV4kgn2WUGaIXUxJWmv+SpoBCPjEPNkc=",
+      "domain": "vtal--trg.sandbox.lightning.force.com",
+      "path": "/",
+      "expires": 1691165670.622833,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "vtal--trg.sandbox.my.salesforce.com",
+      "path": "/",
+      "expires": 1722690871.923269,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSKey-c$CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "vtal--trg.sandbox.my.salesforce.com",
+      "path": "/",
+      "expires": 1722690871.92333,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CookieConsentPolicy",
+      "value": "0:0",
+      "domain": "cs219.salesforce.com",
+      "path": "/",
+      "expires": 1722690873.920435,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSKey-c$CookieConsentPolicy",
+      "value": "0:0",
+      "domain": "cs219.salesforce.com",
+      "path": "/",
+      "expires": 1722690873.920485,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CookieConsentPolicy",
+      "value": "0:0",
+      "domain": "cs197.salesforce.com",
+      "path": "/",
+      "expires": 1722690874.753911,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSKey-c$CookieConsentPolicy",
+      "value": "0:0",
+      "domain": "cs197.salesforce.com",
+      "path": "/",
+      "expires": 1722690874.75406,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "webact",
+      "value": "%7B%22l_vdays%22%3A10%2C%22l_visit%22%3A1690393537721%2C%22session%22%3A1691154875777%2C%22l_search%22%3A%22%22%2C%22l_dtype%22%3A%22SFDC%20Network%22%2C%22l_page%22%3A%22SFDC%3Abr%3Alogin%22%2C%22l_page_url%22%3A%22https%3A%2F%2Fc.salesforce.com%2Flogin-messages%2Fbr%2Fpromos.html%22%2C%22counter%22%3A50%2C%22pv%22%3A1%2C%22f_visit%22%3A1686341150129%2C%22seg%22%3A%22customer%3Abr%22%2C%22d%22%3A%2270130000000sUW0%22%2C%22customer%22%3A1686341456236%7D",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1722690875,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "OptanonConsent",
+      "value": "isGpcEnabled=0&datestamp=Fri+Aug+04+2023+10%3A14%3A41+GMT-0300+(Hor%C3%A1rio+Padr%C3%A3o+de+Bras%C3%ADlia)&version=202306.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=e88fbc55-197c-444a-a71a-06d09e65c36e&interactionCount=1&landingPath=https%3A%2F%2Fc.salesforce.com%2Flogin-messages%2Fbr%2Fpromos.html&groups=1%3A1%2C3%3A0%2C2%3A0%2C4%3A0",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1722690881,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "inst",
+      "value": "APP_8G",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "oinfo",
+      "value": "c3RhdHVzPURFTU8mdHlwZT02Jm9pZD0wMEQ4RzAwMDAwMDRlS3I=",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1696338881.608054,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sfdc_lv2",
+      "value": "KxG83HwbHbXNWXYObMWusrpEgnclY+igF/gYS88btAX2a7gDSMpZDLE5OCawZL54YKAvqtassEdiZL+HV2aVVoEzVZ+fHl/kk=",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": 1722690881.816608,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "disco",
+      "value": "8G:00D8G0000004eKr:0058G000004rDMg:2",
+      "domain": ".salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid",
+      "value": "00D8G0000004eKr!ARQAQGuJzLW24gxIcl050_NEq.ZqJiTEolkpkNJNnMI8OwxSCCo.XebkVg7AunGFXM_ANcABa5w0Stwn3kuAR1kNPsAmdMsv",
+      "domain": "vtal--trg.sandbox.my.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid_Client",
+      "value": "G000004rDMgG0000004eKr",
+      "domain": "vtal--trg.sandbox.my.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "clientSrc",
+      "value": "187.121.118.36",
+      "domain": "vtal--trg.sandbox.my.salesforce.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "oid",
+      "value": "00D8G0000004eKr",
+      "domain": "vtal--trg.sandbox.my.salesforce.com",
+      "path": "/",
+      "expires": 1722690881.817036,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid",
+      "value": "00D8G0000004eKr!ARQAQDdChGY9zgjdES_SiQ4_kKa75qVSjZqV5QH1dN826R6kzJkoHHDW.6V_rCpCS7jr6yQucbMTu9QTgVzkluAGCUZqyYI6",
+      "domain": "vtal--trg.sandbox.file.force.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid_Client",
+      "value": "G000004rDMgG0000004eKr",
+      "domain": "vtal--trg.sandbox.file.force.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "clientSrc",
+      "value": "187.121.118.36",
+      "domain": "vtal--trg.sandbox.file.force.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "inst",
+      "value": "APP_8G",
+      "domain": ".force.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "vtal--trg.sandbox.file.force.com",
+      "path": "/",
+      "expires": 1722690882.929269,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSKey-c$CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "vtal--trg.sandbox.file.force.com",
+      "path": "/",
+      "expires": 1722690882.929383,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sid",
+      "value": "00D8G0000004eKr!ARQAQFPPJwsbceq5BG_zthq5.oo5x35acUT7diePrOrIebUSg2kwfV1pgu0PuC4T8tUuvTnAtTAVL0MoWS4DsEpdbUJhHrwP",
+      "domain": "vtal--trg.sandbox.lightning.force.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid_Client",
+      "value": "G000004rDMgG0000004eKr",
+      "domain": "vtal--trg.sandbox.lightning.force.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "clientSrc",
+      "value": "187.121.118.36",
+      "domain": "vtal--trg.sandbox.lightning.force.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "vtal--trg.sandbox.lightning.force.com",
+      "path": "/",
+      "expires": 1722691124.697653,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSKey-c$CookieConsentPolicy",
+      "value": "0:1",
+      "domain": "vtal--trg.sandbox.lightning.force.com",
+      "path": "/",
+      "expires": 1722691124.697713,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://oimoveltrialorg2021--trg.my.salesforce.com",
+      "localStorage": [
+        {
+          "name": "$AuraClientService.token$salesforceIdentity:flowLightningOut",
+          "value": "eyJub25jZSI6Ijh4LTAzYmY0SkhkdHd1LV9hWWNPMmdqMVN6Q3EzU3p5OTY5UXdGMC1BOW9cdTAwM2QiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6IntcInRcIjpcIjAwRDA0MDAwMDAwOGZmc1wiLFwidlwiOlwiMDJHMDQwMDAwMDAwWXFTXCIsXCJhXCI6XCJjYWltYW5zaWduZXJcIn0iLCJjcml0IjpbImlhdCJdLCJpYXQiOjE2OTAzOTM0Nzk0NDAsImV4cCI6MH0=..w_8FyVjdQSEdTG78wicNCMyGC9NqHTZXUF25LDvcUAI="
+        },
+        {
+          "name": "lightningOutDelegateVersion",
+          "value": "YlFCb0tteDV4aGhQNENwMlB3WlU0ZzE0VDFFNVRwUjllNDRPNDJ3WDdmcWcyNDQuMjAuNC0yLjQxLjQ"
+        }
+      ]
+    },
+    {
+      "origin": "https://c.salesforce.com",
+      "localStorage": [
+        {
+          "name": "webactls",
+          "value": "{\"chat\":0,\"kxsfdc\":{\"segs\":\"\"},\"l_cloud\":\"No Cloud\",\"lastvaliddriver\":\"SFDC Network|[Salesforce.com App]\"}"
+        }
+      ]
+    },
+    {
+      "origin": "https://oimoveltrialorg2021--trg.lightning.force.com",
+      "localStorage": [
+        {
+          "name": "GlobalValueProviders__MUTEX_X",
+          "value": "1599000000a7e2c04363c6c|1690395154225"
+        },
+        {
+          "name": "$AuraClientService.token$one:one",
+          "value": "eyJub25jZSI6ImtrMlh0cDN6d3FxXzZhY3pyOE1ydDdGZUV6aDFHZG81UGdhQW1QY1BOMHdcdTAwM2QiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6IntcInRcIjpcIjAwRDA0MDAwMDAwOGZmc1wiLFwidlwiOlwiMDJHMDQwMDAwMDAwWXFTXCIsXCJhXCI6XCJjYWltYW5zaWduZXJcIn0iLCJjcml0IjpbImlhdCJdLCJpYXQiOjE2OTAzOTUwNzQ5MDcsImV4cCI6MH0=.._ya8wEW8PHmGYg-WxAqZ9vDLUO7OLALBfUnEvlO_Mkk="
+        },
+        {
+          "name": "emp.cometd",
+          "value": "{\"eventType\":\"functionCall\",\"nodeId\":null,\"functionName\":\"unsubscribeCallback\",\"subscription\":{\"id\":\"_1689695913030_3712\",\"channel\":\"/s/notifications/notification\",\"replayId\":-1},\"message\":{\"clientId\":\"5cufwyj7cry9ufp1uz5lga7an1lc\",\"channel\":\"/meta/unsubscribe\",\"id\":\"6\",\"subscription\":\"/s/notifications/notification\",\"successful\":true},\"time\":1689695968478}"
+        },
+        {
+          "name": "appContextId",
+          "value": "06m4x000001UDlDAAW"
+        },
+        {
+          "name": "$AuraClientService.token$desktopDashboards:dashboardApp",
+          "value": "eyJub25jZSI6Inc3VnBIXzVZQkNySzBkQmp3VjJaSVptR2p2eVFLamlQdkQzSFp6THZ4TkFcdTAwM2QiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6IntcInRcIjpcIjAwRDA0MDAwMDAwOGZmc1wiLFwidlwiOlwiMDJHMDQwMDAwMDAwWXFTXCIsXCJhXCI6XCJjYWltYW5zaWduZXJcIn0iLCJjcml0IjpbImlhdCJdLCJpYXQiOjE2OTAzOTUwODA3MzQsImV4cCI6MH0=.._0_qSgPWDsVH3HfuCZzmiCb-cbq4F8lNZ1DS4YT57ME="
+        }
+      ]
+    },
+    {
+      "origin": "https://vtal--trg.sandbox.lightning.force.com",
+      "localStorage": [
+        {
+          "name": "GlobalValueProviders__MUTEX_X",
+          "value": "229250000024c721411d572|1691155367227"
+        },
+        {
+          "name": "$AuraClientService.token$one:one",
+          "value": "eyJub25jZSI6ImdsQzNUTFRyLVQ5TmNsWFFJRFZIZktub0tFSzlMcHFMWFhvbzc1R3ZiSU1cdTAwM2QiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6IntcInRcIjpcIjAwRDhHMDAwMDAwOGZmeFwiLFwidlwiOlwiMDJHOEcwMDAwMDAwWXFYXCIsXCJhXCI6XCJjYWltYW5zaWduZXJcIn0iLCJjcml0IjpbImlhdCJdLCJpYXQiOjE2OTExNTUyNzk1NTAsImV4cCI6MH0=..DiRC--CPeUPyUK-KTjb5EMjJsFpT9e2AGCnN4hUhiTg="
+        },
+        {
+          "name": "appContextId",
+          "value": "06m8G000000HEkbQAG"
+        },
+        {
+          "name": "$AuraClientService.token$desktopDashboards:dashboardApp",
+          "value": "eyJub25jZSI6IlpXaEhzc1BXb21CMlNaRTZ1TWtwUEZxQk5mTVlRaFRldVRiR0ZzcVFXNElcdTAwM2QiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6IntcInRcIjpcIjAwRDhHMDAwMDAwOGZmeFwiLFwidlwiOlwiMDJHOEcwMDAwMDAwWXFYXCIsXCJhXCI6XCJjYWltYW5zaWduZXJcIn0iLCJjcml0IjpbImlhdCJdLCJpYXQiOjE2OTExNTUyODM4OTMsImV4cCI6MH0=..YdQzYmtU1waOtrRfUax8DBPhSPZeb7mG22gECu9l8kY="
+        }
+      ]
+    }
+  ]
+}

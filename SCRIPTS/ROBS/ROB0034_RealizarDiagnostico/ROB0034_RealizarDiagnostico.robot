@@ -3,7 +3,7 @@ Documentation                               Realiza o Diagnóstico
 
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 
 
 # *** Variables ***
@@ -22,8 +22,6 @@ Realizando Diagnostico
     [Documentation]                         Realiza Diagnóstico através de requisição http utilizando método POST.
     ...                                     | ``URL_API`` | ``https://apitrg.vtal.com.br/api/serviceTestManagement/v1/serviceTest``|
     [Tags]                                  RealizaDiagnostico
-
-    Retornar Token Vtal
 
     ${type}=                                Set Variable                            diagnostic
     ${subscriberId}=                        Ler Variavel na Planilha                subscriberId                            Global 

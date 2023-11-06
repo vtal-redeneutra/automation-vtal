@@ -4,7 +4,7 @@ Library                                     Browser
 Library                                     Collections
 Library                                     ExcelLibrary
 Library                                     XML                                     use_lxml=True
-# Library                                     Dialogs
+Library                                     Dialogs
 Library                                     String
 Library                                     AppiumLibrary
 
@@ -21,8 +21,8 @@ Login FWConsole
     [Documentation]                         Acessar URL do FW e fazer login com usuário e senha presentes na planilha.
     ...                                     \nNavegador abre nas medidas 1890x900
 
-    ${USER_FW}=                             Ler Variavel Param Global               Usuario_FW                              Global
-    ${PASSWORD_FW}=                         Ler Variavel Param Global               Senha_FW                                Global
+    ${USER_FW}=                             Ler Variavel Param Global               $.Logins.FW.Usuario                      
+    ${PASSWORD_FW}=                         Ler Variavel Param Global               $.Logins.FW.Senha                        
 
     Contexto para navegador                ${URL_FW}
 
@@ -61,11 +61,9 @@ Validar Evento FW
 
     #PREENCHER VARIAVEIS
     ${TEXTO_BUSCA}=                         Ler Variavel na Planilha                ${VALOR_BUSCA}                          Global                            
-    ${Data_FW}=                             Get Current Date                        result_format=%d/%m/%Y                  increment=- 3 hours
+    ${Data_FW}=                             Get Current Date                        result_format=%d/%m/%Y
     ${Data_FW}=                             Replace String                          ${Data_FW}                              /                                       %2F
     
-    ${bitState}=                            Ler Variavel Param Global               Credencial                              Global
-
     #ABRIR NAVEGADOR
     Contexto para navegador                 ${URL_FW_SEM_LOGIN}?date1=${Data_FW}+01%3A00&date2=${Data_FW}+23%3A59&queryText=${TEXTO_BUSCA}
     
@@ -135,7 +133,7 @@ Validar Evento FW
                     #TENTA LER FREQUENCY BAND
                     ${EXIST_FREQUENCY_BAND}=    Run Keyword And Return Status       Ler Variavel na Planilha                frequencyBand                           Global
 
-                    IF    ${EXIST_FREQUENCY_BAND} == True and "${VALOR_BUSCA}" == "Diag_ID" and "${bitState}" != "Bitstream"
+                    IF    ${EXIST_FREQUENCY_BAND} == True and "${VALOR_BUSCA}" == "Diag_ID" and "${Credencial}" != "Bitstream"
                         ${FREQUENCY_BAND}=  Ler Variavel na Planilha                frequencyBand                           Global
                         IF    "${FREQUENCY_BAND}" == "2.4GHz"
                             ${target_data}=         XML.Get Element Text            ${TEXTO_XML}                            .//frequencyBand[text()="2.4GHz"]/..//${ELEMENTO_XML}

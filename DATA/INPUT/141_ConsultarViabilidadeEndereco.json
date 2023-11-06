@@ -1,0 +1,22 @@
+{
+    "Dados": [
+        {
+            "Input": {
+                "Address": "",
+                "Number": "",
+                "typeComplement1": "",
+                "value1": "",
+                "typeComplement2": "",
+                "value2": "",
+                "typeComplement3": "",
+                "value3": ""
+            },
+            "Output": {
+                "UF": "",
+                "Bairro": "",
+                "locationCode": "",
+                "idEndereco": ""
+            }
+        }
+    ]
+}

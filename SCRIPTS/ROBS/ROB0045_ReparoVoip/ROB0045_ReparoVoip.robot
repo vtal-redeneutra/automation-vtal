@@ -5,7 +5,7 @@ Library                                     String
 
 Resource                                    ../../RESOURCE/COMMON/RES_UTIL.robot
 Resource                                    ../../RESOURCE/API/RES_API.robot
-#Resource                                    ../../RESOURCE/COMMON/RES_LOG.robot
+
 
 
 *** Keywords ***
